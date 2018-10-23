@@ -31,3 +31,11 @@ Route::get('admin', function(){
 Route::get('pagina', function(){
 	return view('sitioweb.inicio');
 });
+
+Route::get('entrenador', function(){
+	return view('sitioweb.entrenador');
+});
+
+Route::get('galeria', function(){
+	return view('sitioweb.galeria');
+});

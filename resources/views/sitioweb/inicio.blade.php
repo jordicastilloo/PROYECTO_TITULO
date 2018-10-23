@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Stamina &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Gimnasio Esparta Chiguayante</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -85,14 +85,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2">
-						<div id="fh5co-logo"><a href="index.html">Stamina<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html">GYM ESPARTA CHIGUAYANTE<span>.</span></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="about.html">Trainer</a></li>
-							<li><a href="pricing.html">Pricing</a></li>
+							<li><a href="galeria">Galeria</a></li>
+							<li><a href="entrenador">Entrenadores</a></li>
+							<li><a href="sitioweb/pricing.html">Pricing</a></li>
 							<li class="has-dropdown">
 								<a href="blog.html">Blog</a>
 								<ul class="dropdown">
@@ -102,7 +102,7 @@
 									<li><a href="#">API</a></li>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="contact.html">Contacto</a></li>
 						</ul>
 					</div>
 				</div>
