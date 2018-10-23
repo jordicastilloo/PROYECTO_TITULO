@@ -104,7 +104,7 @@
 								</ul>
 							</li>
 							<li><a href="contact.html">Contacto</a></li>
-							<li><a href="home">Intranet</a></li>
+							<li><a href="login">Intranet</a></li>
 						</ul>
 					</div>
 				</div>
