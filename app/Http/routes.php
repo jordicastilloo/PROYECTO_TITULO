@@ -28,6 +28,6 @@ Route::get('admin', function(){
 	return view('admin.inicio');
 });
 
-Route::get('sitioweb', function(){
+Route::get('pagina', function(){
 	return view('sitioweb.inicio');
 });
