@@ -39,3 +39,11 @@ Route::get('entrenador', function(){
 Route::get('galeria', function(){
 	return view('sitioweb.galeria');
 });
+
+Route::get('blog', function(){
+	return view('sitioweb.blog');
+});
+
+Route::get('contacto', function(){
+	return view('sitioweb.contacto');
+});
