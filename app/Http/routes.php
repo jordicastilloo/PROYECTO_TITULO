@@ -20,6 +20,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('admin',function(){
+Route::get('admin', function(){
 	return view('admin.dashboard');
 });
