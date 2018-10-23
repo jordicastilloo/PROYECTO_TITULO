@@ -27,3 +27,7 @@ Route::get('login', function(){
 Route::get('admin', function(){
 	return view('admin.inicio');
 });
+
+Route::get('sitioweb', function(){
+	return view('sitioweb.index');
+});
