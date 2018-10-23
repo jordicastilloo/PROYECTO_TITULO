@@ -91,6 +91,7 @@
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="galeria">Galeria</a></li>
+
 							<li><a href="entrenador">Entrenadores</a></li>
 							<li><a href="sitioweb/pricing.html">Pricing</a></li>
 							<li class="has-dropdown">
@@ -103,6 +104,7 @@
 								</ul>
 							</li>
 							<li><a href="contact.html">Contacto</a></li>
+							<li><a href="home">Intranet</a></li>
 						</ul>
 					</div>
 				</div>
