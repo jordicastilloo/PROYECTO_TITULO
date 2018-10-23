@@ -29,5 +29,5 @@ Route::get('admin', function(){
 });
 
 Route::get('sitioweb', function(){
-	return view('sitioweb.index');
+	return view('sitioweb.inicio');
 });
