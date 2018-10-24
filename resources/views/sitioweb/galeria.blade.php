@@ -85,13 +85,17 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2">
-						<div id="fh5co-logo"><a href="index.html">Stamina<span>.</span></a></div>
+						<div id="fh5co-logo">
+
+                             <img src="sitioweb/images/logoesparta.jpg" width="60" height="60">
+
+                          <a href="index.html">GYM Sparta Chiguayante<span>.</span></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li><a href="pagina">Home</a></li>
-							<li class="active"><a href="galeria">Gallery</a></li>
-							<li><a href="entrenador">Trainer</a></li>
+							<li><a href="pagina">Inicio</a></li>
+							<li class="active"><a href="galeria">Galeria</a></li>
+							<li><a href="entrenador">Entrenadores</a></li>
 							<li><a href="pricing.html">Pricing</a></li>
 							<li class="has-dropdown">
 								<a href="blog.html">Blog</a>
@@ -112,15 +116,15 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(sitioweb/images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(sitioweb/images/IMG2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Gallery</h1>
-							<h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>
+							<h1>Galeria</h1>
+							<h2>Gimnasio Esparta Chiguayante<a href="http://freehtml5.co" target="_blank"> facebook.com</a></h2>
 						</div>
 					</div>
 				</div>
@@ -133,7 +137,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Gym gallery</h2>
+					<h2>Galeria GYM Esparta</h2>
 					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
@@ -143,7 +147,7 @@
 				<div class="col-md-12">
 					<ul id="fh5co-portfolio-list">
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-1.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG1.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Illustration</span>
@@ -151,7 +155,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-2.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG8.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -160,7 +164,7 @@
 							</a>
 						</li>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-3.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG3.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -169,7 +173,7 @@
 							</a>
 						</li>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-4.jpg); "> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG4.jpg); "> 
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -177,7 +181,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-3.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG5.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -185,7 +189,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-5.jpg); ">
+						<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG6.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Illustration</span>
@@ -193,7 +197,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-3.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/IMG7.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -208,12 +212,12 @@
 	</div>
 	
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image: url(sitioweb/images/img_bg_3.jpg);">
+	<div id="fh5co-started" class="fh5co-bg" style="background-image: url(sitioweb/images/IMG12.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2>Fitness Classes this Summer <br> <span> Pay Now and <br> Get <span class="percent">35%</span> Discount</span></h2>
+					<h2>Clases Fitness Grupales<br> <span> Pay Now and <br> Get <span class="percent">35%</span> Discount</span></h2>
 				</div>
 			</div>
 			<div class="row animate-box">
@@ -230,7 +234,7 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
-					<h3>A Little About Stamina.</h3>
+					<h3>A Little About Stamina22 .</h3>
 					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
 					<p><a class="btn btn-primary" href="#">Become A Member</a></p>
 				</div>

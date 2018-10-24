@@ -140,7 +140,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4 animate-box">
 					<div class="trainer">
-						<a href="#"><img class="img-responsive" src="images/trainer-1.jpg" alt="trainer"></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/MIGUEL.jpg" alt="trainer"></a>
 						<div class="title">
 							<h3><a href="#">Angel Adams</a></h3>
 							<span>Dance Expert</span>

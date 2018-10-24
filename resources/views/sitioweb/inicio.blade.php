@@ -85,11 +85,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2">
-						<div id="fh5co-logo"><a href="index.html">GYM ESPARTA CHIGUAYANTE<span>.</span></a></div>
+
+
+						<img src="sitioweb/images/logoesparta.jpg" width="50" height="50">
+
+						<div id="fh5co-logo"><a href="index.html">ESPARTA GYM Chiguayante<span>.</span></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="pagina">Inicio</a></li>
 							<li><a href="galeria">Galeria</a></li>
 
 							<li><a href="entrenador">Entrenadores</a></li>
@@ -113,14 +117,14 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(sitioweb/images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(sitioweb/images/IMAGENINICIO.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Make it a lifestyle, not a duty</h1>
+							<h1>Hazlo un estilo de vida, No un Deber!</h1>
 							<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
 							<p><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn btn-primary popup-vimeo">Watch Our Video</a></p>
 						</div>
@@ -135,31 +139,60 @@
 			<div class="row">
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
-						<span><img class="img-responsive" src="sitioweb/images/dumbbell.svg" alt=""></span>
-						<h3>Weight Lifting</h3>
+						<span><img class="img-responsive" src="sitioweb/images/zumba.png" alt=""></span>
+						<h3>ZUMBA</h3>
 						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
 						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
 					</div>
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
-						<span><img class="img-responsive" src="images/exercise.svg" alt=""></span>
-						<h3>Running</h3>
+						<span><img class="img-responsive" src="sitioweb/images/pilates.png" alt=""></span>
+						<h3>PILATES</h3>
 						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
 						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
 					</div>
 				</div>
+			
+		
+
+                <div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span><img class="img-responsive" src="sitioweb/images/cardiobox.png" alt=""></span>
+						<h3>CARDIO BOX</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
+						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+					</div>
+				</div>
+				
+
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
-						<span><img class="img-responsive" src="images/yoga-carpet.svg" alt=""></span>
-						<h3>Yoga</h3>
+						<span><img class="img-responsive" src="sitioweb/images/abdominal.png" alt=""></span>
+						<h3>REDUCTIVO ABDOMINAL</h3>
 						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
 						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+				
+
+
+				<div class="col-md-4 text-center animate-box">
+					<div class="services">
+						<span><img class="img-responsive" src="sitioweb/images/circuit.png" alt=""></span>
+						<h3>CIRCUIT TRAINING</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
+						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+					</div>
+				</div>
+				 
+
+
+
+
+
+
+
 
 	<div id="fh5co-trainer">
 		<div class="container">
@@ -172,7 +205,7 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4 animate-box">
 					<div class="trainer">
-						<a href="#"><img class="img-responsive" src="images/trainer-1.jpg" alt="trainer"></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/trainer-1.jpg" alt="trainer"></a>
 						<div class="title">
 							<h3><a href="#">Angel Adams</a></h3>
 							<span>Dance Expert</span>
@@ -189,7 +222,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4 animate-box">
 					<div class="trainer">
-						<a href="#"><img class="img-responsive" src="images/trainer-2.jpg" alt="trainer"></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/trainer-2.jpg" alt="trainer"></a>
 						<div class="title">
 							<h3><a href="#">Arnold Smith</a></h3>
 							<span>Body Building Expert</span>
@@ -206,7 +239,7 @@
 				</div>
 				<div class="col-md-4 col-sm-4 animate-box">
 					<div class="trainer">
-						<a href="#"><img class="img-responsive" src="images/trainer-3.jpg" alt="trainer"></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/trainer-3.jpg" alt="trainer"></a>
 						<div class="title">
 							<h3><a href="#">Rachel Seely</a></h3>
 							<span>Yoga Expert</span>
@@ -225,7 +258,7 @@
 		</div>
 	</div>
 	
-	<div id="fh5co-schedule" class="fh5co-bg" style="background-image: url(images/img_bg_1.jpg);">
+	<div id="fh5co-schedule" class="fh5co-bg" style="background-image: url(sitioweb/images/img_bg_1.jpg);">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -252,49 +285,49 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="1">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -305,7 +338,7 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="2">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -317,37 +350,37 @@
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -358,49 +391,49 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="3">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -411,37 +444,37 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="4">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
@@ -453,7 +486,7 @@
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -464,31 +497,31 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="5">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
@@ -500,13 +533,13 @@
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -517,49 +550,49 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="6">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -570,49 +603,49 @@
 						<div class="fh5co-tab-content tab-content active" data-tab-content="7">
 							<ul class="class-schedule">
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Boxing</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/ballet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Ballet Dance</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/dumbbell.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
 									<h4>Body Building</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/yoga-carpet.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
 									<h4>Yoga</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
-									<span><img src="images/exercise.svg" class="img-responsive" alt=""></span>
+									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
 									<h4>Cardio</h4>
 									<small>Angel Adams</small>
@@ -722,7 +755,7 @@
 				<div class="col-md-12">
 					<ul id="fh5co-portfolio-list">
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-1.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Illustration</span>
@@ -730,7 +763,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-2.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -739,7 +772,7 @@
 							</a>
 						</li>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-3.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -748,7 +781,7 @@
 							</a>
 						</li>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.jpg); "> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-4.jpg); "> 
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -756,7 +789,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-3.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -764,7 +797,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.jpg); ">
+						<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-5.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Illustration</span>
@@ -772,7 +805,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(sitioweb/images/gallery-3.jpg); ">
 							<a href="#">
 								<div class="case-studies-summary">
 									<span>Web Design</span>
@@ -800,7 +833,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/person3.jpg" alt="user">
+										<img src="sitioweb/images/person3.jpg" alt="user">
 									</figure>
 									<span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -811,7 +844,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/person3.jpg" alt="user">
+										<img src="sitioweb/images/person3.jpg" alt="user">
 									</figure>
 									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -822,7 +855,7 @@
 							<div class="item">
 								<div class="testimony-slide active text-center">
 									<figure>
-										<img src="images/person3.jpg" alt="user">
+										<img src="sitioweb/images/person3.jpg" alt="user">
 									</figure>
 									<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
 									<blockquote>
@@ -838,7 +871,7 @@
 	</div>
 
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image: url(images/img_bg_3.jpg);">
+	<div id="fh5co-started" class="fh5co-bg" style="background-image: url(sitioweb/images/img_bg_3.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -865,7 +898,7 @@
 			<div class="row row-bottom-padded-md">
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#"><img class="img-responsive" src="images/gallery-4.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/gallery-4.jpg" alt=""></a>
 						<div class="blog-text">
 							<h3><a href=""#>45 Minimal Worksspace Rooms for Web Savvys</a></h3>
 							<span class="posted_on">Sep. 15th</span>
@@ -877,7 +910,7 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#"><img class="img-responsive" src="images/gallery-2.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/gallery-2.jpg" alt=""></a>
 						<div class="blog-text">
 							<h3><a href=""#>45 Minimal Worksspace Rooms for Web Savvys</a></h3>
 							<span class="posted_on">Sep. 15th</span>
@@ -889,7 +922,7 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#"><img class="img-responsive" src="images/gallery-3.jpg" alt=""></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/gallery-3.jpg" alt=""></a>
 						<div class="blog-text">
 							<h3><a href=""#>45 Minimal Worksspace Rooms for Web Savvys</a></h3>
 							<span class="posted_on">Sep. 15th</span>
@@ -903,7 +936,7 @@
 		</div>
 	</div>
 
-	<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(images/img_bg_1.jpg);" role="contentinfo">
+	<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(sitioweb/images/img_bg_1.jpg);" role="contentinfo">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row row-pb-md">
