@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\ImplementosForm;
 use Illuminate\Http\Request;
 
 class ImplementosController extends Controller {
@@ -24,7 +24,7 @@ class ImplementosController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view("admin.implementos.crear");
 	}
 
 	/**
@@ -34,7 +34,13 @@ class ImplementosController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$implementos = new \App\implementos;
+		$implementos->nombre = \Request::input('nombre');
+		$implementos->estado = \Request::input('estado');
+		$implementos->tipo = \Request::input('tipo');
+		$implementos->save();
+
+    return redirect('implementos/create')->with('message', 'Post saved');
 	}
 
 	/**

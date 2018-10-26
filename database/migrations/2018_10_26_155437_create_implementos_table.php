@@ -10,14 +10,18 @@ class CreateImplementosTable extends Migration {
 	 *
 	 * @return void
 	 */
+	public $timestamps = false;
+
 	public function up()
 	{
+
 		Schema::create('implementos', function(Blueprint $table)
 		{
 			$table->increments('idimplemento');
 			$table->string('nombre');
 			$table->string('estado');
 			$table->string('tipo');
+			$table->timestamps();
 		});
 	}
 
