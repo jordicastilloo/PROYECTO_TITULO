@@ -10,7 +10,7 @@ class CreateImplementosTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public $timestamps = false;
+	//public $timestamps = false;
 
 	public function up()
 	{
@@ -21,7 +21,7 @@ class CreateImplementosTable extends Migration {
 			$table->string('nombre');
 			$table->string('estado');
 			$table->string('tipo');
-			$table->timestamps();
+
 		});
 	}
 
