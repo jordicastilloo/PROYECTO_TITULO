@@ -11,31 +11,23 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'InicioController@index');
+
+Route::get('login', 'LoginController@index');
+
+Route::get('admin', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::controllers([
+/*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-]);
-
-Route::get('login', function(){
-	return view('login');
-});
-
+]);*/
 
 Route::get('home', function(){
 	return view('home');
 });
 
-Route::get('admin', function(){
-	return view('admin.inicio');
-});
-
-Route::get('pagina', function(){
-	return view('sitioweb.inicio');
-});
 
 Route::get('entrenador', function(){
 	return view('sitioweb.entrenador');
