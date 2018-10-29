@@ -285,7 +285,7 @@
           <ul class="sidebar-menu">
             <li class="header"> Menu Principal</li>
             <li class="active treeview">
-              <a href="#">
+              <a href="/admin">
                 <i class="fas fa-home"></i> <span> Inicio</span>
               </a>
               
