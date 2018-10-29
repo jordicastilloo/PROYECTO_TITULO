@@ -14,7 +14,7 @@ class ImplementosController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		return view("admin.implementos.inicio")->with('implementos', \App\Implementos::paginate(2)->setPath('implementos'));
 	}
 
 	/**
@@ -24,7 +24,7 @@ class ImplementosController extends Controller {
 	 */
 	public function create()
 	{
-		return view("admin.implementos.crear");
+		return view("admin.implementos.createUpdate");
 	}
 
 	/**
@@ -60,9 +60,9 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($idimplemento)
 	{
-		//
+		return view('admin.implementos.createUpdate')->with('implementos', \App\Implementos::find($idimplemento));
 	}
 
 	/**
@@ -71,9 +71,19 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($idimplemento, ImplementosForm $implementosForm)
 	{
-		//
+ 		$implementos = \App\Implementos::find($idimplemento);
+ 
+ 		$implementos->nombre = \Request::input('nombre');
+ 
+  		$implementos->estado = \Request::input('estado');
+
+ 		$implementos->tipo = \Request::input('tipo');
+ 
+ 		$implementos->save();
+ 
+ 		return redirect()->route('implementos.edit', ['post' => $idimplemento])->with('message', 'Post updated');
 	}
 
 	/**
@@ -82,9 +92,13 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($idimplemento)
 	{
-		//
-	}
+		$implementos = \App\Implementos::find($idimplemento);
+ 
+ 		$implementos->delete();
+ 
+ 		return redirect()->route('implementos.index')->with('message', 'Implemento deleted');	
+ 	}
 
 }

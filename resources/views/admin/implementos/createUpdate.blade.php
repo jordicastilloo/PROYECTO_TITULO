@@ -2,6 +2,13 @@
  
 @section('content')
 <div class="container">
+
+<!-- BOTON PARA IR A CREAR
+<div class="row">
+ <div class="col-md-3">
+ {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
+</div>-->
+
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
  <div class="panel panel-default">
@@ -18,7 +25,18 @@
  @if (Session::has('message'))
      <div class="alert alert-success">{{ Session::get('message') }}</div>
  @endif -->
- 
+@if(isset($implementos))
+	{!! Form::model($implementos, ['route' => ['implementos.update', $implementos->idimplemento], 'method' => 'patch']) !!}
+@else
+	{!! Form::open(['route' => 'implementos.store']) !!}
+@endif
+
+@if(isset($implementos))
+ {!! Form::model($implementos, ['route' => ['implementos.update', $implementos->idimplemento], 'method' => 'patch']) !!}
+@else
+ {!! Form::open(['route' => 'implementos.store']) !!}
+@endif
+
  <div class="panel-body">
  {!! Form::open(['route' => 'implementos.store']) !!}
  
