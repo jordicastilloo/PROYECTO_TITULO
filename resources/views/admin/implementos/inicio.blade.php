@@ -1,9 +1,18 @@
 @extends('admin.layout')
  
 @section('content')
+
+<!--
 <div class="container">
 <div class="row">
- <div class="col-md-3">
+ <div class="col-md-3">-->
+
+
+  <div class="container">
+ <div class="row">
+ <div class="col-md-10 col-md-offset-1">
+
+
  {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
 </div>
 

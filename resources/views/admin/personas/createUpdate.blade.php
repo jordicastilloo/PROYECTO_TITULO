@@ -10,7 +10,6 @@
  <div class="panel panel-default">
  <div class="panel-heading">Home</div>
  
-
  <!--
                 @if($errors->has())
                     <div class='alert alert-danger'>
@@ -24,6 +23,15 @@
      <div class="alert alert-success">{{ Session::get('message') }}</div>
  @endif   -->
  
+ 
+@if(isset($personas))
+ {!! Form::model($personas, ['route' => ['personas.update', $personas->RutPersona], 'method' => 'patch']) !!}
+@else
+ {!! Form::open(['route' => 'personas.store']) !!}
+@endif
+ 
+
+
  <div class="panel-body">
  {!! Form::open(['route' => 'personas.store']) !!}
  
@@ -86,15 +94,6 @@
  ['class'=>'form-control', 'placeholder'=>'Ingrese Fecha de Nacimiento (aa/mm/dd)'])
  !!}
  </div>
-
-<!--
-<div class="form-group">
-<label for="Sexo">Selecciona genero:</label>
-<br>
-<input type="radio" name="sexo" id="color" value="masculino">Masculino<br>
-<input type="radio" name="sexo" id="color" value="femenino">Femenino<br>
-<br>
--->
 
 <div class="form-group">
 <label for="Sexo">Selecciona genero:</label>

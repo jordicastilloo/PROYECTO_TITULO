@@ -1,9 +1,18 @@
 @extends('admin.layout')
  
 @section('content')
+
+<!--
 <div class="container">
 <div class="row">
- <div class="col-md-3">
+ <div class="col-md-3">-->
+
+<div class="container">
+ <div class="row">
+ <div class="col-md-10 col-md-offset-1">
+ 
+
+
 
 
 
@@ -22,6 +31,9 @@
                 <th>Nombre</th>
                 <th>Apellido Materno</th>
                 <th>Apellido Paterno</th>
+
+
+                <!--
                 <th>Telefono</th>
                 <th>Email</th>
                 <th>Tipo</th>
@@ -30,7 +42,7 @@
                 <th>Sexo</th>
                 <th>Alergico</th>
                 <th>Patologia</th>
-                <th>Fotografia</th>
+                <th>Fotografia</th> -->
               </tr>
               @foreach ($personas as $Persona)
                   <tr>
@@ -38,6 +50,9 @@
                     <td width="500">{{ $Persona->Nombre}}</td>
                     <td width="500">{{ $Persona->Apellido_Materno}}</td>
                     <td width="500">{{ $Persona->Apellido_Paterno}}</td>
+
+
+                    <!--
                     <td width="500">{{ $Persona->Telefono}}</td>
                     <td width="500">{{ $Persona->Email}}</td>
                     <td width="500">{{ $Persona->Tipo}}</td>
@@ -47,7 +62,7 @@
                     <td width="500">{{ $Persona->Sexo}}</td>
                     <td width="500">{{ $Persona->Alergico}}</td>
                     <td width="500">{{ $Persona->Patologia}}</td>
-                    <td width="500">{{ $Persona->Fotografia}}</td>
+                    <td width="500">{{ $Persona->Fotografia}}</td>  -->
                     <td width="60" align="center">
                       {!! Html::link(route('personas.edit', $Persona->RutPersona), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>

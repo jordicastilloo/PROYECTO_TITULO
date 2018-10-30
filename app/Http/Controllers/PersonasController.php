@@ -26,7 +26,7 @@ class PersonasController extends Controller {
 	public function create()
 	{
 		//
-		return view('admin.personas.create');
+		return view('admin.personas.createUpdate');
 	}
 
 	/**
@@ -74,9 +74,11 @@ class PersonasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($RutPersona)
 	{
 		//
+	    return view('admin.personas.createUpdate')->with('personas', \App\Personas::find($RutPersona));
+
 	}
 
 	/**
@@ -85,10 +87,42 @@ class PersonasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($RutPersona,PersonasForm $personasForm)
 	{
 		//
+		$personas = \App\Personas::find($RutPersona);
+ 
+ 		$personas->Nombre = \Request::input('Nombre');
+ 
+  		$personas->Apellido_Materno = \Request::input('Apellido_Materno');
+
+ 		$personas->Apellido_Paterno = \Request::input('Apellido_Paterno');
+
+ 		$personas->Telefono = \Request::input('Telefono');
+
+ 		$personas->Email = \Request::input('Email');
+
+ 		$personas->Tipo = \Request::input('Tipo');
+
+ 		$personas->Huella = \Request::input('Huella');
+
+ 		$personas->Nacionalidad = \Request::input('Nacionalidad');
+
+ 		$personas->Fecha_nacimiento = \Request::input('Fecha_nacimiento');
+
+ 		$personas->Sexo = \Request::input('Sexo');
+
+ 		$personas->Alergico = \Request::input('Alergico');
+
+ 		$personas->Patologia = \Request::input('Patologia');
+
+ 		$personas->Fotografia = \Request::input('Fotografia');
+ 
+ 		$personas->save();
+ 
+ 		return redirect()->route('personas.edit', ['post' => $RutPersona])->with('message', 'Post updated');
 	}
+
 
 	/**
 	 * Remove the specified resource from storage.
@@ -96,9 +130,15 @@ class PersonasController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($RutPersona)
 	{
 		//
+		$personas= \App\Personas::find($RutPersona);
+ 
+ 		$personas->delete();
+ 
+ 		return redirect()->route('personas.index')->with('message', 'Persona deleted');
+		
 	}
 
 }
