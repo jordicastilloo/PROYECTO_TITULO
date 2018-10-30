@@ -289,17 +289,33 @@
                 <i class="fas fa-home"></i> <span> Inicio</span>
               </a>
               
+
+
+              </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fas fa-dumbbell"></i>
+                <span> Personas </span>
+                <span class="label label-primary pull-right"></span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/personas/create"><i class="fas fa-plus-circle"></i> Registrar Persona</a></li>
+                <li><a href="/personas"><i class="fas fa-bars"></i> Listar Personas</a></li>
+              </ul>
+            </li>
+
+
               
             </li>
             <li class="treeview">
               <a href="#">
                 <i class="fas fa-dumbbell"></i>
-                <span> Implementos</span>
+                <span> Inventario de Implementos</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/implementos/create"><i class="fas fa-plus-circle"></i> Crear</a></li>
-                <li><a href="/implementos"><i class="fas fa-bars"></i> Listar</a></li>
+                <li><a href="/implementos/create"><i class="fas fa-plus-circle"></i> Añadir Implemento</a></li>
+                <li><a href="/implementos"><i class="fas fa-bars"></i> Listar Implementos</a></li>
               </ul>
             </li><!--
             <li class="treeview">

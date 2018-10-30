@@ -13,18 +13,21 @@
           <table class="table table-bordered">
               <tr>
                 <th>Nombre</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Estado</th>
+                <th>Tipo</th>
               </tr>
               @foreach ($implementos as $implementos)
                   <tr>
                     <td width="500">{{ $implementos->nombre }}</td>
+                    <td width="500">{{ $implementos->estado }}</td>
+                    <td width="500">{{ $implementos->tipo }}</td>
                     <td width="60" align="center">
-                      {!! Html::link(route('implementos.edit', $implementos->idimplemento), 'Edit', array('class' => 'btn btn-success btn-md')) !!}
+                      {!! Html::link(route('implementos.edit', $implementos->idimplemento), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
+
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('implementos.destroy', $implementos->idimplemento), 'method' => 'DELETE')) !!}
-                          <button type="submit" class="btn btn-danger btn-md">Delete</button>
+                          <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
                   </tr>

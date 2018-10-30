@@ -41,19 +41,19 @@
  {!! Form::open(['route' => 'implementos.store']) !!}
  
  <div class="form-group">
- {!! Form::text('nombre', null, ["class" => "form-control"]) !!}
+ {!! Form::text('nombre', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre del Implemento']) !!}
  </div>
  
  <div class="form-group">
- {!! Form::text('estado', null, ["class" => "form-control"]) !!}
+ {!! Form::text('estado', null, ['class' => 'form-control','placeholder'=>'Ingrese el estado del Implemento']) !!}
  </div>
  
   <div class="form-group">
- {!! Form::text('tipo', null, ["class" => "form-control"]) !!}
+ {!! Form::text('tipo', null, ["class" => 'form-control','placeholder'=>'Ingrese el Tipo de Implemento']) !!}
  </div>
  
  <div class="form-group">
- {!! Form::submit('Send', ["class" => "btn btn-success btn-block"]) !!}
+ {!! Form::submit('Agregar', ["class" => "btn btn-success btn-block"]) !!}
  </div>
  
  {!! Form::close() !!}

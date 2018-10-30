@@ -12,6 +12,8 @@
 */
 Route::resource('implementos', 'ImplementosController');
 
+Route::resource('personas', 'PersonasController');
+
 Route::get('/', 'InicioController@index');
 
 Route::get('login', 'LoginController@index');
