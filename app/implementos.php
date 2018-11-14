@@ -7,7 +7,7 @@ class implementos extends Model {
 	//
 	public $timestamps = false;
 	protected $table = 'implementos';
-	protected $primaryKey = 'idimplemento';
+	protected $primaryKey = 'id_implemento';
 	protected $fillable = ['nombre', 'estado', 'tipo'];
-	protected $guarded = ['idimplemento'];
+	protected $guarded = ['id_implemento'];
 }

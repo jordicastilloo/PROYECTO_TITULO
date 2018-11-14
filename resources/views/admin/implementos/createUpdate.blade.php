@@ -26,13 +26,13 @@
      <div class="alert alert-success">{{ Session::get('message') }}</div>
  @endif -->
 @if(isset($implementos))
-	{!! Form::model($implementos, ['route' => ['implementos.update', $implementos->idimplemento], 'method' => 'patch']) !!}
+	{!! Form::model($implementos, ['route' => ['implementos.update', $implementos->id_implemento], 'method' => 'patch']) !!}
 @else
 	{!! Form::open(['route' => 'implementos.store']) !!}
 @endif
 
 @if(isset($implementos))
- {!! Form::model($implementos, ['route' => ['implementos.update', $implementos->idimplemento], 'method' => 'patch']) !!}
+ {!! Form::model($implementos, ['route' => ['implementos.update', $implementos->id_implemento], 'method' => 'patch']) !!}
 @else
  {!! Form::open(['route' => 'implementos.store']) !!}
 @endif
@@ -50,6 +50,10 @@
  
   <div class="form-group">
  {!! Form::text('tipo', null, ["class" => 'form-control','placeholder'=>'Ingrese el Tipo de Implemento']) !!}
+ </div>
+
+ <div class="form-group">
+ {!! Form::text('stock', null, ["class" => 'form-control','placeholder'=>'Ingrese el stock de Implemento']) !!}
  </div>
  
  <div class="form-group">

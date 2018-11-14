@@ -3,27 +3,24 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImplementosTable extends Migration {
+class CreateEjerciciosTable extends Migration {
 
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
-	//public $timestamps = false;
-
 	public function up()
 	{
-
-		Schema::create('implementos', function(Blueprint $table)
+		Schema::create('ejercicios', function(Blueprint $table)
 		{
-			$table->increments('id_implemento');
+			$table->increments('id_ejercicio');
 			$table->string('nombre');
-			$table->string('estado');
+			$table->string('fotografia');
+			$table->string('video');
+			$table->string('descripcion');
+			$table->string('clasificacion');
 			$table->string('tipo');
-			$table->int('stock');
-			$table->int('empresa_id_emp');
-
 		});
 	}
 
@@ -34,7 +31,7 @@ class CreateImplementosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('implementos');
+		Schema::drop('ejercicios');
 	}
 
 }

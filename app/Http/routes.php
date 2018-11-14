@@ -22,6 +22,8 @@ Route::get('admin', 'HomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::resource('personal', 'PersonalController');
+
 /*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

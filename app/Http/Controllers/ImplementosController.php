@@ -38,6 +38,7 @@ class ImplementosController extends Controller {
 		$implementos->nombre = \Request::input('nombre');
 		$implementos->estado = \Request::input('estado');
 		$implementos->tipo = \Request::input('tipo');
+		$implementos->stock = \Request::input('stock');
 		$implementos->save();
 
     return redirect('implementos/create')->with('message', 'Post saved');
@@ -60,9 +61,9 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($idimplemento)
+	public function edit($id_implemento)
 	{
-		return view('admin.implementos.createUpdate')->with('implementos', \App\Implementos::find($idimplemento));
+		return view('admin.implementos.createUpdate')->with('implementos', \App\Implementos::find($id_implemento));
 	}
 
 	/**
@@ -71,19 +72,21 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($idimplemento, ImplementosForm $implementosForm)
+	public function update($id_implemento, ImplementosForm $implementosForm)
 	{
- 		$implementos = \App\Implementos::find($idimplemento);
+ 		$implementos = \App\Implementos::find($id_implemento);
  
  		$implementos->nombre = \Request::input('nombre');
  
   		$implementos->estado = \Request::input('estado');
 
  		$implementos->tipo = \Request::input('tipo');
+
+ 		$implementos->stock = \Request::input('stock');
  
  		$implementos->save();
  
- 		return redirect()->route('implementos.edit', ['post' => $idimplemento])->with('message', 'Post updated');
+ 		return redirect()->route('implementos.edit', ['post' => $id_implemento])->with('message', 'Post updated');
 	}
 
 	/**
@@ -92,9 +95,9 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($idimplemento)
+	public function destroy($id_implemento)
 	{
-		$implementos = \App\Implementos::find($idimplemento);
+		$implementos = \App\Implementos::find($id_implemento);
  
  		$implementos->delete();
  
