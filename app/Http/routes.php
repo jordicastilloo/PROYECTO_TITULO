@@ -24,6 +24,14 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('personal', 'PersonalController');
 
+Route::resource('clases', 'ClasesController');
+
+Route::resource('empresa', 'EmpresaController');
+
+Route::resource('plan_nutricional', 'Plan_nutricionalController');
+
+Route::resource('reserva', 'ReservaController');
+
 /*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
