@@ -24,13 +24,14 @@
 
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
-      @if(!$personas->isEmpty())
+      @if(!$personal->isEmpty())
           <table class="table table-bordered">
               <tr>
                 <th>Rut</th>
                 <th>Nombre</th>
                 <th>Apellido Materno</th>
                 <th>Apellido Paterno</th>
+                <th>Cargo</th>
 
 
                 <!--
@@ -50,6 +51,7 @@
                     <td width="500">{{ $Persona->nombre_p}}</td>
                     <td width="500">{{ $Persona->ap_pat_p}}</td>
                     <td width="500">{{ $Persona->ap_mat_p}}</td>
+                    <td width="500">{{ $Persona->profesion_p}}</td>
 
 
                     <!--
@@ -67,7 +69,7 @@
                       {!! Html::link(route('personal.edit', $Persona->rut_p), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
                     <td width="60" align="center">
-                      {!! Form::open(array('route' => array('personas.destroy', $Persona->rut_p), 'method' => 'DELETE')) !!}
+                      {!! Form::open(array('route' => array('personal.destroy', $Persona->rut_p), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
                     </td>

@@ -19,13 +19,13 @@ class CreatePersonalsTable extends Migration {
 			$table->string('nombre_p');
 			$table->string('ap_pat_p');
 			$table->string('ap_mat_p');
-			$table->integer('telefono');
+			$table->integer('telefono_p');
 			$table->string('email_p');
 			$table->string('contrasena_p');
 			$table->string('nacionalidad_p');
-			$table->datetime('fecha_nac_p');
+			$table->date('fecha_nac_p');
 			$table->string('sexo_p');
-			$table->string('profresion_p');
+			$table->string('profesion_p');
 			$table->string('fotografia_p');
 			$table->integer('empresa_id_emp');
 		});

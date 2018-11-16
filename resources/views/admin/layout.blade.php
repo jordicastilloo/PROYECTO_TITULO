@@ -299,8 +299,8 @@
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/personas/create"><i class="fas fa-plus-circle"></i> Registrar Persona</a></li>
-                <li><a href="/personas"><i class="fas fa-bars"></i> Listar Personas</a></li>
+                <li><a href="/personal/create"><i class="fas fa-plus-circle"></i> Registrar Persona</a></li>
+                <li><a href="/personal/"><i class="fas fa-bars"></i> Listar Personas</a></li>
               </ul>
             </li>
 
