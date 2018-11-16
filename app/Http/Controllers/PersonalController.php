@@ -26,7 +26,7 @@ class PersonalController extends Controller {
 	public function create()
 	{
 		//
-		return view('personals.createUpdate');
+		return view('admin.personal.createUpdate');
 	}
 
 	/**
