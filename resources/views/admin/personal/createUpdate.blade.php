@@ -117,9 +117,9 @@
 <div class="form-group">
 <label for="Sexo">Selecciona genero:</label>
 <br>Masculino
-{!! Form::radio('sexo_p', 'Masculino', true, ['class' => 'form-control']) !!} 
+{!! Form::radio('sexo_p', 'Masculino', true) !!} 
 Femenino
-{!! Form::radio('sexo_p', 'Femenino', true, ['class' => 'form-control']) !!} 
+{!! Form::radio('sexo_p', 'Femenino', true) !!} 
 </div>
 
 
