@@ -129,7 +129,10 @@ Femenino
 {!! Form::radio('sexo_p', 'Femenino', true) !!} 
 </div>
 
-
+<div class="form-group">
+<label for="Foto">Subir Foto:</label>
+<input type="file" class="form-control" name="file" >
+</div>
  
  
  <div class="form-group">
