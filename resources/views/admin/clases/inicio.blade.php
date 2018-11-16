@@ -56,28 +56,10 @@
       </div>
       <div class="modal-body">
         
-      
-      @if(!$clases->isEmpty())
-          <table class="table table-bordered">
-              <tr>
-                <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Hora de Inicio</th>
-                <th>Hora Finalizacion</th>
-
-              </tr>
-              @foreach ($clases as $clases)
-                  <tr>
-                    <td width="500">{{ $clases->nombre_clase }}</td>
-                    <td width="500">{{ $clases->descripcion_clase }}</td>
-                    <td width="500">{{ $clases->hora_inicio }}</td>
-                    <td width="500">{{ $clases->hora_fin }}</td>
-      
-
+          {{ $clases->descripcion_clase }}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
