@@ -18,8 +18,8 @@ class CreateReservasTable extends Migration {
 			$table->datetime('hora_inicio');
 			$table->datetime('hora_fin');
 			$table->datetime('fecha');
-			$table->int('clientes_rut_cliente');
-			$table->int('personal_rut_p');
+			$table->integer('clientes_rut_cliente');
+			$table->integer('personal_rut_p');
 		});
 	}
 

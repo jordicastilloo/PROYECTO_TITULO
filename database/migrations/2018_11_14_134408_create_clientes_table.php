@@ -14,11 +14,11 @@ class CreateClientesTable extends Migration {
 	{
 		Schema::create('clientes', function(Blueprint $table)
 		{
-			$table->int('rut_cliente');
+			$table->integer('rut_cliente');
 			$table->string('nombre_cliente');
 			$table->string('ap_pat_cliente');
 			$table->string('ap_mat_cliente');
-			$table->int('telefono_cliente');
+			$table->integer('telefono_cliente');
 			$table->string('email_cliente');
 			$table->string('contrasena_cliente');
 			$table->string('nacionalidad_cliente');
@@ -27,8 +27,8 @@ class CreateClientesTable extends Migration {
 			$table->string('alergia_cliente');
 			$table->string('patologia_cliente');
 			$table->string('fotografia_cliente');
-			$table->int('empresa_id_emp');
-			$table->int('contrata_id_insc');
+			$table->integer('empresa_id_emp');
+			$table->integer('contrata_id_insc');
 		});
 	}
 

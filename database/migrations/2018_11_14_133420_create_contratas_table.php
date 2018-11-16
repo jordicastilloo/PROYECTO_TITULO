@@ -16,9 +16,9 @@ class CreateContratasTable extends Migration {
 		{
 			$table->increments('id_insc');
 			$table->datatime('inicio_insc');
-			$table->int('pago_insc');
+			$table->integer('pago_insc');
 			$table->datatime('fin_insc');
-			$table->int('planes_id_plan');
+			$table->integer('planes_id_plan');
 		});
 	}
 

@@ -15,8 +15,8 @@ class CreateContsTable extends Migration {
 		Schema::create('conts', function(Blueprint $table)
 		{
 			$table->increments('id_cont');
-			$table->int('rutinas_id_rutina');
-			$table->int('ejercicios_id_ejercicio');
+			$table->integer('rutinas_id_rutina');
+			$table->integer('ejercicios_id_ejercicio');
 		});
 	}
 

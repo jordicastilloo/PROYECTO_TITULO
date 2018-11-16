@@ -18,7 +18,7 @@ class CreateClasesTable extends Migration {
 			$table->string('nombre_clase');
 			$table->time('hora_inicio');
 			$table->time('hora_fin');
-			$table->int('empresa_id_emp');
+			$table->integer('empresa_id_emp');
 
 		});
 	}

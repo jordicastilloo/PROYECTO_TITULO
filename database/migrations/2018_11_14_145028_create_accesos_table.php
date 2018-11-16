@@ -17,8 +17,8 @@ class CreateAccesosTable extends Migration {
 			$table->increments('id_acceso');
 			$table->datatime('hora');
 			$table->string('mes');
-			$table->int('ano');
-			$table->int('clientes_rut_cliente');
+			$table->integer('ano');
+			$table->integer('clientes_rut_cliente');
 		});
 	}
 

@@ -21,8 +21,8 @@ class CreateImplementosTable extends Migration {
 			$table->string('nombre');
 			$table->string('estado');
 			$table->string('tipo');
-			$table->int('stock');
-			$table->int('empresa_id_emp');
+			$table->integer('stock');
+			$table->integer('empresa_id_emp');
 
 		});
 	}

@@ -18,7 +18,7 @@ class CreatePlanNutricionalsTable extends Migration {
 			$table->string('nombre_plan_nut');
 			$table->string('descripcion_plan_nut');
 			$table->string('personal_rut_p');
-			$table->int('clientes_rut_cliente');
+			$table->integer('clientes_rut_cliente');
 
 		});
 	}

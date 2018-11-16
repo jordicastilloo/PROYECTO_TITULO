@@ -17,7 +17,7 @@ class CreateEmpresasTable extends Migration {
 			$table->increments('id_emp');
 			$table->string('nombre_emp');
 			$table->string('direccion_emp');
-			$table->int('telefono_emp');
+			$table->integer('telefono_emp');
 			$table->string('email_emp');
 		});
 	}

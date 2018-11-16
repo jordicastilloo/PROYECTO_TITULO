@@ -17,10 +17,10 @@ class CreateRutinasTable extends Migration {
 			$table->increments('id_rutina');
 			$table->string('nombre_rutina');
 			$table->string('desc_rutina');
-			$table->int('series');
-			$table->int('repeticiones');
-			$table->int('personal_rut_p');
-			$table->int('clientes_rut_cliente');
+			$table->integer('series');
+			$table->integer('repeticiones');
+			$table->integer('personal_rut_p');
+			$table->integer('clientes_rut_cliente');
 
 		});
 	}

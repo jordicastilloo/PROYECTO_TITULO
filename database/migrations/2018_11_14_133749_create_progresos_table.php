@@ -16,21 +16,21 @@ class CreateProgresosTable extends Migration {
 		{
 			$table->increments('id_progreso');
 			$table->double('peso_corporal');
-			$table->int('estatura');
-			$table->int('subescapular');
-			$table->int('tricipital');
-			$table->int('supra_iliaco');
-			$table->int('hombros');
-			$table->int('pecho');
-			$table->int('biceps_relajado');
-			$table->int('biceps_contraido');
-			$table->int('muneca');
-			$table->int('cintura');
-			$table->int('cadera');
-			$table->int('muslo');
-			$table->int('gemelo');
+			$table->integer('estatura');
+			$table->integer('subescapular');
+			$table->integer('tricipital');
+			$table->integer('supra_iliaco');
+			$table->integer('hombros');
+			$table->integer('pecho');
+			$table->integer('biceps_relajado');
+			$table->integer('biceps_contraido');
+			$table->integer('muneca');
+			$table->integer('cintura');
+			$table->integer('cadera');
+			$table->integer('muslo');
+			$table->integer('gemelo');
 			$table->datatime('fecha_evaluacion');
-			$table->int('clientes_rut_cliente');
+			$table->integer('clientes_rut_cliente');
 		});
 	}
 
