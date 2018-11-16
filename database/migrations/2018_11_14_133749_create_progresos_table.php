@@ -29,7 +29,7 @@ class CreateProgresosTable extends Migration {
 			$table->integer('cadera');
 			$table->integer('muslo');
 			$table->integer('gemelo');
-			$table->datatime('fecha_evaluacion');
+			$table->datetime('fecha_evaluacion');
 			$table->integer('clientes_rut_cliente');
 		});
 	}

@@ -15,7 +15,7 @@ class CreateAccesosTable extends Migration {
 		Schema::create('accesos', function(Blueprint $table)
 		{
 			$table->increments('id_acceso');
-			$table->datatime('hora');
+			$table->datetime('hora');
 			$table->string('mes');
 			$table->integer('ano');
 			$table->integer('clientes_rut_cliente');

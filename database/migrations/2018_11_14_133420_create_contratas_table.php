@@ -15,9 +15,9 @@ class CreateContratasTable extends Migration {
 		Schema::create('contratas', function(Blueprint $table)
 		{
 			$table->increments('id_insc');
-			$table->datatime('inicio_insc');
+			$table->datetime('inicio_insc');
 			$table->integer('pago_insc');
-			$table->datatime('fin_insc');
+			$table->datetime('fin_insc');
 			$table->integer('planes_id_plan');
 		});
 	}
