@@ -56,6 +56,16 @@ class PersonalController extends Controller {
 		$personal->empresa_id_emp = \Request::input('empresa_id_emp');
 		$personal->save();
 
+		//obtenemos el campo file definido en el formulario
+       $file = $request->file('file');
+ 
+       //obtenemos el nombre del archivo
+       $nombre = $file->getClientOriginalName();
+ 
+       //indicamos que queremos guardar un nuevo archivo en el disco local
+       \Storage::disk('local')->put($nombre,  \File::get($file));
+ 
+
     return redirect('personal/create')->with('message', 'Post saved');
 	}
 
