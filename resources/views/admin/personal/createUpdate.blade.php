@@ -70,11 +70,18 @@
  !!}
  </div>
 
+
  <div class="form-group">
- {!! Form::text('tipo_p', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Usuario'])
- !!}
- </div>
+<label for="Sexo">Seleccione Tipo de Usuario:</label>
+<br>Administrador
+{!! Form::radio('tipo_p', 'Administrador', true) !!} 
+Profesor
+{!! Form::radio('tipo_p', 'Profesor', true) !!} 
+Nutricionista
+{!! Form::radio('tipo_p', 'Nutricionista', true) !!} 
+</div>
+
+
 
  <div class="form-group">
  {!! Form::text('contrasena_p', null,
