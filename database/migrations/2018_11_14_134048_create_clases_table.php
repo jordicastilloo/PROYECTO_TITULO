@@ -16,6 +16,7 @@ class CreateClasesTable extends Migration {
 		{
 			$table->increments('id_clase');
 			$table->string('nombre_clase');
+			$table->string('descripcion_clase');
 			$table->time('hora_inicio');
 			$table->time('hora_fin');
 			$table->integer('empresa_id_emp');

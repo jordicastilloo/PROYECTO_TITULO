@@ -39,6 +39,7 @@ class ClasesController extends Controller {
 		//
 		$clases = new \App\implementos;
 		$clases->nombre_clase = \Request::input('nombre_clase');
+		$clases->nombre_clase = \Request::input('descripcion_clase');
 		$clases->hora_inicio = \Request::input('hora_inicio');
 		$clases->hora_fin = \Request::input('hora_fin');
 		$clases->empresa_id_emp = \Request::input('empresa_id_emp');
@@ -82,6 +83,8 @@ class ClasesController extends Controller {
 		$clases = \App\Implementos::find($id_implemento);
  
  		$clases->nombre = \Request::input('nombre_clase');
+
+ 		$clases->nombre = \Request::input('descripcion_clase');
  
   		$clases->estado = \Request::input('hora_inicio');
 
