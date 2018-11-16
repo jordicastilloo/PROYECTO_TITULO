@@ -41,7 +41,8 @@
                       {!! Form::open(array('route' => array('implementos.destroy', $implementos->id_implemento), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
-                    </td>
+
+         </td>
                   </tr>
               @endforeach
           </table>

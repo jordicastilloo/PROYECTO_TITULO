@@ -26,7 +26,7 @@ class ClasesController extends Controller {
 	public function create()
 	{
 		//
-		return view('clases.createUpdate');
+		return view('admin.clases.createUpdate');
 	}
 
 	/**
@@ -37,9 +37,9 @@ class ClasesController extends Controller {
 	public function store()
 	{
 		//
-		$clases = new \App\implementos;
+		$clases = new \App\clases;
 		$clases->nombre_clase = \Request::input('nombre_clase');
-		$clases->nombre_clase = \Request::input('descripcion_clase');
+		$clases->descripcion_clase = \Request::input('descripcion_clase');
 		$clases->hora_inicio = \Request::input('hora_inicio');
 		$clases->hora_fin = \Request::input('hora_fin');
 		$clases->empresa_id_emp = \Request::input('empresa_id_emp');
@@ -80,11 +80,11 @@ class ClasesController extends Controller {
 	public function update($id_clase,ClasesForm $clasesForm)
 	{
 		//
-		$clases = \App\Implementos::find($id_implemento);
+		$clases = \App\Clases::find($id_clase);
  
  		$clases->nombre = \Request::input('nombre_clase');
 
- 		$clases->nombre = \Request::input('descripcion_clase');
+ 		$clases->descripcion_clase = \Request::input('descripcion_clase');
  
   		$clases->estado = \Request::input('hora_inicio');
 

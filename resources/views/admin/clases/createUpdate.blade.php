@@ -43,6 +43,10 @@
  <div class="form-group">
  {!! Form::text('nombre_clase', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre de la Clase']) !!}
  </div>
+
+  <div class="form-group">
+ {!! Form::textarea('descripcion_clase', null, ['class' => 'form-control','placeholder'=>'Ingrese Descripcion de la Clase']) !!}
+ </div>
  
  <div class="form-group">
  {!! Form::text('hora_inicio', null, ['class' => 'form-control','placeholder'=>'Ingrese hora de Inicio']) !!}

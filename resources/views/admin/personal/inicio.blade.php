@@ -65,6 +65,8 @@
                     <td width="500">{{ $Persona->Alergico}}</td>
                     <td width="500">{{ $Persona->Patologia}}</td>
                     <td width="500">{{ $Persona->Fotografia}}</td>  -->
+
+                    
                     <td width="60" align="center">
                       {!! Html::link(route('personal.edit', $Persona->rut_p), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>

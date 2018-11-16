@@ -9,7 +9,7 @@ class Clases extends Model {
     protected $table = 'clases';
 	protected $primaryKey = 'id_clase';
 	//protected $
-	protected $fillable = ['id_clase','nombre_clase', 'descripcion_clase','hora_inicio', 'hora_fin','empresa_id_emp'];
+	protected $fillable = ['nombre_clase', 'descripcion_clase','hora_inicio', 'hora_fin','empresa_id_emp'];
 	protected $guarded = ['id_clase'];
 
 }

@@ -73,12 +73,13 @@
 
  <div class="form-group">
 <label for="Sexo">Seleccione Tipo de Usuario:</label>
-<br>Administrador
+<br>
 {!! Form::radio('tipo_p', 'Administrador', true) !!} 
-Profesor
+Administrador
 {!! Form::radio('tipo_p', 'Profesor', true) !!} 
-Nutricionista
+Profesor
 {!! Form::radio('tipo_p', 'Nutricionista', true) !!} 
+Nutricionista
 </div>
 
 
@@ -123,10 +124,12 @@ Nutricionista
 
 <div class="form-group">
 <label for="Sexo">Selecciona genero:</label>
-<br>Masculino
+<br>
 {!! Form::radio('sexo_p', 'Masculino', true) !!} 
-Femenino
-{!! Form::radio('sexo_p', 'Femenino', true) !!} 
+Masculino
+
+{!! Form::radio('sexo_p', 'Femenino', true) !!}
+Femenino 
 </div>
 
 <div class="form-group">

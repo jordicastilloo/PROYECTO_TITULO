@@ -295,12 +295,12 @@
             <li class="treeview">
               <a href="#">
                 <i class="fas fa-dumbbell"></i>
-                <span> Personas </span>
+                <span> Personal </span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/personal/create"><i class="fas fa-plus-circle"></i> Registrar Persona</a></li>
-                <li><a href="/personal/"><i class="fas fa-bars"></i> Listar Personas</a></li>
+                <li><a href="/personal/create"><i class="fas fa-plus-circle"></i> Registrar Personal</a></li>
+                <li><a href="/personal/"><i class="fas fa-bars"></i> Listar Personal</a></li>
               </ul>
             </li>
 
@@ -317,7 +317,33 @@
                 <li><a href="/implementos/create"><i class="fas fa-plus-circle"></i> Añadir Implemento</a></li>
                 <li><a href="/implementos"><i class="fas fa-bars"></i> Listar Implementos</a></li>
               </ul>
-            </li><!--
+            </li>
+
+
+
+             </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fas fa-dumbbell"></i>
+                <span> Clases </span>
+                <span class="label label-primary pull-right"></span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/clases/create"><i class="fas fa-plus-circle"></i> Añadir Clase</a></li>
+                <li><a href="/clases/"><i class="fas fa-bars"></i> Listar Clases</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+
+
+
+
+
+            <!--
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-folder"></i> <span>Examples</span>
