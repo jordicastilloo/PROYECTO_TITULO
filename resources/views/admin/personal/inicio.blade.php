@@ -32,6 +32,7 @@
                 <th>Apellido Materno</th>
                 <th>Apellido Paterno</th>
                 <th>Cargo</th>
+                <th>Fotografia</th>
 
 
                 <!--
@@ -52,6 +53,7 @@
                     <td width="500">{{ $Persona->ap_pat_p}}</td>
                     <td width="500">{{ $Persona->ap_mat_p}}</td>
                     <td width="500">{{ $Persona->profesion_p}}</td>
+                    <td width="500">{{ $Persona->fotografia_p}}</td>
 
 
                     <!--
