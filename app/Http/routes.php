@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('progreso', 'ProgresoController');
+
 Route::resource('clientes', 'ClientesController');
 
 Route::resource('implementos', 'ImplementosController');

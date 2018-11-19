@@ -45,7 +45,7 @@
  </div>
  
  <div class="form-group">
- {!! Form::text('descripcion_plan_nut', null, ['class' => 'form-control','placeholder'=>'Ingrese Plan Nutricional']) !!}
+ {!! Form::textarea('descripcion_plan_nut', null, ['class' => 'form-control','placeholder'=>'Ingrese Plan Nutricional']) !!}
  </div>
  
   <div class="form-group">

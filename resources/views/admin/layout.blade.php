@@ -352,6 +352,34 @@
 
 
 
+             </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fas fa-dumbbell"></i>
+                <span> Progreso Clientes </span>
+                <span class="label label-primary pull-right"></span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/progreso/create"><i class="fas fa-plus-circle"></i> Añadir Progreso a Clientes</a></li>
+                <li><a href="/progreso/"><i class="fas fa-bars"></i> Listar Progresos</a></li>
+              </ul>
+            </li>
+
+
+
+
+ </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fas fa-dumbbell"></i>
+                <span> Plan Nutricional </span>
+                <span class="label label-primary pull-right"></span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/plan_nutricional/create"><i class="fas fa-plus-circle"></i> Añadir Plan Nutricional</a></li>
+                <li><a href="/plan_nutricional/"><i class="fas fa-bars"></i> Listar Plan</a></li>
+              </ul>
+            </li>
 
 
 

@@ -56,7 +56,12 @@
       </div>
       <div class="modal-body">
         
-          {{ $clases->descripcion_clase }}
+            
+
+               {{ $clases->descripcion_clase }}
+                    
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
