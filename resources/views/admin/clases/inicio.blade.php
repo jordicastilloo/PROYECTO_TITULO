@@ -1,3 +1,5 @@
+
+
 @extends('admin.layout')
  
 @section('content')
@@ -36,6 +38,9 @@
 
 
                     <!-- Button trigger modal -->
+
+
+<!--
 <td width="60" align="center">
 
 
@@ -44,7 +49,8 @@
 </button>
 
 
-<!-- Modal -->
+
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -69,11 +75,14 @@
     </div>
   </div>
 </div>
-</td>
+</td>  
+-->
+ 
                 
                     <td width="60" align="center">
                       {!! Html::link(route('clases.edit', $clases->id_clase), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
+
 
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('clases.destroy', $clases->id_clase), 'method' => 'DELETE')) !!}
@@ -86,6 +95,8 @@
           </table>
 
       @endif
+
+
  </div>
  </div>
 </div>
