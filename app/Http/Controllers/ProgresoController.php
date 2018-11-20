@@ -53,7 +53,8 @@ class ProgresoController extends Controller {
 		$progreso->cadera = \Request::input('cadera');
 		$progreso->muslo = \Request::input('muslo');
 		$progreso->gemelo = \Request::input('gemelo');
-		$progreso->fecha_evaluacion = \Request::input('fecha_evaluacion');
+		$progreso->fecha_evaluacion = date("Y-m-d");
+		//\Request::input('fecha_evaluacion');
 		$progreso->clientes_rut_cliente = \Request::input('clientes_rut_cliente');
 		$progreso->save();
 

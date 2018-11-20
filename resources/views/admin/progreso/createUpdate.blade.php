@@ -100,9 +100,6 @@
  {!! Form::text('gemelo', null, ["class" => 'form-control','placeholder'=>'Ingrese medida Gemelo']) !!}
  </div>
 
- <div class="form-group">
- {!! Form::text('fecha_evaluacion', null, ["class" => 'form-control','placeholder'=>'Ingrese Fecha de evaluacion (aa-mm-dd)']) !!}
- </div>
 
  <div class="form-group">
  {!! Form::text('clientes_rut_cliente', null, ["class" => 'form-control','placeholder'=>'Ingrese Cliente']) !!}

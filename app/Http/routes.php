@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::resource('personas', 'PersonasController');
 
 Route::resource('planes', 'PlanesController');
 
