@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('planes', 'PlanesController');
+
 Route::resource('progreso', 'ProgresoController');
 
 Route::resource('clientes', 'ClientesController');
