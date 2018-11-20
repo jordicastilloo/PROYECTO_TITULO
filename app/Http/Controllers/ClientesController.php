@@ -52,7 +52,7 @@ class ClientesController extends Controller {
 		$clientes->alergia_cliente = \Request::input('alergia_cliente');
 		$clientes->patologia_cliente = \Request::input('patologia_cliente');
 		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
-		$clientes->empresa_id_emp = \Request::input('empresa_id_emp');
+		$clientes->empresa_id_emp = 1000;
 		$clientes->contrata_id_insc = \Request::input('contrata_id_insc');
 		$clientes->save();
 
@@ -130,7 +130,6 @@ class ClientesController extends Controller {
 
  		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
 
- 		$clientes->empresa_id_emp = \Request::input('empresa_id_emp');
 
  		$clientes->contrata_id_insc = \Request::input('contrata_id_insc');
 

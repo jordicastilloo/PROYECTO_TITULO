@@ -62,7 +62,7 @@
  {!! Form::text('empresa_id_emp', null, ["class" => 'form-control','placeholder'=>'Ingrese Empresa']) !!}
  </div>-->
 
-
+ 
  
  <div class="form-group">
  {!! Form::submit('Agregar Clase', ["class" => "btn btn-success btn-block"]) !!}
