@@ -15,7 +15,7 @@ class Plan_nutricionalController extends Controller {
 	public function index()
 	{
 		//
-		return view("admin.iplan_nutricional.inicio")->with('plan_nutricional', \App\Plan_nutricional::paginate(2)->setPath('plan_nutricional'));
+		return view("admin.plan_nutricional.inicio")->with('plan_nutricional', \App\Plan_nutricional::paginate(2)->setPath('plan_nutricional'));
 	}
 
 	/**
