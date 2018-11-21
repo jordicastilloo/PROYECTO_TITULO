@@ -34,6 +34,7 @@
                 <th>Estado</th>
                 <th>Tipo</th>
                 <th>Stock</th>
+                <th>Fecha de Ingreso</th>
               </tr>
 
 
@@ -43,6 +44,7 @@
                     <td width="500">{{ $implemento->estado }}</td>
                     <td width="500">{{ $implemento->tipo }}</td>
                     <td width="500">{{ $implemento->stock }}</td>
+                    <td width="500">{{ $implemento->fecha_ingreso  }}</td>
                     <td width="60" align="center">
                       {!! Html::link(route('implementos.edit', $implemento->id_implemento), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>

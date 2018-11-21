@@ -304,26 +304,7 @@
               </ul>
             </li>
 
-               
-
-
-               </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fas fa-dumbbell"></i>
-                <span> PERSONAS(BORRAR) </span>
-                <span class="label label-primary pull-right"></span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/clientes/create"><i class="fas fa-plus-circle"></i> Registrar PERSONAS</a></li>
-                <li><a href="/clientes/"><i class="fas fa-bars"></i> Listar PERSONAS</a></li>
-              </ul>
-            </li>
-
-
               
-
-
             </li>
             <li class="treeview">
               <a href="#">

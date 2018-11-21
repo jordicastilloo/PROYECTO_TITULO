@@ -50,6 +50,7 @@ class ImplementosController extends Controller {
 		$implementos->estado = \Request::input('estado');
 		$implementos->tipo = \Request::input('tipo');
 		$implementos->stock = \Request::input('stock');
+		$implementos->fecha_ingreso = date("Y-m-d");
 		$implementos->save();
 
     return redirect('implementos/create')->with('message', 'Post saved');
