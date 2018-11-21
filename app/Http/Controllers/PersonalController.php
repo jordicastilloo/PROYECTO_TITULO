@@ -19,7 +19,9 @@ class PersonalController extends Controller {
 	{
 
 
-            $personal = Personal::search($request->name)->orderBy('rut_p','DESC')->paginate(5);
+           // $personal = Personal::search($request->name)->orderBy('rut_p','DESC')->paginate(5);
+
+		    $personal = Personal::search($request->name)->type($request->get('tipo_p'))->orderBy('rut_p','DESC')->paginate(5);
 
             return view ('admin.personal.inicio')->with('personal',$personal);
 

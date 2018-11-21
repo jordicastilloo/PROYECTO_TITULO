@@ -7,9 +7,18 @@
 <div class="row">
  <div class="col-md-3">-->
 
-{!! Form::open (['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+<!--
+{!! Form::open (['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}-->
+
+{!!Form::model(Request::all(), ['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+
+
   <div class="form-group">
     {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre-Apellido Paterno'])!!}    
+
+
+    <!--Formulario lista de tipos-->
+     {!!Form::select('tipo_p',config('options.types'),null,['class' => 'form-control'])!!}
   </div>
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
@@ -41,7 +50,7 @@
                 <th>Nombre</th>
                 <th>Apellido Paterno</th>
                 <th>Apellido Materno</th>
-                <th>Cargo</th>
+                <th>Tipo</th>
                 <th>Fotografia</th>
 
 
@@ -93,7 +102,9 @@
     
       @endif
 
-         {!! $personal->render() !!}
+         <!--{!! $personal->render() !!}-->
+         <!--PARA VER COMPLETA LA LISTA DE ACUERDO AL TIPO-->
+         {!! $personal->appends(Request::only(['name','tipo_p']))->render()!!}
  </div>
  </div>
 </div>

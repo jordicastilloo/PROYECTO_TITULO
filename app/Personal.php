@@ -30,7 +30,22 @@ class Personal extends Model {
         //return $query->where('nombre_p','LIKE',"%$name%");
          $query->where(\DB::raw("CONCAT(nombre_p,' ',ap_pat_p)"),"LIKE","%$name%");
 
+     }
     }
- }
+
+
+    public function scopeType($query,$type){
+    	$types = config('options.types');
+
+    	if($type != "" && isset($types[$type])){
+    		$query->where('tipo_p',$type);
+    	}
+    }
+
+
+
+
+
+
 
 }
