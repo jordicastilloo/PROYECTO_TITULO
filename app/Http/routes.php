@@ -11,6 +11,9 @@
 |
 */
 
+
+
+
 Route::resource('personas', 'PersonasController');
 
 Route::resource('planes', 'PlanesController');
@@ -22,6 +25,7 @@ Route::resource('clientes', 'ClientesController');
 Route::resource('implementos', 'ImplementosController');
 
 Route::resource('personas', 'PersonasController');
+
 
 Route::get('/', 'InicioController@index');
 

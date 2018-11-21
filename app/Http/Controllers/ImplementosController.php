@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ImplementosForm;
 use Illuminate\Http\Request;
+use App\Http\Request\ImplementosRequest;
+use App\Implementos;
 
 class ImplementosController extends Controller {
 
@@ -12,9 +14,17 @@ class ImplementosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		return view("admin.implementos.inicio")->with('implementos', \App\Implementos::paginate(2)->setPath('implementos'));
+
+
+		$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
+
+		return view('admin.implementos.inicio')->with('implementos',$implementos);
+
+
+        /*
+		return view("implementos.inicio")->with('implementos', \App\Implementos::paginate(2)->setPath('implementos'));*/
 	}
 
 	/**
@@ -34,6 +44,7 @@ class ImplementosController extends Controller {
 	 */
 	public function store()
 	{
+
 		$implementos = new \App\implementos;
 		$implementos->nombre = \Request::input('nombre');
 		$implementos->estado = \Request::input('estado');

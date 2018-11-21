@@ -19,6 +19,10 @@
  {!! Html::link(route('personas.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!} 
 
 
+
+
+
+
 </div>
 
 

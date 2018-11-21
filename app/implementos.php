@@ -10,4 +10,14 @@ class implementos extends Model {
 	protected $primaryKey = 'id_implemento';
 	protected $fillable = ['nombre', 'estado', 'tipo'];
 	protected $guarded = ['id_implemento'];
+
+
+
+ public function scopeSearch($query,$name){
+
+
+        if(trim($name) != ""){
+        return $query->where('nombre','LIKE',"%$name%");
+    }
+ }
 }

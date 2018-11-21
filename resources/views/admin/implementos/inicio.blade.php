@@ -2,13 +2,22 @@
  
 @section('content')
 
-<!--
-<div class="container">
-<div class="row">
- <div class="col-md-3">-->
 
 
-  <div class="container">
+  {!! Form::open (['route' => 'implementos.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+  <div class="form-group">
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre del Implemento'])!!}    
+  </div>
+  <button type="submit" class="btn btn-default">Buscar</button>
+  {!! Form::close()!!}
+
+
+
+
+<!-----     -->
+
+
+ <div class="container">
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
 
