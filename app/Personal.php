@@ -1,6 +1,7 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Personal extends Model {
 
@@ -13,24 +14,21 @@ class Personal extends Model {
 	protected $guarded = ['rut_p'];
 
 
-$personal = Personal::with(['personal'=> function($q){
+	public function getFullNameAttribute()
+	{
+		return $this->nombre_p.''.$this->ap_pat_p;
+	}
 
-            $q->select([
-                id,
-                DB::raw("CONCAT(nombre_p,' ',ap_pat_p)  AS fullname")
-            ]);
-
-    }])->get();
 
 
 	public function scopeSearch($query,$name){
 
 
-        if(trim($name) != ""){
+
+        if(trim($name) != "")
+        {
         //return $query->where('nombre_p','LIKE',"%$name%");
-
-      return $query->where($q,'LIKE',"%$name%");
-
+         $query->where(\DB::raw("CONCAT(nombre_p,' ',ap_pat_p)"),"LIKE","%$name%");
 
     }
  }

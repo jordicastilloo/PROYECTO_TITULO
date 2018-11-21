@@ -9,7 +9,7 @@
 
 {!! Form::open (['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
   <div class="form-group">
-    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre de la Persona'])!!}    
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre-Apellido Paterno'])!!}    
   </div>
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
@@ -39,8 +39,8 @@
               <tr>
                 <th>Rut</th>
                 <th>Nombre</th>
-                <th>Apellido Materno</th>
                 <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
                 <th>Cargo</th>
                 <th>Fotografia</th>
 

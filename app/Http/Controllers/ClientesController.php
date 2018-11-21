@@ -4,7 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ClientesForm;
 use Illuminate\Http\Request;
-
+use App\Clientes;
 class ClientesController extends Controller {
 
 	/**
@@ -12,10 +12,16 @@ class ClientesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
-		return view("admin.clientes.inicio")->with('clientes', \App\Clientes::paginate(2)->setPath('clientes'));
+		$clientes = Clientes::search($request->name)->orderBy('rut_cliente','DESC')->paginate(5);
+
+            return view ('admin.clientes.inicio')->with('clientes',$clientes);
+
+
+
+		//return view("admin.clientes.inicio")->with('clientes', \App\Clientes::paginate(2)->setPath('clientes'));
 	}
 
 	/**

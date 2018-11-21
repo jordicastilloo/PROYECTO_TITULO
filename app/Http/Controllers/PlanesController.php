@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PlanesForm;
 use Illuminate\Http\Request;
+use App\Planes;
+
 
 class PlanesController extends Controller {
 
@@ -12,10 +14,16 @@ class PlanesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
-		return view("admin.planes.inicio")->with('planes', \App\Planes::paginate(2)->setPath('planes'));
+		$planes = Planes::search($request->name)->orderBy('id_plan','DESC')->paginate(5);
+
+		return view ('admin.planes.inicio')->with('planes',$planes);
+
+
+
+		//return view("admin.planes.inicio")->with('planes', \App\Planes::paginate(2)->setPath('planes'));
 	}
 
 	/**

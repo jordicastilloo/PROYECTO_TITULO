@@ -6,7 +6,6 @@ use App\Http\Requests\PersonalForm;
 use Illuminate\Http\Request;
 use App\Personal;
 use App\Http\Request\PersonalRequest;
-use Illuminate\Support\Facades\DB;
 
 
 class PersonalController extends Controller {
@@ -18,7 +17,7 @@ class PersonalController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		//
+
 
             $personal = Personal::search($request->name)->orderBy('rut_p','DESC')->paginate(5);
 

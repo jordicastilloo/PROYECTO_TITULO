@@ -11,4 +11,13 @@ class Planes extends Model {
 	protected $fillable = ['nombre_plan', 'precio_plan'];
 	protected $guarded = ['id_plan'];
 
+
+	public function scopeSearch($query,$name){
+
+
+        if(trim($name) != ""){
+        return $query->where('nombre_plan','LIKE',"%$name%");
+    }
+ }
+
 }
