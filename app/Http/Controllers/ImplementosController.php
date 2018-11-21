@@ -16,11 +16,11 @@ class ImplementosController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-
+		//$implementos = Implementos::orderBy('id_implemento','DESC')->paginate(5);
 
 		$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
 
-		return view('admin.implementos.inicio')->with('implementos',$implementos);
+		return view ('admin.implementos.inicio')->with('implementos',$implementos);
 
 
         /*

@@ -13,6 +13,7 @@ class implementos extends Model {
 
 
 
+
  public function scopeSearch($query,$name){
 
 

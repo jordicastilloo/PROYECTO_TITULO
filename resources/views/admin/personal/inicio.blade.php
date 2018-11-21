@@ -7,6 +7,16 @@
 <div class="row">
  <div class="col-md-3">-->
 
+{!! Form::open (['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+  <div class="form-group">
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre de la Persona'])!!}    
+  </div>
+  <button type="submit" class="btn btn-default">Buscar</button>
+  {!! Form::close()!!}
+
+
+
+
 <div class="container">
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
@@ -80,12 +90,10 @@
                   </tr>
               @endforeach
           </table>
-          
-             
-      
-
-
+    
       @endif
+
+         {!! $personal->render() !!}
  </div>
  </div>
 </div>
