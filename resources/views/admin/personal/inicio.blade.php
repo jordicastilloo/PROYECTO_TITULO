@@ -51,7 +51,7 @@
                 <th>Apellido Paterno</th>
                 <th>Apellido Materno</th>
                 <th>Tipo</th>
-                <th>Fotografia</th>
+                
 
               </tr>
               @foreach ($personal as $Persona)
@@ -61,7 +61,12 @@
                     <td width="500">{{ $Persona->ap_pat_p}}</td>
                     <td width="500">{{ $Persona->ap_mat_p}}</td>
                     <td width="500">{{ $Persona->tipo_p}}</td>
-                    <td width="500">{{ $Persona->fotografia_p}}</td>
+
+                     <td><a href="#" data-target="#modal-delete-{{$Persona->rut_p}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-sm">Mostrar</button>
+      </a></td>
+ 
+                  
 
                     
                     <td width="60" align="center">
@@ -73,12 +78,21 @@
                       {!! Form::close() !!}
                     </td>
                   </tr>
+
+                                   @include('admin.personal.botonmodal')
+
+
+
+                 <!-- @include('admin.personal.botonmodal');-->
+
+
+
               @endforeach
+
           </table>
     
       @endif
 
-         <!--{!! $personal->render() !!}-->
          <!--PARA VER COMPLETA LA LISTA DE ACUERDO AL TIPO-->
          {!! $personal->appends(Request::only(['name','tipo_p']))->render()!!}
  </div>
