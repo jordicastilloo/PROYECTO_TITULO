@@ -53,17 +53,6 @@
                 <th>Tipo</th>
                 <th>Fotografia</th>
 
-
-                <!--
-                <th>Telefono</th>
-                <th>Email</th>
-                <th>Tipo</th>
-              
-                <th>Fecha de Nacimiento</th>
-                <th>Sexo</th>
-                <th>Alergico</th>
-                <th>Patologia</th>
-                <th>Fotografia</th> -->
               </tr>
               @foreach ($personal as $Persona)
                   <tr>
@@ -73,19 +62,6 @@
                     <td width="500">{{ $Persona->ap_mat_p}}</td>
                     <td width="500">{{ $Persona->tipo_p}}</td>
                     <td width="500">{{ $Persona->fotografia_p}}</td>
-
-
-                    <!--
-                    <td width="500">{{ $Persona->Telefono}}</td>
-                    <td width="500">{{ $Persona->Email}}</td>
-                    <td width="500">{{ $Persona->Tipo}}</td>
-                    
-                   
-                    <td width="500">{{ $Persona->Fecha_nacimiento}}</td>
-                    <td width="500">{{ $Persona->Sexo}}</td>
-                    <td width="500">{{ $Persona->Alergico}}</td>
-                    <td width="500">{{ $Persona->Patologia}}</td>
-                    <td width="500">{{ $Persona->Fotografia}}</td>  -->
 
                     
                     <td width="60" align="center">

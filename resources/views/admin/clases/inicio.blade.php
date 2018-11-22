@@ -1,13 +1,18 @@
-
-
 @extends('admin.layout')
- 
-@section('content')
+ @section('content')
 
 <!--
 <div class="container">
 <div class="row">
  <div class="col-md-3">-->
+
+  {!! Form::open (['route' => 'clases.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+  <div class="form-group">
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre de la clase'])!!}  
+   <!-- {!!Form::select('estado',config('options.types'),null,['class' => 'form-control'])!!}-->  
+  </div>
+  <button type="submit" class="btn btn-default">Buscar</button>
+  {!! Form::close()!!}
 
 
 
@@ -30,77 +35,49 @@
                 <th>Hora Finalizacion</th>
 
               </tr>
-              @foreach ($clases as $clases)
+              @foreach ($clases as $clase)
                   <tr>
-                    <td width="500">{{ $clases->nombre_clase }}</td>
-                    <td width="500">{{ $clases->descripcion_clase }}</td>
-                    <td width="500">{{ $clases->hora_inicio }}</td>
-                    <td width="500">{{ $clases->hora_fin }}</td>
+                    <td width="500">{{ $clase->nombre_clase }}</td>
+                    <td width="500">{{ $clase->descripcion_clase }}</td>
+                    <td width="500">{{ $clase->hora_inicio }}</td>
+                    <td width="500">{{ $clase->hora_fin }}</td>
 
 
-                    <!-- Button trigger modal -->
-
-
-<!--
-<td width="60" align="center">
-
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Listar Datos
-</button>
-
-
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-            
-
-               {{ $clases->descripcion_clase }}
-                    
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-</td>  
--->
+                     <td><a href="#" data-target="#modal-delete-{{$clase->id_clase}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-sm">Mostrar</button>
+      </a></td>
  
                 
                     <td width="60" align="center">
-                      {!! Html::link(route('clases.edit', $clases->id_clase), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
+                      {!! Html::link(route('clases.edit', $clase->id_clase), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
 
 
                     <td width="60" align="center">
-                      {!! Form::open(array('route' => array('clases.destroy', $clases->id_clase), 'method' => 'DELETE')) !!}
+                      {!! Form::open(array('route' => array('clases.destroy', $clase->id_clase), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
 
+
                   </tr>
+
+
+                                 @include('admin.clases.botonmodal')
+
               @endforeach
           </table>
 
       @endif
 
+      {!! $clases->render() !!}
+
 
  </div>
  </div>
 </div>
+
+
 @endsection
 
 

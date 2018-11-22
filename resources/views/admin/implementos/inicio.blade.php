@@ -2,9 +2,9 @@
  
 @section('content')
 
+   
+   {!!Form::model(Request::all(), ['route' => 'implementos.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
 
-
-  {!! Form::open (['route' => 'implementos.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
   <div class="form-group">
     {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre del Implemento'])!!}  
    <!-- {!!Form::select('estado',config('options.types'),null,['class' => 'form-control'])!!}-->  

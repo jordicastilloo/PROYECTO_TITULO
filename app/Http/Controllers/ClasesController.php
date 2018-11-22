@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ClasesForm;
 use Illuminate\Http\Request;
+use App\Http\Request\ClasesRequest;
+use App\Clases;
 
 class ClasesController extends Controller {
 
@@ -12,10 +14,12 @@ class ClasesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
-		return view("admin.clases.inicio")->with('clases', \App\Clases::paginate(2)->setPath('clases'));
+		$clases = Clases::search($request->name)->orderBy('id_clase','DESC')->paginate(5);
+
+		return view ('admin.clases.inicio')->with('clases',$clases);
 	}
 
 	/**
