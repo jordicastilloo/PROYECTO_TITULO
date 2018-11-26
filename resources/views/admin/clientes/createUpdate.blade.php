@@ -102,22 +102,35 @@
 
 <div class="form-group">
  {!! Form::text('fecha_nac_cliente', null,
- ['class'=>'form-control', 'id'=>'fecha_nac_cliente']),old('fecha_nac_cliente')!!}
+ ['class'=>'form-control datepicker' , 'id'=>'fechanacimiento']),old('fecha_nac_cliente')!!}
  </div>
 
+
+
+
  
-
-
 <script type="text/javascript" src="/dist/jquery-ui/external/jquery/jquery.js"></script>
 <script type="text/javascript" src="/dist/jquery-ui/jquery-ui.min.js"></script> 
 
 
  
 <script type="text/javascript">
+
+	
     //$("#date").datepicker();
-    	$('#fecha_nac_cliente').datepicker({dateFormat: 'yy-mm-dd', changeMonth: true, changeYear: true, language: "es", yearRange: '-100:+0'});
+    	//$('#fecha_nac_cliente').datepicker({dateFormat: 'yy-mm-dd', changeMonth: true, changeYear: true, language: "es", yearRange: '-100:+0'});
+var fecha = $("#fecha_nac_cliente").val();
 
+    $('.datepicker').datepicker({
+    dateFormat: "yy-mm-dd",
+    language: "es",
+    autoclose: true,
+    changeMonth: true, 
+    changeYear: true,  
+    yearRange: '-100:+0'
+}).datepicker('setDate', new Date(fecha));
 
+   
 
     
 </script>
