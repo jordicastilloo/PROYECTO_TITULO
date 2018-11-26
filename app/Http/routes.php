@@ -55,6 +55,10 @@ Route::get('home', function(){
 });
 
 
+Route::get('inscripcion', function(){
+	return view('admin.inscripcion.inicio');
+});
+
 Route::get('entrenador', function(){
 	return view('sitioweb.entrenador');
 });
