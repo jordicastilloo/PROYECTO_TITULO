@@ -21,9 +21,17 @@ class ClientesForm extends Request {
 	 */
 	public function rules()
 	{
-		return [
-			//
-		];
+		return[
+
+		    'email_cliente'=> 'min:4|max:120|unique:clientes|required',
+		    'rut_cliente'=> 'unique:clientes|required'
+		    	];
+		
+
 	}
+
+
+
+
 
 }

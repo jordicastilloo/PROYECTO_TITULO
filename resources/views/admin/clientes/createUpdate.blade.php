@@ -1,7 +1,23 @@
 @extends('admin.layout')
  
 @section('content')
+
+
+ @if(count($errors)>0)
+ <div class="alert alert-danger" role="alert">
+    <ul>
+        @foreach($errors->all()as $messages)
+        <li>{{$messages}}</li>
+        @endforeach
+    </ul>
+</div>
+ @endif
+
+
+
 <div class="container">
+
+
 
 
 
@@ -40,6 +56,7 @@
  {!! Form::open(['route' => 'clientes.store']) !!}
 @endif
  
+
 
 
  <div class="panel-body">
