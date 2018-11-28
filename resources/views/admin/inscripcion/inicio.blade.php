@@ -1,126 +1,121 @@
 @extends('admin.layout')
  
 @section('content')
-<div class="panel panel-primary" width="30px">
-	<div class="panel-heading">Título del panel</div>
+
+<div id="panel">
+	    <div class="info-box-content">
+            <span class="info-box-text">CPU Traffic</span>
+            <span class="info-box-number">90<small>%</small></span>
+        </div>
+<div id="panel1" class="panel panel-primary">
+	<div class="panel-heading">Planes</div>
 	<div class="panel-body">
-		Plan 1
-		Plan 2
-		Plan 3
+		<button type="button" class="btn btn-default">Plan 1</button>
+		<button type="button" class="btn btn-default">Plan 2</button>
+		<button type="button" class="btn btn-default">Plan 3</button>
 	</div>
 </div>
-<div class="panel panel-primary">
-	<div class="panel-heading">Título del panel</div>
-	<div class="panel-body">
-		 
-@if(isset($personas))
- {!! Form::model($personas, ['route' => ['personas.update', $personas->RutPersona], 'method' => 'patch']) !!}
+<div id="panel2" class="panel panel-primary">
+	<div class="panel-heading">Cliente</div>
+	<div class="panel-body">	 
+
+@if(isset($clientes))
+ {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cliente], 'method' => 'patch']) !!}
 @else
- {!! Form::open(['route' => 'personas.store']) !!}
+ {!! Form::open(['route' => 'clientes.store']) !!}
 @endif
  
 
 
  <div class="panel-body">
- {!! Form::open(['route' => 'personas.store']) !!}
+ {!! Form::open(['route' => 'clientes.store']) !!}
  
  <div class="form-group">
- {!! Form::text('RutPersona', null,
+ {!! Form::text('rut_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Rut'])
  !!}
  </div>
  
  <div class="form-group">
- {!! Form::text('Nombre', null,
+ {!! Form::text('nombre_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Nombre'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Apellido_Materno', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Apellido Materno'])
- !!}
- </div>
-
- <div class="form-group">
- {!! Form::text('Apellido_Paterno', null,
+ {!! Form::text('ap_pat_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Apellido Paterno'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Telefono', null,
+ {!! Form::text('ap_mat_cliente', null,
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Apellido Materno'])
+ !!}
+ </div>
+
+ <div class="form-group">
+ {!! Form::text('telefono_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Telefono de Contacto'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Email', null,
+ {!! Form::text('email_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Email'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Tipo', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Usuario'])
+ {!! Form::text('contrasena_cliente', null,
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Contraseña'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Huella', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Huella'])
- !!}
- </div>
-
- <div class="form-group">
- {!! Form::text('Nacionalidad', null,
+ {!! Form::text('nacionalidad_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Nacionalidad'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Fecha_nacimiento', null,
+ {!! Form::text('fecha_nac_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Fecha de Nacimiento (aa/mm/dd)'])
  !!}
+<input type="text" class="form-control pull-right" id="datepicker">
  </div>
+
 
 <div class="form-group">
 <label for="Sexo">Selecciona genero:</label>
-<br>Masculino
-{!! Form::radio('Sexo', 'Masculino', true, ['class' => 'form-control']) !!} 
-Femenino
-{!! Form::radio('Sexo', 'Femenino', true, ['class' => 'form-control']) !!} 
+<br>
+{!! Form::radio('sexo_cliente', 'Masculino', true) !!} 
+Masculino
+
+{!! Form::radio('sexo_cliente', 'Femenino', true) !!}
+Femenino 
 </div>
 
-
-
-<!--
  <div class="form-group">
- {!! Form::text('Sexo', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Sexo'])
- !!}
- </div>-->
-
- <div class="form-group">
- {!! Form::textarea('Alergico', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Alergia'])
+ {!! Form::text('alergia_cliente', null,
+ ['class'=>'form-control', 'placeholder'=>'Ingrese si contiene algun tipo de alergia'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::textarea('Patologia', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Patologia'])
+ {!! Form::text('patologia_cliente', null,
+ ['class'=>'form-control', 'placeholder'=>'Ingrese si contiene algun tipo de Patologia'])
  !!}
  </div>
 
  <div class="form-group">
- {!! Form::text('Fotografia', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Fotografia'])
- !!}
- </div>
+<label for="Foto">Subir Fotografia:</label>
+<input type="file" class="form-control" name="file" >
+</div>
+
  
  <div class="form-group">
- {!! Form::submit('Registrar Socio', ["class" => "btn btn-success btn-block"]) !!}
+ {!! Form::submit('Registrar Cliente', ["class" => "btn btn-success btn-block"]) !!}
  </div>
  
  {!! Form::close() !!}
@@ -128,11 +123,11 @@ Femenino
  </div>
 
 </div>
-<div class="panel panel-primary">
+<div id="panel3" class="panel panel-primary">
 	<div class="panel-heading">Título del panel</div>
 	<div class="panel-body">
 		confirmar
 	</div>
 </div>
-
+</div>
 @endsection
