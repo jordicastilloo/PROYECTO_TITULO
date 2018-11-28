@@ -56,7 +56,7 @@
  {!! Form::text('stock', null, ["class" => 'form-control','placeholder'=>'Ingrese el stock de Implemento']) !!}
  </div>
  
- <div class="form-group">
+ <div class="form-group" onclick="return confirm('Esta seguro?')">
  {!! Form::submit('Agregar', ["class" => "btn btn-success btn-block"]) !!}
  </div>
  
