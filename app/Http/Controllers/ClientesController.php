@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ClientesForm;
 use Illuminate\Http\Request;
 use App\Clientes;
+
 class ClientesController extends Controller {
 
 	/**
@@ -40,8 +41,10 @@ class ClientesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(ClientesForm $request)
 	{
+		
+
 		//
 		$clientes = new \App\clientes;
 		$clientes->rut_cliente = \Request::input('rut_cliente');
