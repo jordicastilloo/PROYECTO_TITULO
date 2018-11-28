@@ -50,7 +50,7 @@
  
  
  
- <div class="form-group">
+ <div class="form-group" onclick="return confirm('Esta seguro?')">
  {!! Form::submit('Agregar Plan', ["class" => "btn btn-success btn-block"]) !!}
  </div>
  

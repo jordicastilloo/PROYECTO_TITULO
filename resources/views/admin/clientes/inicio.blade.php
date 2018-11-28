@@ -58,7 +58,7 @@
                     </td>
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('clientes.destroy', $Cliente->rut_cliente), 'method' => 'DELETE')) !!}
-                          <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
+                          <button type="submit" class="btn btn-danger btn-md" onclick="return confirm('Esta seguro?')">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
                   </tr>

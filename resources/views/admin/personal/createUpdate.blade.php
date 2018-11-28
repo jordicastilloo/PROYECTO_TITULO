@@ -131,7 +131,7 @@ Femenino
 </div>
  
  
- <div class="form-group">
+ <div class="form-group" onclick="return confirm('Esta seguro?')">
  {!! Form::submit('Registrar Personal', ["class" => "btn btn-success btn-block"]) !!}
  </div>
  
