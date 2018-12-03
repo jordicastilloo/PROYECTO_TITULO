@@ -1,23 +1,51 @@
-@extends('admin.layout')
- 
-@section('content')
+    <script>
+    $(document).on('click', '#agregar', function() {
+    $('#ModalAgregar').modal('show');
+    });
+    </script>
 
-<div id="panel">
-	    <div class="info-box-content">
-            <span class="info-box-text">CPU Traffic</span>
-            <span class="info-box-number">90<small>%</small></span>
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          <h4 class="modal-title">Seleccione Plan</h4>
         </div>
-<div id="panel1" class="panel panel-primary">
-	<div class="panel-heading">Planes</div>
-	<div class="panel-body">
-		<button type="button" class="btn btn-default">Plan 1</button>
-		<button type="button" class="btn btn-default">Plan 2</button>
-		<button type="button" class="btn btn-default">Plan 3</button>
-	</div>
-</div>
-<div id="panel2" class="panel panel-primary">
-	<div class="panel-heading">Cliente</div>
-	<div class="panel-body">	 
+        <div class="modal-body">
+          <div id="panel1" class="panel panel-primary">
+          <div class="panel-heading">Planes</div>
+            <div class="panel-body">
+              <button type="button" class="btn btn-default" id="agregar">Plan 1</button>
+              <button type="button" class="btn btn-default">Plan 2</button>
+              <button type="button" class="btn btn-default">Plan 3</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="ModalAgregar" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          <h4 class="modal-title">Inscripción</h4>
+        </div>
+        <div class="modal-body">
+          <div id="panel2" class="panel panel-primary">
+  <div class="panel-heading">Cliente</div>
+  <div class="panel-body">   
 
 @if(isset($clientes))
  {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cliente], 'method' => 'patch']) !!}
@@ -136,11 +164,11 @@ Femenino
  </div>
 
 </div>
-<div id="panel3" class="panel panel-primary">
-	<div class="panel-heading">Título del panel</div>
-	<div class="panel-body">
-		confirmar
-	</div>
-</div>
-</div>
-@endsection
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
