@@ -2,6 +2,9 @@
     $(document).on('click', '#agregar', function() {
     $('#ModalAgregar').modal('show');
     });
+    $(document).on('click', '#rut', function() {
+    $('#RUT').modal('show');
+    });
     </script>
 
 <!-- Modal -->
@@ -19,7 +22,7 @@
           <div class="panel-heading">Planes</div>
             <div class="panel-body">
               <button type="button" class="btn btn-default" id="agregar">Plan 1</button>
-              <button type="button" class="btn btn-default">Plan 2</button>
+              <button type="button" class="btn btn-default" id="rut">Plan 2</button>
               <button type="button" class="btn btn-default">Plan 3</button>
             </div>
           </div>
@@ -31,6 +34,55 @@
       
     </div>
   </div>
+
+
+
+<!-- Modal -->
+  <div class="modal fade" id="RUT" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+          <h4 class="modal-title">Ingrese RUT</h4>
+        </div>
+        <div class="modal-body">
+
+     <div id="panel2" class="panel panel-primary">
+  <div class="panel-heading">rut</div>
+  <div class="panel-body">   
+
+@if(isset($clientes))
+ {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cliente], 'method' => 'patch']) !!}
+@else
+ {!! Form::open(['route' => 'clientes.store']) !!}
+@endif
+ 
+
+
+ <div class="panel-body">
+ {!! Form::open(['route' => 'clientes.store']) !!}
+ 
+ <div class="form-group">
+ {!! Form::text('rut_cliente', null,
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Rut'])
+ !!}
+ </div>
+</div>
+</div>
+</div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
 
 <!-- Modal -->
   <div class="modal fade" id="ModalAgregar" role="dialog">
