@@ -9,15 +9,16 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>Titulo</h3>
+              <h3>Inscribir</h3>
 
-              <p>Subtitulo</p>
+              <p>Inscribir nuevo socio</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="fas fa-user"></i>
             </div>
-            <a href="#" class="small-box-footer">Más <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" data-toggle="modal" data-target="#myModal" title="Inscribir"  class="small-box-footer">Inscribir <i class="fa fa-arrow-circle-right"></i></a>
           </div>
+          @include('admin.inscripcion.inscripcionmodal')
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
@@ -46,7 +47,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">Más <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" data-target="#modal" data-toggle="modal" title="Inscribir"  class="small-box-footer">Inscribir <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

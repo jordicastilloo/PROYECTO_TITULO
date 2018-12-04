@@ -78,12 +78,37 @@
  !!}
  </div>
 
- <div class="form-group">
+<div class="form-group">
  {!! Form::text('fecha_nac_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Fecha de Nacimiento (aa/mm/dd)'])
- !!}
-<input type="text" class="form-control pull-right" id="datepicker">
+ ['class'=>'form-control datepicker' , 'id'=>'fechanacimiento']),old('fecha_nac_cliente')!!}
  </div>
+
+
+
+
+ 
+<script type="text/javascript" src="/dist/jquery-ui/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="/dist/jquery-ui/jquery-ui.min.js"></script> 
+
+
+ 
+<script type="text/javascript">
+
+var fecha = $("#fecha_nac_cliente").val();
+
+    $('.datepicker').datepicker({
+    dateFormat: "yy-mm-dd",
+    language: "es",
+    autoclose: true,
+    changeMonth: true, 
+    changeYear: true,  
+    yearRange: '-100:+0'
+}).datepicker('setDate', new Date(fecha));
+
+   
+
+    
+</script>
 
 
 <div class="form-group">
@@ -95,18 +120,6 @@ Masculino
 {!! Form::radio('sexo_cliente', 'Femenino', true) !!}
 Femenino 
 </div>
-
- <div class="form-group">
- {!! Form::text('alergia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese si contiene algun tipo de alergia'])
- !!}
- </div>
-
- <div class="form-group">
- {!! Form::text('patologia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese si contiene algun tipo de Patologia'])
- !!}
- </div>
 
  <div class="form-group">
 <label for="Foto">Subir Fotografia:</label>
