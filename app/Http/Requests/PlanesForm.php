@@ -23,7 +23,10 @@ class PlanesForm extends Request {
 	{
 		return [
 			//
-		];
+			'nombre_plan'=> 'max:120|unique:planes|required',
+		    'precio_plan'=> 'required|numeric'
+		    	];
+	
 	}
 
 }

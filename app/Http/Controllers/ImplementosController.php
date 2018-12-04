@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Request\ImplementosRequest;
 use App\Implementos;
 
+
+
 class ImplementosController extends Controller {
 
 	/**
@@ -34,7 +36,14 @@ class ImplementosController extends Controller {
 	 */
 	public function create()
 	{
-		return view("admin.implementos.createUpdate");
+		$implementos_tipos = Implementos::lists('tipo');
+
+
+
+
+		return view("admin.implementos.createUpdate",compact('implementos_tipos'));
+
+
 	}
 
 	/**
@@ -47,10 +56,11 @@ class ImplementosController extends Controller {
 
 		$implementos = new \App\implementos;
 		$implementos->nombre = \Request::input('nombre');
-		$implementos->estado = \Request::input('estado');
+		$implementos->estado = "";
 		$implementos->tipo = \Request::input('tipo');
-		$implementos->stock = \Request::input('stock');
+		$implementos->stock = 1;
 		$implementos->fecha_ingreso = date("Y-m-d");
+		$implementos->empresa_id_emp = 1000;
 		$implementos->save();
 
     return redirect('implementos/create')->with('message', 'Post saved');
