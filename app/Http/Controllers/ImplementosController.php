@@ -8,7 +8,6 @@ use App\Http\Request\ImplementosRequest;
 use App\Implementos;
 
 
-
 class ImplementosController extends Controller {
 
 	/**
@@ -37,8 +36,6 @@ class ImplementosController extends Controller {
 	public function create()
 	{
 		$implementos_tipos = Implementos::lists('tipo');
-
-
 
 
 		return view("admin.implementos.createUpdate",compact('implementos_tipos'));
