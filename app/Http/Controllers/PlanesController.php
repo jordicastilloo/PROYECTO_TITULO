@@ -42,7 +42,7 @@ class PlanesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(PlanesForm $request)
 	{
 		//
 		$planes = new \App\planes;

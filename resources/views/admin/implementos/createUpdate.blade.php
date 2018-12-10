@@ -44,17 +44,24 @@
  {!! Form::text('nombre', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre del Implemento']) !!}
  </div>
  
+ <!--
  <div class="form-group">
  {!! Form::text('estado', null, ['class' => 'form-control','placeholder'=>'Ingrese el estado del Implemento']) !!}
- </div>
+ </div>-->
  
+  
+<!--
   <div class="form-group">
  {!! Form::text('tipo', null, ["class" => 'form-control','placeholder'=>'Ingrese el Tipo de Implemento']) !!}
- </div>
+ </div>-->
 
+{!! Form::select('tipo', $implementos_tipos, null, ['class' => 'form-control']) !!} <br>
+
+
+<!--
  <div class="form-group">
  {!! Form::text('stock', null, ["class" => 'form-control','placeholder'=>'Ingrese el stock de Implemento']) !!}
- </div>
+ </div>-->
  
  <div class="form-group" onclick="return confirm('Esta seguro?')">
  {!! Form::submit('Agregar', ["class" => "btn btn-success btn-block"]) !!}

@@ -346,7 +346,7 @@
             <li class="treeview">
               <a href="#">
                 <i class="fas fa-dumbbell"></i>
-                <span> Inventario de Implementos</span>
+                <span>Implementos</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -354,6 +354,8 @@
                 <li><a href="/implementos"><i class="fas fa-bars"></i> Listar Implementos</a></li>
               </ul>
             </li>
+
+
 
 
 
