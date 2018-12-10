@@ -1,8 +1,20 @@
 @extends('admin.layout')
 
 @section('content')
+<!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Escritorio
+            <small>Inicio</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+            <li class="active">Escritorio</li>
+          </ol>
+        </section>
 <h1>Bienvenido</h1>
 <h3>¿Qué desea hacer?</h3>
+  <br>
 <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-lg-3 col-xs-6">
@@ -25,12 +37,11 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>Titulo<sup style="font-size: 20px">%</sup></h3>
-
-              <p>Subtitulo</p>
+              <h3>Planes</h3>
+              <p>Ingresar/Modificar</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="fas fa-clipboard"></i>
             </div>
             <a href="#" class="small-box-footer">Más <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -40,14 +51,13 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>Titulo</h3>
-
-              <p>Subtitulo</p>
+              <h3>Implementos </h3>
+              <p>Registrar/Listar</p>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="fas fa-dumbbell"></i>
             </div>
-            <a href="#" data-target="#modal" data-toggle="modal" title="Inscribir"  class="small-box-footer">Inscribir <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/implementos" class="small-box-footer">Registrar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -55,19 +65,21 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>Titulo </h3>
-
-              <p>Subtitulo</p>
+              <h3>Progreso </h3>
+              <p>Registrar evaluación física</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="fas fa-walking"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" data-toggle="modal" data-target="#Modal1" title="Ingresar"  class="small-box-footer">Ingresar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
+          @include('admin.progreso.progresomodal')
         </div>
         <!-- ./col -->
       </div>
       <!-- /.row -->
+
+<!--
 <select class="js-example-basic-single" name="state">
   <option value="AL">Alabama</option>
     ...
@@ -109,4 +121,6 @@
     <li class="page-item"><a class="page-link" href="#">Next</a></li>
   </ul>
 </nav>
+
+-->
 @endsection

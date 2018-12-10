@@ -185,8 +185,6 @@ var fecha = $("#fecha_nac_cliente").val();
     yearRange: '-100:+0'
 }).datepicker('setDate', new Date(fecha));
 
-   
-
     
 </script>
 
