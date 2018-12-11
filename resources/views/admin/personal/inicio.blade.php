@@ -66,9 +66,6 @@
         <button type="button" class="btn btn-primary btn-sm">Mostrar</button>
       </a></td>
  
-                  
-
-                    
                     <td width="60" align="center">
                       {!! Html::link(route('personal.edit', $Persona->rut_p), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>

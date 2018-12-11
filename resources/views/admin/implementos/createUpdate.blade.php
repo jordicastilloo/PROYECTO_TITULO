@@ -44,24 +44,27 @@
  {!! Form::text('nombre', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre del Implemento']) !!}
  </div>
  
- <!--
- <div class="form-group">
- {!! Form::text('estado', null, ['class' => 'form-control','placeholder'=>'Ingrese el estado del Implemento']) !!}
- </div>-->
- 
   
-<!--
-  <div class="form-group">
- {!! Form::text('tipo', null, ["class" => 'form-control','placeholder'=>'Ingrese el Tipo de Implemento']) !!}
- </div>-->
 
-{!! Form::select('tipo', $implementos_tipos, null, ['class' => 'form-control']) !!} <br>
+   <div class="form-group">
+
+ <label for="">Tipo de Implemento</label>
+ <select name="tipo_id_tip" id="inputTipo_id" class="form-control" required="required">
+  
+     <option value="">-- Seleccione el Tipo de Implemento --</option>
+   @foreach(App\Tipos::get() as $tipo)
+        <option value ="{{ $tipo['id_tipo'] }}">{{$tipo['nombre_tipo']}}</option>
 
 
-<!--
- <div class="form-group">
- {!! Form::text('stock', null, ["class" => 'form-control','placeholder'=>'Ingrese el stock de Implemento']) !!}
- </div>-->
+
+   @endforeach
+   </select>
+ </div>
+
+ 
+
+
+
  
  <div class="form-group" onclick="return confirm('Esta seguro?')">
  {!! Form::submit('Agregar', ["class" => "btn btn-success btn-block"]) !!}
@@ -73,4 +76,6 @@
  </div>
  </div>
 </div>
+
+
 @endsection

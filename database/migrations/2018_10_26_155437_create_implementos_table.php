@@ -20,10 +20,12 @@ class CreateImplementosTable extends Migration {
 			$table->increments('id_implemento');
 			$table->string('nombre');
 			$table->string('estado');
-			$table->string('tipo');
+			//$table->string('tipo');
 			$table->integer('stock');
 			$table->date('fecha_ingreso');
+			$table->string('subcategoria');
 			$table->integer('empresa_id_emp');
+			$table->integer('tipo_id_tip');
 
 		});
 	}

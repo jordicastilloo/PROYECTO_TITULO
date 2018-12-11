@@ -1,6 +1,8 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 class implementos extends Model {
 
@@ -8,10 +10,8 @@ class implementos extends Model {
 	public $timestamps = false;
 	protected $table = 'implementos';
 	protected $primaryKey = 'id_implemento';
-	protected $fillable = ['nombre', 'estado', 'tipo','fecha_ingreso','empresa_id_emp'];
+	protected $fillable = ['nombre', 'estado', 'stock','fecha_ingreso','subcategoria','empresa_id_emp','tipo_id_tip'];
 	protected $guarded = ['id_implemento'];
-
-
 
 
  public function scopeSearch($query,$name){
@@ -21,6 +21,7 @@ class implementos extends Model {
         return $query->where('nombre','LIKE',"%$name%");
     }
  }
+
 
 
 
