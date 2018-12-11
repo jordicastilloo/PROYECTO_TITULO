@@ -298,8 +298,8 @@
               </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-dumbbell"></i>
-                <span> Personal </span>
+                <i class="fas fa-user-tie"></i>
+                <span> Personal</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -312,8 +312,8 @@
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-dumbbell"></i>
-                <span> Clientes </span>
+                <i class="fas fa-users"></i>
+                <span> Clientes</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -327,8 +327,8 @@
              </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-dumbbell"></i>
-                <span> Planes </span>
+                <i class="fas fa-clipboard"></i>
+                <span> Planes</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -346,7 +346,7 @@
             <li class="treeview">
               <a href="#">
                 <i class="fas fa-dumbbell"></i>
-                <span>Implementos</span>
+                <span> Implementos</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -362,8 +362,8 @@
              </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-dumbbell"></i>
-                <span> Clases </span>
+                <i class="fas fa-calendar-alt"></i>
+                <span> Clases</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -378,8 +378,8 @@
              </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-dumbbell"></i>
-                <span> Progreso Clientes </span>
+                <i class="fas fa-walking"></i>
+                <span> Progreso Clientes</span>
                 <span class="label label-primary pull-right"></span>
               </a>
               <ul class="treeview-menu">
@@ -394,7 +394,7 @@
  </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-dumbbell"></i>
+                <i class="fas fa-th-list"></i>
                 <span> Plan Nutricional </span>
                 <span class="label label-primary pull-right"></span>
               </a>
