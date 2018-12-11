@@ -73,7 +73,7 @@ class ImplementosController extends Controller {
 		//$implementos->tipo = \Request::input('tipo');
 		$implementos->stock = 1;
 		$implementos->fecha_ingreso = date("Y-m-d");
-		$implementos->subcategoria=\Request::input('subcategoria');
+		$implementos->subcategoria= \Request::input('subcategoria');;
 		$implementos->empresa_id_emp = 1000;
 		$implementos->tipo_id_tip = \Request::input('tipo_id_tip');
 		$implementos->save();

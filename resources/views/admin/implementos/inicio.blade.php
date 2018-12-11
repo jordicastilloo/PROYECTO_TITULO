@@ -36,6 +36,8 @@
                 <th>Tipo</th>
                 <!--<th>Stock</th>-->
                 <th>Fecha de Ingreso</th>
+
+                <th>Subcategoria</th>
               </tr>
 
 
@@ -47,6 +49,8 @@
                     <td width="500">{{ $implemento->tipo_id_tip}}</td>
                     <!--<td width="500">{{ $implemento->stock }}</td>-->
                     <td width="500">{{ $implemento->fecha_ingreso  }}</td>
+
+                    <td width="500">{{ $implemento->subcategoria  }}</td>
 
 
 
