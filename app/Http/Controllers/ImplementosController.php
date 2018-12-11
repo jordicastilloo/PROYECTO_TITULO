@@ -113,7 +113,7 @@ class ImplementosController extends Controller {
 	{
  		$implementos = \App\Implementos::find($id_implemento);
  
- 		$implementos->nombre = \Request::input('nombre');
+ 		//$implementos->nombre = \Request::input('nombre');
  
   		$implementos->estado = \Request::input('estado');
 

@@ -26,6 +26,8 @@
  {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
 </div>
 
+
+
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
       @if(!$implementos->isEmpty())
@@ -38,11 +40,18 @@
                 <th>Fecha de Ingreso</th>
 
                 <th>Subcategoria</th>
+
+                <th>Stock</th>
+
+                <th>Estado</th>
               </tr>
 
 
-          
+              
               @foreach ($implementos as $implemento)
+
+
+
                   <tr>
                     <td width="500">{{ $implemento->nombre }}</td>
                     <!--<td width="500">{{ $implemento->estado }}</td>-->
@@ -52,17 +61,27 @@
 
                     <td width="500">{{ $implemento->subcategoria  }}</td>
 
+                    <td width="500">{{ $implemento->stock  }}</td>
+
+
+                    @if($implemento->estado == ""){
+                    {{ $implemento->estado = "Por Confimar" }}
+                    }            
+                    @endif
+
+                    <td width="500">{{ $implemento->estado  }}</td>
 
 
 
 
+                    
 
 
 
-
+                   <!--
                     <td width="60" align="center">
                       {!! Html::link(route('implementos.edit', $implemento->id_implemento), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
-                    </td>
+                    </td>-->
 
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('implementos.destroy', $implemento->id_implemento), 'method' => 'DELETE')) !!}
@@ -80,6 +99,8 @@
 
 
       @endif
+
+
 
 
               {!! $implementos->render() !!}
