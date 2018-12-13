@@ -45,7 +45,7 @@
 
                 <th>Estado</th>
 
-                <th>Agregar Estado</th>
+                <th>Estado Implemento</th>
               </tr>
 
 
@@ -75,7 +75,7 @@
 
 
           <td><a href="#" data-target="#edit-modal-{{$implemento->id_implemento}}" data-toggle="modal" title="Mostrar">
-        <button type="button" class="btn btn-primary btn-sm">Mostrar</button>
+        <button type="button" class="btn btn-primary btn-sm">Ingresar Estado</button>
       </a></td>
         
 

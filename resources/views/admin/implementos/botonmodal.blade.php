@@ -1,5 +1,5 @@
 
-                  <div class="modal fade" id="edit-modal-{{$implemento->id_implemento}}">
+<div class="modal fade" id="edit-modal-{{$implemento->id_implemento}}" method="POST">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -8,12 +8,20 @@
                     <h4 class="modal-title" align="center"><b>Agregar Estado del Implemento</b></h4>
                   </div>
                   <div class="modal-body">
-                    <form role="form" action="/edit_user">
-                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+
+<!--
+                    <form role="form" action="/implementos/createUpdate/ {{$implemento->id_implemento}}">-->
+
+                        <form action="{{route('implementos.edit')}}" method="post" id=EstadoImplementos class=form-horizontal>
+
+
+
+
+                   <!-- <input type="hidden" name="estado" value="<?php echo csrf_token(); ?>"-->
                     <div class="box-body">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Estado</label> 
-                          <input type="text" class="form-control" name="user_id" placeholder="User ID" value="{{$implemento->estado}}">
+                          <label for="InputEstado">Estado</label> 
+                          <input type="text" class="form-control" name="estado" placeholder="Ingrese Estado Implemento" value="{{$implemento->estado}}">
                         </div>
 
                         <!--
@@ -34,14 +42,15 @@
                           <input type="password" class="form-control" name="change_password" placeholder="Enter password">
                         </div>
                       </div> -->
+
+
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary" id="btnSave">Ingresar</button>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
             </div> 
-
 
