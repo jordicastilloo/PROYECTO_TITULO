@@ -44,6 +44,8 @@
                 <th>Stock</th>
 
                 <th>Estado</th>
+
+                <th>Agregar Estado</th>
               </tr>
 
 
@@ -72,10 +74,10 @@
                     <td width="500">{{ $implemento->estado  }}</td>
 
 
-
-
-                    
-
+          <td><a href="#" data-target="#edit-modal-{{$implemento->id_implemento}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-sm">Mostrar</button>
+      </a></td>
+        
 
 
                    <!--
@@ -91,6 +93,7 @@
                   </tr>
 
 
+ @include('admin.implementos.botonmodal')
   
 
               @endforeach
@@ -109,6 +112,13 @@
  </div>
  </div>
 </div>
+
+
+
+
+
+     
+
 
 
 
