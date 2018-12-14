@@ -1,5 +1,6 @@
+ 
 
-<div class="modal fade" id="edit-modal-{{$implemento->id_implemento}}" method="POST">
+<div class="modal fade" id="edit-modal-{{$implemento->id_implemento}}">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -7,15 +8,17 @@
                       <span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" align="center"><b>Agregar Estado del Implemento</b></h4>
                   </div>
-                  <div class="modal-body">
 
 <!--
                     <form role="form" action="/implementos/createUpdate/ {{$implemento->id_implemento}}">-->
 
-                        <form action="{{route('implementos.edit')}}" method="post" id=EstadoImplementos class=form-horizontal>
+                        <form action="/implementos" method="POST" id=EstadoImplementos>
 
 
+                        
 
+
+                  <div class="modal-body">
 
                    <!-- <input type="hidden" name="estado" value="<?php echo csrf_token(); ?>"-->
                     <div class="box-body">
@@ -53,4 +56,8 @@
                 </div>
               </div>
             </div> 
+
+
+
+
 

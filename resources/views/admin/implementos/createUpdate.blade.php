@@ -1,7 +1,32 @@
 @extends('admin.layout')
  
 @section('content')
+
+
+ @if(count($errors)>0)
+ <div class="alert alert-danger" role="alert">
+    <ul>
+        @foreach($errors->all()as $messages)
+        <li>{{$messages}}</li>
+        @endforeach
+    </ul>
+</div>
+ @endif
+
+
+
 <div class="container">
+
+<!--diseño-->
+<div class="col-md-8">
+    <div class="box box-danger">
+            <div class="box-header">
+
+
+                <!--AQUI TERMINA-->
+ 
+
+
 
 <!-- BOTON PARA IR A CREAR
 <div class="row">
@@ -48,7 +73,7 @@
 
  <div class="form-group">
  <label for="">Tipo de Implemento</label>
- <select name="tipo_id_tip" id="inputTipo_id" class="form-control" required="required">
+ <select name="tipo_id_tip" id="inputTipo_id" class="form-control">
  <option value="">-- Seleccione el Tipo de Implemento --</option>
  @foreach(App\Tipos::get() as $tipo)
  <option value ="{{ $tipo['id_tipo'] }}">{{$tipo['nombre_tipo']}}</option>
@@ -59,7 +84,7 @@
 
  <div class="form-group">
  <label for="">Subcategoria Implementos</label>
- <select name="subcategoria" id="inputSubcategoria" class="form-control" required="required">
+ <select name="subcategoria" id="inputSubcategoria" class="form-control">
  <option value="">-- Seleccione Subcategoria Tipo de Implemento --</option>
  <optgroup label="Kilogramos"> 
  <option value ="3 kg">3 kg</option>

@@ -23,6 +23,9 @@ class ImplementosForm extends Request {
 	{
 		return [
 
+			'nombre'=> 'max:120|required',
+		    'tipo_id_tip'=> 'required'
+
 		];
 	}
 

@@ -2,6 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+
+
+    <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sistema | Panel Control</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -467,5 +476,10 @@
     <script src="/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="/dist/js/demo.js"></script>
+
+
+
+
+
   </body>
 </html>

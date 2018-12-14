@@ -66,6 +66,15 @@ class ImplementosController extends Controller {
 	 */
 	public function store(Request $request)
 	{   
+
+
+
+		$this->validate($request,[
+			'nombre'=>'required',
+			'tipo_id_tip' => 'required'
+
+		]
+		);
  
 		$implementos = new \App\implementos;
 		$implementos->nombre = \Request::input('nombre');
@@ -114,26 +123,19 @@ class ImplementosController extends Controller {
 	public function update(Request $request)
 	{
 
-
-        Implementos::update($request->all());
-
-        return back();
-
-
-
- 		//$implementos = \App\Implementos::find($id_implemento);
+ 		$implementos = \App\Implementos::find($id_implemento);
  
- 		//$implementos->nombre = \Request::input('nombre');
+ 		$implementos->nombre = \Request::input('nombre');
  
-  		//$implementos->estado = \Request::input('estado');
+  		$implementos->estado = \Request::input('estado');
 
- 		//$implementos->tipo = \Request::input('tipo');
+ 		$implementos->tipo = \Request::input('tipo');
 
- 		//$implementos->stock = \Request::input('stock');
+ 		$implementos->stock = \Request::input('stock');
  
- 		//$implementos->save();
+ 		$implementos->save();
  
- 		//return redirect()->route('implementos.edit', ['post' => $id_implemento])->with('message', 'Post updated');
+ 		return redirect()->route('implementos.edit', ['post' => $id_implemento])->with('message', 'Post updated');
 	}
 
 	/**
