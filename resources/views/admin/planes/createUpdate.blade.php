@@ -60,7 +60,7 @@
  </div>
  
  <div class="form-group">
- {!! Form::text('precio_plan', null, ['class' => 'form-control','placeholder'=>'Ingrese el Precio del Plan']) !!}
+ {!! Form::text('precio_plan', null, ['class' => 'form-control','placeholder'=>'Ingrese el Precio Mensual del Plan']) !!}
  </div>
  
  
