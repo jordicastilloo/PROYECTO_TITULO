@@ -87,6 +87,7 @@
  <select name="subcategoria" id="inputSubcategoria" class="form-control">
  <option value="">-- Seleccione Subcategoria Tipo de Implemento --</option>
  <optgroup label="Kilogramos"> 
+ <option value ="2,5 kg">2,5 kg</option>    
  <option value ="3 kg">3 kg</option>
  <option value ="6 kg">6 kg</option>
  <option value ="7,5 kg">7,5 kg</option>

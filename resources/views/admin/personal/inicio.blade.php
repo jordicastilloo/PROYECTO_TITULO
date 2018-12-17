@@ -63,7 +63,7 @@
                     <td width="500">{{ $Persona->tipo_p}}</td>
 
                      <td><a href="#" data-target="#modal-delete-{{$Persona->rut_p}}" data-toggle="modal" title="Mostrar">
-        <button type="button" class="btn btn-primary btn-sm">Mostrar</button>
+        <button type="button" class="btn btn-primary btn-sm">Ver Datos</button>
       </a></td>
  
                     <td width="60" align="center">

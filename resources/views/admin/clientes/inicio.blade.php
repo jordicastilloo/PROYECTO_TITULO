@@ -51,6 +51,9 @@
                     <td width="500">{{ $Cliente->ap_pat_cliente}}</td>
                     <td width="500">{{ $Cliente->ap_mat_cliente}}</td>
                     <td width="500">{{ $Cliente->fotografia_cliente}}</td>
+                    <td><a href="#" data-target="#modal-delete-{{$Cliente->rut_cliente}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-sm">Ver Datos</button>
+      </a></td>
 
                     
                     <td width="60" align="center">
@@ -62,6 +65,11 @@
                       {!! Form::close() !!}
                     </td>
                   </tr>
+
+
+                    @include('admin.clientes.botonmodal')
+
+
               @endforeach
           </table>
           
