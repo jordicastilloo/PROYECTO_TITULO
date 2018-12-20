@@ -21,10 +21,12 @@ class ImplementosForm extends Request {
 	 */
 	public function rules()
 	{
+
+
 		return [
 
-			'nombre'=> 'max:120|required',
-		    'tipo_id_tip'=> 'required'
+			//'nombre'=> 'max:120|required',
+		   // 'tipo_id_tip'=> 'required'
 
 		];
 	}

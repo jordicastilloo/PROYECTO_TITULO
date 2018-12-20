@@ -42,7 +42,6 @@
                 <th>Nombre</th>
                 <th>Apellido Paterno</th>
                 <th>Apellido Materno</th>
-                <th>fotografia</th>
               </tr>
               @foreach ($clientes as $Cliente)
                   <tr>

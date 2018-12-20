@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Request\ImplementosRequest;
 use App\Implementos;
 use App\Tipos;
-
-
-
+use Illuminate\Support\Facades\DB;
 
 class ImplementosController extends Controller {
 
@@ -20,6 +18,7 @@ class ImplementosController extends Controller {
 	 */
 	public function index(Request $request)
 	{
+
 		//$implementos = Implementos::orderBy('id_implemento','DESC')->paginate(5);
 
 		$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
@@ -69,12 +68,14 @@ class ImplementosController extends Controller {
 
 
 
-		$this->validate($request,[
-			'nombre'=>'required',
-			'tipo_id_tip' => 'required'
+		//$this->validate($request,[
+			//'nombre'=>'required',
+			//'tipo_id_tip' => 'required'
 
-		]
-		);
+		//]
+		//);
+
+		
  
 		$implementos = new \App\implementos;
 		$implementos->nombre = \Request::input('nombre');
@@ -111,7 +112,7 @@ class ImplementosController extends Controller {
 	 */
 	public function edit($id_implemento)
 	{
-		return view('admin.implementos.createUpdate')->with('implementos', \App\Implementos::find($id_implemento));
+		return view('admin.implementos.Update')->with('implementos', \App\Implementos::find($id_implemento));
 	}
 
 	/**
@@ -120,18 +121,18 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update(Request $request)
+	public function update($id_implemento,ImplementosForm $implementosForm)
 	{
 
  		$implementos = \App\Implementos::find($id_implemento);
  
- 		$implementos->nombre = \Request::input('nombre');
+ 		//$implementos->nombre = \Request::input('nombre');
  
   		$implementos->estado = \Request::input('estado');
 
- 		$implementos->tipo = \Request::input('tipo');
+ 		//$implementos->tipo = \Request::input('tipo');
 
- 		$implementos->stock = \Request::input('stock');
+ 		//$implementos->stock = \Request::input('stock');
  
  		$implementos->save();
  
@@ -152,6 +153,7 @@ class ImplementosController extends Controller {
  
  		return redirect()->route('implementos.index')->with('message', 'Implemento deleted');	
  	}
+
 
  	
 

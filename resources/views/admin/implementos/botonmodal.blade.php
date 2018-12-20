@@ -1,6 +1,7 @@
- 
 
 <div class="modal fade" id="edit-modal-{{$implemento->id_implemento}}">
+
+
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -12,19 +13,20 @@
 <!--
                     <form role="form" action="/implementos/createUpdate/ {{$implemento->id_implemento}}">-->
 
-                        <form action="/implementos" method="POST" id=EstadoImplementos>
+<form id="AñadirEstado" method="post" action="agregarestado1">
 
 
-                        
+
+      <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 
 
                   <div class="modal-body">
 
-                   <!-- <input type="hidden" name="estado" value="<?php echo csrf_token(); ?>"-->
+
                     <div class="box-body">
                         <div class="form-group">
                           <label for="InputEstado">Estado</label> 
-                          <input type="text" class="form-control" name="estado" placeholder="Ingrese Estado Implemento" value="{{$implemento->estado}}">
+                          <input type="text" class="form-control" name="estado" value="{{$implemento->estado}}">
                         </div>
 
                         <!--
@@ -56,6 +58,7 @@
                 </div>
               </div>
             </div> 
+
 
 
 
