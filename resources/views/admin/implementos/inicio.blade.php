@@ -7,7 +7,7 @@
 
   <div class="form-group">
     {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre del Implemento'])!!}  
-   <!-- {!!Form::select('estado',config('options.types'),null,['class' => 'form-control'])!!}-->  
+   {!!Form::select('estado',config('options2.estados'),null,['class' => 'form-control'])!!}  
   </div>
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
@@ -91,9 +91,6 @@
                       {!! Form::close() !!}
                   </td>
                   </tr>
-
-
- @include('admin.implementos.botonmodal')
   
 
               @endforeach
@@ -105,13 +102,16 @@
 
 
 
-
-              {!! $implementos->render() !!}
+<!--PARA VER COMPLETA LA LISTA DE ACUERDO AL ESTADO-->
+         {!! $implementos->appends(Request::only(['name','estado']))->render()!!}
+            <!--  {!! $implementos->render() !!}-->
 
 
  </div>
  </div>
 </div>
+</div>
+
 
 
 @endsection

@@ -2,13 +2,6 @@
  
 @section('content')
 
-<!--
-<div class="container">
-<div class="row">
- <div class="col-md-3">-->
-
-<!--
-{!! Form::open (['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}-->
 
 {!!Form::model(Request::all(), ['route' => 'personal.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
 
@@ -18,7 +11,7 @@
 
 
     <!--Formulario lista de tipos-->
-     {!!Form::select('tipo_p',config('options.types'),null,['class' => 'form-control'])!!}
+   {!!Form::select('tipo_p',config('options.types'),null,['class' => 'form-control'])!!}
   </div>
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}

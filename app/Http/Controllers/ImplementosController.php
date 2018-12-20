@@ -21,7 +21,9 @@ class ImplementosController extends Controller {
 
 		//$implementos = Implementos::orderBy('id_implemento','DESC')->paginate(5);
 
-		$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
+		//$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
+
+		 $implementos = Implementos::search($request->name)->type($request->get('estado'))->orderBy('id_implemento','DESC')->paginate(5);
 
 		return view ('admin.implementos.inicio')->with('implementos',$implementos);
 

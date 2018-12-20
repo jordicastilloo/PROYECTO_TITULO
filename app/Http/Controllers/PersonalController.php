@@ -6,6 +6,8 @@ use App\Http\Requests\PersonalForm;
 use Illuminate\Http\Request;
 use App\Personal;
 use App\Http\Request\PersonalRequest;
+use Illuminate\Support\Facades\DB;
+
 
 
 class PersonalController extends Controller {

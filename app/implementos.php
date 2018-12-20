@@ -23,6 +23,16 @@ class implementos extends Model {
  }
 
 
+ public function scopeType($query,$estado){
+    	$estados = config('options2.estados');
+
+    	if($estado != "" && isset($estados[$estado])){
+    		$query->where('estado',$estado);
+    	}
+    }
+
+
+
 
 
 }
