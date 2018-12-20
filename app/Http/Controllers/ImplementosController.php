@@ -68,12 +68,12 @@ class ImplementosController extends Controller {
 
 
 
-		//$this->validate($request,[
-			//'nombre'=>'required',
-			//'tipo_id_tip' => 'required'
+		$this->validate($request,[
+			'nombre'=>'required',
+			'tipo_id_tip' => 'required'
 
-		//]
-		//);
+		]
+		);
 
 		
  
