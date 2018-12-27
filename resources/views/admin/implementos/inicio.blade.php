@@ -2,6 +2,9 @@
  
 @section('content')
 
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    
    {!!Form::model(Request::all(), ['route' => 'implementos.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
 
@@ -43,9 +46,9 @@
 
                 <th>Stock</th>
 
-                <th>Estado</th>
+                <th>Estado del Implemento</th>
 
-                <th>Estado Implemento</th>
+                <th></th>
 
                 <th>Dar de Baja</th>
               </tr>
