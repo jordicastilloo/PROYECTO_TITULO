@@ -71,6 +71,8 @@
                     <td width="500">{{ $implemento->estado  }}</td>
 
 
+
+
 <!--
  @if($implemento->estado != "Deterioro" && $implemento->estado != "Disponible")
           <td><a href="#" data-target="#edit-modal-{{$implemento->id_implemento}}" data-toggle="modal" title="Mostrar">
@@ -83,6 +85,8 @@
                     <td width="60" align="center">
                       {!! Html::link(route('implementos.edit', $implemento->id_implemento), 'Ingresar Estado', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
+                    @else 
+                       <td></td>
                     @endif
 
                     <td width="60" align="center">

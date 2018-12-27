@@ -32,7 +32,7 @@
           <table class="table table-bordered">
               <tr>
                 <th>Nombre</th>
-                <th>Precio Mensual</th>
+                <th>Precio</th>
 
               </tr>
               @foreach ($planes as $plan)
