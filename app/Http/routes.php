@@ -1,6 +1,7 @@
  <?php
 
 use App\implementos;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -50,6 +51,7 @@ Route::resource('reserva', 'ReservaController');
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);*/
+
 
 Route::get('home', function(){
 	return view('home');

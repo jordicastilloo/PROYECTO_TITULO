@@ -6,7 +6,8 @@ use App\Http\Requests\ImplementosForm;
 use Illuminate\Http\Request;
 use App\Http\Request\ImplementosRequest;
 use App\Implementos;
-
+use App\Tipos;
+use Illuminate\Support\Facades\DB;
 
 class ImplementosController extends Controller {
 
@@ -17,9 +18,12 @@ class ImplementosController extends Controller {
 	 */
 	public function index(Request $request)
 	{
+
 		//$implementos = Implementos::orderBy('id_implemento','DESC')->paginate(5);
 
-		$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
+		//$implementos = Implementos::search($request->name)->orderBy('id_implemento','DESC')->paginate(5);
+
+		 $implementos = Implementos::search($request->name)->type($request->get('estado'))->orderBy('id_implemento','DESC')->paginate(5);
 
 		return view ('admin.implementos.inicio')->with('implementos',$implementos);
 
@@ -35,10 +39,23 @@ class ImplementosController extends Controller {
 	 */
 	public function create()
 	{
-		$implementos_tipos = Implementos::lists('tipo');
 
 
-		return view("admin.implementos.createUpdate",compact('implementos_tipos'));
+		//$implementos = Implementos::with('id_tipo')->get();
+ 		$tipos = Tipos::all();
+
+ 		return view('admin.implementos.createUpdate',compact('tipos'));
+
+
+
+
+		//$tipos = Tipos::with('tipos')->get();
+		//$tipos = Tipos::all();
+		//$tipos = Tipos::pluck('nombre_tipo','id_tipo');
+		//$tipos = Tipos::lists('nombre_tipo','id_tipo');
+		//$implementos_subcategorias = Implementos::lists('subcategoria');
+
+		return view("admin.implementos.createUpdate");
 
 
 	}
@@ -48,17 +65,32 @@ class ImplementosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
-	{
+	public function store(Request $request)
+	{   
 
+
+
+		$this->validate($request,[
+			'nombre'=>'required',
+			'tipo_id_tip' => 'required'
+
+		]
+		);
+
+		
+ 
 		$implementos = new \App\implementos;
 		$implementos->nombre = \Request::input('nombre');
 		$implementos->estado = "";
-		$implementos->tipo = \Request::input('tipo');
+		//$implementos->tipo = \Request::input('tipo');
 		$implementos->stock = 1;
 		$implementos->fecha_ingreso = date("Y-m-d");
+		$implementos->subcategoria= \Request::input('subcategoria');;
 		$implementos->empresa_id_emp = 1000;
+		$implementos->tipo_id_tip = \Request::input('tipo_id_tip');
 		$implementos->save();
+
+
 
     return redirect('implementos/create')->with('message', 'Post saved');
 	}
@@ -82,7 +114,7 @@ class ImplementosController extends Controller {
 	 */
 	public function edit($id_implemento)
 	{
-		return view('admin.implementos.createUpdate')->with('implementos', \App\Implementos::find($id_implemento));
+		return view('admin.implementos.Update')->with('implementos', \App\Implementos::find($id_implemento));
 	}
 
 	/**
@@ -91,17 +123,18 @@ class ImplementosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id_implemento, ImplementosForm $implementosForm)
+	public function update($id_implemento,ImplementosForm $implementosForm)
 	{
+
  		$implementos = \App\Implementos::find($id_implemento);
  
- 		$implementos->nombre = \Request::input('nombre');
+ 		//$implementos->nombre = \Request::input('nombre');
  
   		$implementos->estado = \Request::input('estado');
 
- 		$implementos->tipo = \Request::input('tipo');
+ 		//$implementos->tipo = \Request::input('tipo');
 
- 		$implementos->stock = \Request::input('stock');
+ 		//$implementos->stock = \Request::input('stock');
  
  		$implementos->save();
  
@@ -122,5 +155,8 @@ class ImplementosController extends Controller {
  
  		return redirect()->route('implementos.index')->with('message', 'Implemento deleted');	
  	}
+
+
+ 	
 
 }

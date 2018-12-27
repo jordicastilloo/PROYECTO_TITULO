@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class ImplementosForm extends Request {
+class TiposForm extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -21,11 +21,8 @@ class ImplementosForm extends Request {
 	 */
 	public function rules()
 	{
-
-
 		return [
-		    'estado'=>'required'
-
+			//
 		];
 	}
 

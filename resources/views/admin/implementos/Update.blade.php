@@ -3,7 +3,6 @@
 @section('content')
 
 
-
  @if(count($errors)>0)
  <div class="alert alert-danger" role="alert">
     <ul>
@@ -18,11 +17,14 @@
 
 <div class="container">
 
-<!-- BOTON PARA IR A CREAR
-<div class="row">
- <div class="col-md-3">
- {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
-</div>-->
+<!--diseño-->
+<div class="col-md-8">
+    <div class="box box-danger">
+            <div class="box-header">
+
+
+                <!--AQUI TERMINA-->
+
 
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
@@ -40,33 +42,41 @@
  @if (Session::has('message'))
      <div class="alert alert-success">{{ Session::get('message') }}</div>
  @endif -->
-@if(isset($planes))
-	{!! Form::model($planes, ['route' => ['planes.update', $planes->id_plan], 'method' => 'patch']) !!}
+@if(isset($implementos))
+	{!! Form::model($implementos, ['route' => ['implementos.update', $implementos->id_implemento], 'method' => 'patch']) !!}
 @else
-	{!! Form::open(['route' => 'planes.store']) !!}
+	{!! Form::open(['route' => 'implementos.store']) !!}
 @endif
 
-@if(isset($planes))
- {!! Form::model($planes, ['route' => ['planes.update', $planes->id_plan], 'method' => 'patch']) !!}
+@if(isset($implementos))
+ {!! Form::model($implementos, ['route' => ['implementos.update', $implementos->id_implemento], 'method' => 'patch']) !!}
 @else
- {!! Form::open(['route' => 'planes.store']) !!}
+ {!! Form::open(['route' => 'implementos.store']) !!}
 @endif
 
  <div class="panel-body">
- {!! Form::open(['route' => 'planes.store']) !!}
+ {!! Form::open(['route' => 'implementos.store']) !!}
  
- <div class="form-group">
- {!! Form::text('nombre_plan', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre del Plan']) !!}
+
+
+<div class="form-group">
+ <label for="">Estado del Implemento</label>
+ <select name="estado" id="inputEstado" class="form-control">
+ <option value="">-- Seleccione Estado del Implemento --</option>
+ <option value ="Deterioro">Deterioro</option>    
+ <option value ="Disponible">Disponible</option>
+ <option value ="Ver que mas">Ver que mas</option>
+ 
+ </select>
  </div>
- 
- <div class="form-group">
- {!! Form::text('precio_plan', null, ['class' => 'form-control','placeholder'=>'Ingrese el Precio Mensual del Plan']) !!}
- </div>
- 
- 
+
+
+
+
+
  
  <div class="form-group" onclick="return confirm('Esta seguro?')">
- {!! Form::submit('Agregar Plan', ["class" => "btn btn-success btn-block"]) !!}
+ {!! Form::submit('Agregar', ["class" => "btn btn-success btn-block"]) !!}
  </div>
  
  {!! Form::close() !!}
@@ -75,4 +85,6 @@
  </div>
  </div>
 </div>
+
+
 @endsection
