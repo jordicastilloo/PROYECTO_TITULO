@@ -17,6 +17,7 @@ class CreatePlanesTable extends Migration {
 			$table->increments('id_plan');
 			$table->string('nombre_plan');
 			$table->string('precio_plan');
+			$table->integer('duracion_plan');
 		});
 	}
 

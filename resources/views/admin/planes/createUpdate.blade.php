@@ -60,9 +60,37 @@
  </div>
  
  <div class="form-group">
- {!! Form::text('precio_plan', null, ['class' => 'form-control','placeholder'=>'Ingrese el Precio Mensual del Plan']) !!}
+ {!! Form::text('precio_plan', null, ['class' => 'form-control','placeholder'=>'Ingrese el Precio del Plan']) !!}
  </div>
  
+
+  <div class="form-group">
+ <label for="">Duracion Plan</label>
+ <select name="duracion_plan" id="inputDuracionPlan" class="form-control">
+ <option value="">-- Seleccione Duración del Plan --</option>
+
+
+ <optgroup label="Diario"> 
+ <option value="0">Dia</option>
+
+ <optgroup label="Mensual"> 
+ <option value ="1">1 mes</option>    
+ <option value ="2">2 meses</option>
+ <option value ="3">3 meses</option>
+ <option value ="4">4 meses</option>
+ <option value ="5">5 meses</option>
+ <option value ="6">6 meses</option>
+ <option value ="7">7 meses</option>
+ <option value ="8">8 meses</option>
+ <option value ="9">9 meses</option>
+ <option value ="10">10 meses</option>
+ <option value ="11">11 meses</option>
+ <option value ="12">12 meses</option>
+ 
+
+  
+ </select>
+ </div>
  
  
  <div class="form-group" onclick="return confirm('Esta seguro?')">

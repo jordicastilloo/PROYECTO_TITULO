@@ -48,7 +48,7 @@
 
                 <th>Estado del Implemento</th>
 
-                <th></th>
+                <th>Ingresar Estado</th>
 
                 <th>Dar de Baja</th>
               </tr>

@@ -7,6 +7,8 @@
 <div class="row">
  <div class="col-md-3">-->
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 {!! Form::open (['route' => 'planes.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
   <div class="form-group">
@@ -33,13 +35,24 @@
               <tr>
                 <th>Nombre</th>
                 <th>Precio</th>
+                <th>Duracion Plan</th>
 
               </tr>
               @foreach ($planes as $plan)
                   <tr>
                     <td width="500">{{ $plan->nombre_plan }}</td>
                     <td width="500">{{ $plan->precio_plan }}</td>
-                    <td width="60" align="center">
+
+
+                    
+                   
+                    @if($plan->duracion_plan == 0) <td width="500">{{ "Dia" }}</td>
+                    @elseif($plan->duracion_plan == 1) <td width="500">{{ $plan->duracion_plan }} Mes</td>
+                    @elseif ($plan->duracion_plan != 0)<td width="500">{{ $plan->duracion_plan }} Meses</td>
+                    @endif
+                    
+
+                    <td>
                       {!! Html::link(route('planes.edit', $plan->id_plan), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
 

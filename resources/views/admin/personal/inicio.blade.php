@@ -67,6 +67,9 @@
                           <button type="submit" class="btn btn-danger btn-md" onclick="return confirm('Esta seguro?')">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
+
+                    <td><a href="{{action('PersonalController@downloadPDF', $personal->rut_p)}}">PDF</a></td>
+
                   </tr>
 
                                    @include('admin.personal.botonmodal')

@@ -113,6 +113,8 @@ return [
 		/*
 		 * Laravel Framework Service Providers...
 		 */
+		  
+		
 		'Illuminate\Html\HtmlServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -162,6 +164,10 @@ return [
 
 	'aliases' => [
 
+		   
+
+        
+       
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 'Form'      => 'Illuminate\Html\FormFacade',
 		'App'       => 'Illuminate\Support\Facades\App',

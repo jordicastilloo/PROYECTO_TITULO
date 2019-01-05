@@ -85,7 +85,7 @@
  <div class="form-group">
  <label for="">Subcategoria Implementos</label>
  <select name="subcategoria" id="inputSubcategoria" class="form-control">
- <option value="">-- Seleccione Subcategoria Tipo de Implemento --</option>
+ <option value="">-- Seleccione Subcategoria Tipo de Implemento si es necesario--</option>
  <optgroup label="Kilogramos"> 
  <option value ="2,5 kg">2,5 kg</option>    
  <option value ="3 kg">3 kg</option>

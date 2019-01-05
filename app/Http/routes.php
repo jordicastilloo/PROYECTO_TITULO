@@ -13,6 +13,7 @@ use App\implementos;
 |
 */
 
+Route::get('/downloadPDF/{rut_p}','PersonalController@downloadPDF');
 
 
 

@@ -48,6 +48,7 @@ class PlanesController extends Controller {
 		$planes = new \App\planes;
 		$planes->nombre_plan = \Request::input('nombre_plan');
 		$planes->precio_plan = \Request::input('precio_plan');
+		$planes->duracion_plan = \Request::input('duracion_plan');
 		$planes->save();
 
     return redirect('planes/create')->with('message', 'Planes saved');
@@ -90,6 +91,8 @@ class PlanesController extends Controller {
  		$planes->nombre_plan = \Request::input('nombre_plan');
  
   		$planes->precio_plan = \Request::input('precio_plan');
+
+  		$planes->duracion_plan = \Request::input('duracion_plan');
  
  		$planes->save();
  
