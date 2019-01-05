@@ -4,7 +4,10 @@
 
 
 
+
 <div class="modal fade" tabindex="-1" id="modal-delete-{{$Cliente->rut_cliente}}" role="dialog" >
+
+
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -14,27 +17,26 @@
                             aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Datos de la Persona</h4>
             </div>
-            <div class="modal-body">
 
 
 
+            
+            <div class="modal-body" style="max-height: calc(100vh - 210px);overflow-y: auto";>
+        
+            		<p> Rut: {{$Cliente->rut_cliente}}</p>
+            		<p> Nombre: {{$Cliente->nombre_cliente}}</p>
+                    <p> Apellido Paterno: {{$Cliente->ap_pat_cliente}}</p>
+                    <p> Apellido Materno: {{$Cliente->ap_mat_cliente}}</p>
+                    <p> Telefono: {{$Cliente->telefono_cliente}}</p>
+                    <p> Email: {{$Cliente->email_cliente}}</p>
+                    <p> Nacionalidad: {{$Cliente->nacionalidad_cliente}}</p>
+                    <p> Fecha de Nacimiento: {{$Cliente->fecha_nac_cliente}}</p>
+                    <p> Genero: {{$Cliente->sexo_cliente}}</p>
+                    <p> Alergia: {{$Cliente->alergia_cliente}}</p>
+                    <p> Patologia: {{$Cliente->patologia_cliente}}</p>
+                    <p> <img src="{{$Cliente->fotografia_cliente}}" height="200" width="200"></p>
+            
 
-
-            	<ul>
-            		<br><h4>Rut: {{$Cliente->rut_cliente}}
-            		<br>Nombre: {{$Cliente->nombre_cliente}}
-                    <br>Apellido Paterno: {{$Cliente->ap_pat_cliente}}
-                    <br>Apellido Materno: {{$Cliente->ap_mat_cliente}}
-                    <br>Telefono: {{$Cliente->telefono_cliente}}
-                    <br>Email: {{$Cliente->email_cliente}}
-                    <br>Nacionalidad: {{$Cliente->nacionalidad_cliente}}
-                    <br>Fecha de Nacimiento: {{$Cliente->fecha_nac_cliente}}
-                    <br>Genero: {{$Cliente->sexo_cliente}}
-                    <br>Alergia: {{$Cliente->alergia_cliente}}
-                    <br>Patologia: {{$Cliente->patologia_cliente}}
-                    <br>Fotografia: {{$Cliente->fotografia_cliente}}
-
-            	</ul>
 
             </div>
             <div class="modal-footer">
@@ -42,4 +44,5 @@
             </div>
         </div>
     </div>
+
 </div>

@@ -49,6 +49,7 @@
                     <td width="500">{{ $Cliente->nombre_cliente}}</td>
                     <td width="500">{{ $Cliente->ap_pat_cliente}}</td>
                     <td width="500">{{ $Cliente->ap_mat_cliente}}</td>
+                    <!--<td width="500"><img src={{ $Cliente->fotografia_cliente}} height="200" width="200"></td>-->
                     <td><a href="#" data-target="#modal-delete-{{$Cliente->rut_cliente}}" data-toggle="modal" title="Mostrar">
         <button type="button" class="btn btn-primary btn-sm">Ver Datos</button>
       </a></td>
