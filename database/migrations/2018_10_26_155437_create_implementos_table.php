@@ -24,8 +24,11 @@ class CreateImplementosTable extends Migration {
 			$table->integer('stock');
 			$table->date('fecha_ingreso');
 			$table->string('subcategoria');
-			$table->integer('empresa_id_emp');
-			$table->integer('tipo_id_tip');
+		
+			$table->integer('empresa_id_emp')->unsigned();
+			$table->foreign('empresa_id_emp')->references('id_emp')->on('empresas');
+			$table->integer('tipo_id_tip')->unsigned();
+			$table->foreign('tipo_id_tip')->references('id_tipo')->on('tipos');
 
 		});
 	}
@@ -38,6 +41,9 @@ class CreateImplementosTable extends Migration {
 	public function down()
 	{
 		Schema::drop('implementos');
+		Schema::table('implementos', function (Blueprint $table) {
+            $table->dropForeign('implementos_empresas_tipos_id_emp_id_tipo_foreign');
+        });
 	}
 
 }

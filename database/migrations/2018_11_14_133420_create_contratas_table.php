@@ -18,7 +18,10 @@ class CreateContratasTable extends Migration {
 			$table->datetime('inicio_insc');
 			$table->integer('pago_insc');
 			$table->datetime('fin_insc');
-			$table->integer('planes_id_plan');
+			
+
+			$table->integer('planes_id_plan')->unsigned();
+			$table->foreign('planes_id_plan')->references('id_plan')->on('planes');
 		});
 	}
 
@@ -30,6 +33,9 @@ class CreateContratasTable extends Migration {
 	public function down()
 	{
 		Schema::drop('contratas');
+		Schema::table('contratas', function (Blueprint $table) {
+            $table->dropForeign('contratas_planes_id_plan_foreign');
+        });
 	}
 
 }

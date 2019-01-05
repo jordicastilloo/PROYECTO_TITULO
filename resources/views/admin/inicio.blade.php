@@ -43,7 +43,7 @@
             <div class="icon">
               <i class="fas fa-clipboard"></i>
             </div>
-            <a href="#" class="small-box-footer">Más <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/planes" class="small-box-footer">Listar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -57,7 +57,7 @@
             <div class="icon">
               <i class="fas fa-dumbbell"></i>
             </div>
-            <a href="/implementos" class="small-box-footer">Registrar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="/implementos" class="small-box-footer">Listar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

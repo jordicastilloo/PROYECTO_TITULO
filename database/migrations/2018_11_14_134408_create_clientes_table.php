@@ -28,8 +28,11 @@ class CreateClientesTable extends Migration {
 			$table->string('alergia_cliente');
 			$table->string('patologia_cliente');
 			$table->string('fotografia_cliente');
-			$table->integer('empresa_id_emp');
-			$table->integer('contrata_id_insc');
+			
+			$table->integer('empresa_id_emp')->unsigned();
+			$table->foreign('empresa_id_emp')->references('id_emp')->on('empresas');
+			$table->integer('contrata_id_insc')->unsigned();
+			$table->foreign('contrata_id_insc')->references('id_insc')->on('contrata_id_insc');
 		});
 	}
 
@@ -41,6 +44,10 @@ class CreateClientesTable extends Migration {
 	public function down()
 	{
 		Schema::drop('clientes');
+		Schema::table('clientes', function (Blueprint $table) {
+            $table->dropForeign('clientes_empresas_contratas_id_emp_id_insc_foreign');
+        });
 	}
+	
 
 }
