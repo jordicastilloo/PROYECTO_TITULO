@@ -27,7 +27,8 @@ class CreatePersonalsTable extends Migration {
 			$table->string('sexo_p');
 			$table->string('profesion_p');
 			$table->string('fotografia_p');
-			$table->integer('empresa_id_emp');
+			$table->integer('empresa_id_emp')->unsigned();
+			$table->foreign('empresa_id_emp')->references('id_emp')->on('empresas');
 		});
 	}
 
@@ -39,6 +40,15 @@ class CreatePersonalsTable extends Migration {
 	public function down()
 	{
 		Schema::drop('personals');
+		Schema::table('personals', function (Blueprint $table) {
+            $table->dropForeign('personals_empresas_id_emp_foreign');
+        });
 	}
+	/*public function onDelete()
+	{
+	$table->foreign('category_id')
+      ->references('id')->on('categories')
+      ->onDelete('cascade');
+	}*/
 
 }
