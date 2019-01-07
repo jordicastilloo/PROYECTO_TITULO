@@ -4,6 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reserva extends Model {
 
-	//
+	public $timestamps = false;
+	protected $table = 'reserva';
+	protected $primaryKey = 'id_reserva';
+	protected $fillable = ['hora_inicio', 'hora_fin', 'fecha','rut_cl','rut_p'];
+	protected $guarded = ['id_reserva'];
 
 }
