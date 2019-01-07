@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlanNutricionalsTable extends Migration {
+class CreateReservasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,13 @@ class CreatePlanNutricionalsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('plan__nutricionals', function(Blueprint $table)
+		Schema::create('reservas', function(Blueprint $table)
 		{
-			$table->increments('id_plan_nut');
-			$table->string('nombre_plan_nut');
-			$table->string('descripcion_plan_nut');
-
+			$table->increments('id_reserva');
+			$table->datetime('hora_inicio');
+			$table->datetime('hora_fin');
+			$table->datetime('fecha');
+			
 			$table->integer('rut_p')->unsigned();
 			$table->foreign('rut_p')->references('rut_p')->on('personals');
 
@@ -34,7 +35,7 @@ class CreatePlanNutricionalsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('plan__nutricionals');
+		Schema::drop('reservas');
 	}
 
 }
