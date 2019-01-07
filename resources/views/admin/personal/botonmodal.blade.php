@@ -1,8 +1,3 @@
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
 
 <div class="modal fade" tabindex="-1" id="modal-delete-{{$Persona->rut_p}}" role="dialog" >
     <div class="modal-dialog" role="document">
@@ -16,11 +11,12 @@
             </div>
             <div class="modal-body">
 
-
+<div class="modal-body" style="max-height: calc(100vh - 210px);overflow-y: auto"; align="center">
 
 
 
             	<ul>
+                    <p> <img src="{{$Persona->fotografia_p}}" height="200" width="200"></p>
             		<br><h4>Rut: {{$Persona->rut_p}}
                     <br>Cargo: {{$Persona->tipo_p}}
             		<br>Nombre: {{$Persona->nombre_p}}
@@ -33,7 +29,6 @@
                     <br>Fecha de Nacimiento: {{$Persona->fecha_nac_p}}
                     <br>Genero: {{$Persona->sexo_p}}
                     <br>Profesion: {{$Persona->profesion_p}}
-                    <br>Fotografia: {{$Persona->fotografia_p}}
             	</ul>
 
             </div>

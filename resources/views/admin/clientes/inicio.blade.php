@@ -26,7 +26,6 @@
 
 
 
-
  {!! Html::link(route('clientes.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!} 
 
 
@@ -50,9 +49,18 @@
                     <td width="500">{{ $Cliente->ap_pat_cliente}}</td>
                     <td width="500">{{ $Cliente->ap_mat_cliente}}</td>
                     <!--<td width="500"><img src={{ $Cliente->fotografia_cliente}} height="200" width="200"></td>-->
-                    <td><a href="#" data-target="#modal-delete-{{$Cliente->rut_cliente}}" data-toggle="modal" title="Mostrar">
-        <button type="button" class="btn btn-primary btn-sm">Ver Datos</button>
+
+                    
+                    <!--AQUI LLAMADA AL MODAL-->
+                   
+                    <td><a href="#" data-target="#modal-{{$Cliente->rut_cliente}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal">Ver Datos</button>
       </a></td>
+
+
+
+
+
 
                     
                     <td width="60" align="center">

@@ -68,7 +68,6 @@
                       {!! Form::close() !!}
                     </td>
 
-                    <td><a href="{{action('PersonalController@downloadPDF', $personal->rut_p)}}">PDF</a></td>
 
                   </tr>
 
