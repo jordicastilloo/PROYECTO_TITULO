@@ -32,8 +32,8 @@ class CreateProgresosTable extends Migration {
 			$table->double('gemelo');
 			$table->date('fecha_evaluacion');
 
-			$table->integer('rut_cliente')->unsigned();
-			$table->foreign('rut_cliente')->references('rut_cliente')->on('clientes');
+			$table->integer('rut_cl')->unsigned();
+			$table->foreign('rut_cl')->references('rut_cl')->on('clientes');
 		});
 	}
 

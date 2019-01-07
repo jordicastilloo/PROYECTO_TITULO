@@ -14,7 +14,8 @@ class CreateClientesTable extends Migration {
 	{
 		Schema::create('clientes', function(Blueprint $table)
 		{
-			$table->integer('rut_cliente');
+			$table->integer('rut_cl')->unsigned();
+			$table->primary('rut_cl');
 			$table->string('nombre_cliente');
 			$table->string('ap_pat_cliente');
 			$table->string('ap_mat_cliente');
@@ -29,7 +30,7 @@ class CreateClientesTable extends Migration {
 			$table->string('patologia_cliente');
 			$table->string('fotografia_cliente');
 			$table->integer('estado');
-			
+
 			$table->integer('id_emp')->unsigned();
 			$table->foreign('id_emp')->references('id_emp')->on('empresas');
 			$table->integer('id_insc')->unsigned();

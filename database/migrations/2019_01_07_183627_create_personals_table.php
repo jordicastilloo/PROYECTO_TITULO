@@ -14,7 +14,8 @@ class CreatePersonalsTable extends Migration {
 	{
 		Schema::create('personals', function(Blueprint $table)
 		{
-			$table->integer('rut_p');
+			$table->integer('rut_p')->unsigned();
+			$table->primary('rut_p');
 			$table->string('tipo_p');
 			$table->string('nombre_p');
 			$table->string('ap_pat_p');
