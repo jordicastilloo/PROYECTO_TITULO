@@ -171,15 +171,21 @@ Femenino
 
  <div class="form-group">
  {!! Form::text('alergia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese si contiene algun tipo de alergia'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Alergia (En caso de contener)'])
  !!}
  </div>
 
+
+
  <div class="form-group">
  {!! Form::text('patologia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese si contiene algun tipo de Patologia'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Patologia (En caso de contener)'])
  !!}
  </div>
+
+
+
+
 
  <div class="form-group">
 <label for="Foto">Subir Fotografia:</label>
