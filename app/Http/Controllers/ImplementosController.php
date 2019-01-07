@@ -6,7 +6,6 @@ use App\Http\Requests\ImplementosForm;
 use Illuminate\Http\Request;
 use App\Http\Request\ImplementosRequest;
 use App\Implementos;
-use App\Tipos;
 use Illuminate\Support\Facades\DB;
 
 class ImplementosController extends Controller {
@@ -42,9 +41,9 @@ class ImplementosController extends Controller {
 
 
 		//$implementos = Implementos::with('id_tipo')->get();
- 		$tipos = Tipos::all();
+ 	
 
- 		return view('admin.implementos.createUpdate',compact('tipos'));
+ 		return view('admin.implementos.createUpdate',compact('tipo'));
 
 
 
@@ -70,24 +69,24 @@ class ImplementosController extends Controller {
 
 
 
-		$this->validate($request,[
-			'nombre'=>'required',
-			'tipo_id_tip' => 'required'
+		//$this->validate($request,[
+			//'nombre'=>'required',
+			//'tipo_id_tip' => 'required'
 
-		]
-		);
+		//]
+		//);
 
 		
  
 		$implementos = new \App\implementos;
 		$implementos->nombre = \Request::input('nombre');
 		$implementos->estado = "";
-		//$implementos->tipo = \Request::input('tipo');
+		$implementos->tipo = \Request::input('tipo');
 		$implementos->stock = 1;
 		$implementos->fecha_ingreso = date("Y-m-d");
 		$implementos->subcategoria= \Request::input('subcategoria');;
-		$implementos->empresa_id_emp = 1000;
-		$implementos->tipo_id_tip = \Request::input('tipo_id_tip');
+		$implementos->id_emp = 1;
+		//$implementos->tipo = \Request::input('tipo');
 		$implementos->save();
 
 

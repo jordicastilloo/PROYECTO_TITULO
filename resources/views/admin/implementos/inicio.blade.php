@@ -60,7 +60,7 @@
                   <tr>
                     <td width="500">{{ $implemento->nombre }}</td>
                     <!--<td width="500">{{ $implemento->estado }}</td>-->
-                    <td width="500">{{ $implemento->tipo_id_tip}}</td>
+                    <td width="500">{{ $implemento->tipo}}</td>
                     <!--<td width="500">{{ $implemento->stock }}</td>-->
                     <td width="500">{{ $implemento->fecha_ingreso  }}</td>
 

@@ -69,17 +69,7 @@
  {!! Form::text('nombre', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre del Implemento']) !!}
  </div>
  
-  
-<!--
- <div class="form-group">
- <label for="">Tipo de Implemento</label>
- <select name="tipo_id_tip" id="inputTipo_id" class="form-control">
- <option value="">-- Seleccione el Tipo de Implemento --</option>
- @foreach(App\Tipos::get() as $tipo)
- <option value ="{{ $tipo['id_tipo'] }}">{{$tipo['nombre_tipo']}}</option>
- @endforeach
- </select>
- </div>-->
+
 
 
  <div class="form-group">
