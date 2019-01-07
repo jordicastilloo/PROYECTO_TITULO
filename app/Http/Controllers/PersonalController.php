@@ -67,7 +67,7 @@ class PersonalController extends Controller {
 		$personal->sexo_p = \Request::input('sexo_p');
 		$personal->profesion_p = \Request::input('profesion_p');
 		$personal->fotografia_p = \Request::input('fotografia_p');
-		$personal->empresa_id_emp = 1000;
+		$personal->id_emp = 1;
 		$personal->save();
 
 		//obtenemos el campo file definido en el formulario
