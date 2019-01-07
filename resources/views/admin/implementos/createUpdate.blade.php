@@ -70,7 +70,7 @@
  </div>
  
   
-
+<!--
  <div class="form-group">
  <label for="">Tipo de Implemento</label>
  <select name="tipo_id_tip" id="inputTipo_id" class="form-control">
@@ -79,7 +79,21 @@
  <option value ="{{ $tipo['id_tipo'] }}">{{$tipo['nombre_tipo']}}</option>
  @endforeach
  </select>
+ </div>-->
+
+
+ <div class="form-group">
+ <label for="">Tipo de Implemento</label>
+ <select name="tipo" id="inputTipo" class="form-control">
+ <option value="">-- Seleccione Tipo de Implemento--</option>
+ <option value ="Musculacion">Musculacion</option>    
+ <option value ="Cardiovascular">Cardiovascular</option>
+ <option value ="Aerobica">Aerobica</option>
+  
+ </select>
  </div>
+
+
 
 
  <div class="form-group">
