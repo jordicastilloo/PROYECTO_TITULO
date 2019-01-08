@@ -43,9 +43,11 @@
                     <td width="500">{{ $clase->hora_fin }}</td>
 
 
+
+<!--
                      <td><a href="#" data-target="#modal-delete-{{$clase->id_clase}}" data-toggle="modal" title="Mostrar">
         <button type="button" class="btn btn-primary btn-sm">Mostrar Datos</button>
-      </a></td>
+      </a></td>-->
  
                 
                     <td width="60" align="center">

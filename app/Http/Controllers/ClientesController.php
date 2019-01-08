@@ -16,7 +16,7 @@ class ClientesController extends Controller {
 	public function index(Request $request)
 	{
 		//
-		$clientes = Clientes::search($request->name)->orderBy('rut_cliente','DESC')->paginate(5);
+		$clientes = Clientes::search($request->name)->orderBy('rut_cl','DESC')->paginate(5);
 
             return view ('admin.clientes.inicio')->with('clientes',$clientes);
 
@@ -47,10 +47,11 @@ class ClientesController extends Controller {
 
 		//
 		$clientes = new \App\clientes;
-		$clientes->rut_cliente = \Request::input('rut_cliente');
+		$clientes->rut_cliente = \Request::input('rut_cl');
 		$clientes->nombre_cliente = \Request::input('nombre_cliente');
 		$clientes->ap_pat_cliente = \Request::input('ap_pat_cliente');
 		$clientes->ap_mat_cliente = \Request::input('ap_mat_cliente');
+		$clientes->estado = 1;
 	    $clientes->telefono_cliente = \Request::input('telefono_cliente');
 		$clientes->email_cliente = \Request::input('email_cliente');
 		$clientes->huella_cliente = \Request::input('huella_cliente');
@@ -61,7 +62,7 @@ class ClientesController extends Controller {
 		$clientes->alergia_cliente = \Request::input('alergia_cliente');
 		$clientes->patologia_cliente = \Request::input('patologia_cliente');
 		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
-		$clientes->empresa_id_emp = 1000;
+		$clientes->id_emp = 1;
 		$clientes->contrata_id_insc = \Request::input('contrata_id_insc');
 		$clientes->save();
 
@@ -84,7 +85,7 @@ class ClientesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($rut_cliente)
+	public function show($rut_cl)
 	{
 		//
 	}
@@ -95,10 +96,10 @@ class ClientesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($rut_cliente)
+	public function edit($rut_cl)
 	{
 		//
-		return view('admin.clientes.createUpdate')->with('clientes', \App\Clientes::find($rut_cliente));
+		return view('admin.clientes.createUpdate')->with('clientes', \App\Clientes::find($rut_cl));
 	}
 
 	/**
@@ -107,10 +108,10 @@ class ClientesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($rut_cliente,ClientesForm $clientesForm)
+	public function update($rut_cl,ClientesForm $clientesForm)
 	{
 		//
-		$clientes = \App\Clientes::find($rut_cliente);
+		$clientes = \App\Clientes::find($rut_cl);
  
  		$clientes->nombre_cliente = \Request::input('nombre_cliente');
  
@@ -154,10 +155,10 @@ class ClientesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($rut_cliente)
+	public function destroy($rut_cl)
 	{
 		//
-		$clientes= \App\Clientes::find($rut_cliente);
+		$clientes= \App\Clientes::find($rut_cl);
  
  		$clientes->delete();
  

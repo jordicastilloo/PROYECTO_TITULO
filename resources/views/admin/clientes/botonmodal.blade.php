@@ -1,7 +1,7 @@
 
 
 
-<div class="modal fade" tabindex="-1" id="modal-{{$Cliente->rut_cliente}}" role="dialog" >
+<div class="modal fade" tabindex="-1" id="modal-{{$Cliente->rut_cl}}" role="dialog" >
 
 
 
@@ -22,7 +22,7 @@
 
 
                      <p> <img src="{{$Cliente->fotografia_cliente}}" height="200" width="200"></p>
-            		<p> Rut: {{$Cliente->rut_cliente}}</p>
+            		<p> Rut: {{$Cliente->rut_cl}}</p>
             		<p> Nombre: {{$Cliente->nombre_cliente}}</p>
                     <p> Apellido Paterno: {{$Cliente->ap_pat_cliente}}</p>
                     <p> Apellido Materno: {{$Cliente->ap_mat_cliente}}</p>
