@@ -46,7 +46,7 @@ class ClasesController extends Controller {
 		$clases->descripcion_clase = \Request::input('descripcion_clase');
 		$clases->hora_inicio = \Request::input('hora_inicio');
 		$clases->hora_fin = \Request::input('hora_fin');
-		$clases->empresa_id_emp = 1000;
+		$clases->id_emp = 1;
 		$clases->save();
 
     return redirect('clases/create')->with('message', 'Post saved');
@@ -94,7 +94,7 @@ class ClasesController extends Controller {
 
  		$clases->hora_fin = \Request::input('hora_fin');
 
- 		$clases->empresa_id_emp = \Request::input('empresa_id_emp');
+ 		//$clases->empresa_id_emp = \Request::input('empresa_id_emp');
  
  		$clases->save();
  

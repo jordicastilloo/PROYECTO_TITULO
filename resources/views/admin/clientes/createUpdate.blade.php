@@ -63,7 +63,7 @@
  {!! Form::open(['route' => 'clientes.store']) !!}
  
  <div class="form-group">
- {!! Form::text('rut_cliente', null,
+ {!! Form::text('rut_cl', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Rut'])
  !!}
  </div>
