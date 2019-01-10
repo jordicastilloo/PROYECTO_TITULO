@@ -49,9 +49,10 @@
                     <td width="500">{{ $Cliente->nombre_cliente}}</td>
                     <td width="500">{{ $Cliente->ap_pat_cliente}}</td>
                     <td width="500">{{ $Cliente->ap_mat_cliente}}</td>
-                    <td width="500">{{ $Cliente->estado}}</td>
+                    <!--<td width="500">{{ $Cliente->estado}}</td>-->
 
                      @if($Cliente->estado == 1) <td width="500">{{ "Activo" }}</td>
+                     @elseif($Cliente->estado == 0) <td width="500">{{ "Inactivo" }}</td>
                      @endif
                     <!--<td width="500"><img src={{ $Cliente->fotografia_cliente}} height="200" width="200"></td>-->
 
@@ -59,23 +60,42 @@
                     <!--AQUI LLAMADA AL MODAL-->
                    
                     <td><a href="#" data-target="#modal-{{$Cliente->rut_cl}}" data-toggle="modal" title="Mostrar">
-        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal">Ver Datos</button>
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Ver Datos</button>
       </a></td>
 
 
 
-
-
-
-                    
                     <td width="60" align="center">
                       {!! Html::link(route('clientes.edit', $Cliente->rut_cl), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
+
+
+
+                  
+
+
+
+<!--
+      <script type="text/javascript">
+function CambiarEstadoAInactivo() {
+
+
+
+        }
+}
+</script>
+
+                   <td><input type="submit" value="Dejar Inactivo" class="btn btn-danger btn-md"onclick="return CambiarEstadoAInactivo();"></td> -->
+
+
+
+                   
+                    <!--
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('clientes.destroy', $Cliente->rut_cl), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md" onclick="return confirm('Esta seguro?')">Eliminar</button>
                       {!! Form::close() !!}
-                    </td>
+                    </td>-->
                   </tr>
 
 

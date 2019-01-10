@@ -13,7 +13,6 @@ use App\implementos;
 |
 */
 
-Route::get('/downloadPDF/{rut_p}','PersonalController@downloadPDF');
 
 
 
@@ -52,6 +51,8 @@ Route::resource('reserva', 'ReservaController');
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);*/
+
+Route::resource('cambiarestado', 'ClientesController@editData');
 
 
 Route::get('home', function(){

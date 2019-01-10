@@ -165,4 +165,5 @@ class ClientesController extends Controller {
  		return redirect()->route('clientes.index')->with('message', 'Clientes deleted');
 	}
 
+
 }

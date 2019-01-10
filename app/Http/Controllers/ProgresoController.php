@@ -55,7 +55,7 @@ class ProgresoController extends Controller {
 		$progreso->gemelo = \Request::input('gemelo');
 		$progreso->fecha_evaluacion = date("Y-m-d");
 		//\Request::input('fecha_evaluacion');
-		$progreso->clientes_rut_cliente = \Request::input('clientes_rut_cliente');
+		$progreso->rut_cl = \Request::input('rut_cl');
 		$progreso->save();
 
     return redirect('progreso/create')->with('message', 'Progreso saved');

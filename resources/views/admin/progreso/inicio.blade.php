@@ -21,19 +21,22 @@
       @if(!$progreso->isEmpty())
           <table class="table table-bordered">
               <tr>
-                <th>Peso Corporal</th>
-                <th>Estatura</th>
-                <th>Subescapular</th>
-                <th>Tricipital</th>
+                <th>Rut Cliente</th>
 
               </tr>
               @foreach ($progreso as $progreso)
                   <tr>
-                    <td width="500">{{ $progreso->peso_corporal }}</td>
-                    <td width="500">{{ $progreso->estatura }}</td>
+                    <td width="500">{{ $progreso->rut_cl }}</td>
+                   <!-- <td width="500">{{ $progreso->estatura }}</td>--
                     <td width="500">{{ $progreso->subescapular }}</td>
-                    <td width="500">{{ $progreso->tricipital }}</td>
+                    <td width="500">{{ $progreso->tricipital }}</td>-->
                     <td width="60" align="center">
+
+
+                      <td><a href="#" data-target="#modal-progreso-{{$progreso->rut_cl}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Ver Datos</button>
+      </a></td>
+                    <td>
                       {!! Html::link(route('progreso.edit', $progreso->id_progreso), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
 
@@ -44,6 +47,12 @@
 
          </td>
                   </tr>
+
+
+                  @include('admin.progreso.botonmodal')
+
+
+
               @endforeach
           </table>
       @endif
