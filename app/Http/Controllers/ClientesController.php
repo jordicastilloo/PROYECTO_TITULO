@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ClientesForm;
 use Illuminate\Http\Request;
 use App\Clientes;
+use App\Progreso;
 
 class ClientesController extends Controller {
 

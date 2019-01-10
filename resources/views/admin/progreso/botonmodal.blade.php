@@ -16,6 +16,7 @@
 
             	<ul><h4>
             		<br>Rut: {{$progreso->rut_cl}}
+                    <br>Nombre: {{$progreso->clientes->nombre_cliente}} {{$progreso->clientes->ap_pat_cliente}} 
                     <br>Peso Corporal: {{$progreso->peso_corporal}} Kilogramos
             		<br>Estatura: {{$progreso->estatura}} Centímetros</h4> 
 

@@ -34,5 +34,12 @@ class Clientes extends Model {
     }
  }
 
+public function progreso() //id
+{
+		return $this->hasOne('App\Progreso','rut_cl','rut_cl');
+	}
+
+
+
 
 }

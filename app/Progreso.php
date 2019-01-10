@@ -10,4 +10,11 @@ class Progreso extends Model {
 	protected $fillable = ['peso_corporal', 'estatura', 'subescapular','tricipital','bicipital','supra_iliaco','hombros','pecho','biceps_relajado','biceps_contraido','muneca','cintura','cadera','muslo','gemelo','fecha_evaluacion','rut_cl'];
 	protected $guarded = ['id_progreso'];
 
+
+
+	public function clientes() //id
+{
+		return $this->hasOne('App\Clientes','rut_cl','rut_cl');
+	}
+
 }

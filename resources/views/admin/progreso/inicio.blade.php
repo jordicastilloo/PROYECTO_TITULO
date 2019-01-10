@@ -22,11 +22,23 @@
           <table class="table table-bordered">
               <tr>
                 <th>Rut Cliente</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+
+
 
               </tr>
               @foreach ($progreso as $progreso)
                   <tr>
                     <td width="500">{{ $progreso->rut_cl }}</td>
+                    <td width="500">{{ $progreso->clientes->nombre_cliente }}</td>
+                    <td width="500">{{ $progreso->clientes->ap_pat_cliente }}</td>
+                    <td width="500">{{ $progreso->clientes->ap_mat_cliente }}</td>
+
+
+
+
                    <!-- <td width="500">{{ $progreso->estatura }}</td>--
                     <td width="500">{{ $progreso->subescapular }}</td>
                     <td width="500">{{ $progreso->tricipital }}</td>-->
