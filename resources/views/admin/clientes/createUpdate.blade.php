@@ -1,4 +1,4 @@
-@extends('admin.layout')
+    @extends('admin.layout')
  
 @section('content')
 
@@ -51,7 +51,7 @@
  
  
 @if(isset($clientes))
- {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cliente], 'method' => 'patch']) !!}
+ {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cl], 'method' => 'patch']) !!}
 @else
  {!! Form::open(['route' => 'clientes.store']) !!}
 @endif
@@ -124,12 +124,6 @@
 
 
 
-
- 
-<script type="text/javascript" src="/dist/jquery-ui/external/jquery/jquery.js"></script>
-<script type="text/javascript" src="/dist/jquery-ui/jquery-ui.min.js"></script> 
-
-
  
 <script type="text/javascript">
 
@@ -194,18 +188,18 @@ Femenino
 
 <div class="form-group">
  {!! Form::text('fotografia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Fotografia'])
  !!}
  </div>
 
  <div class="form-group">
  {!! Form::text('empresa_id_emp', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese id Empresa'])
  !!}
  </div>
 
 <div class="form-group">
- {!! Form::text('contrata_id_insc', null,
+ {!! Form::text('id_insc', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
  !!}
  </div>

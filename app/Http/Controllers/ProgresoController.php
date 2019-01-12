@@ -18,7 +18,7 @@ class ProgresoController extends Controller {
 	{
 		//
 
-		$progreso = Progreso::search($request->name)->orderBy('rut_cl','DESC')->paginate(5);
+		$progreso = Progreso::search($request->name)->orderBy('fecha_evaluacion','DESC')->paginate(5);
 		
 		//return view("admin.progreso.inicio")->with('progreso', \App\Progreso::paginate(2)->setPath('progreso'));
 
