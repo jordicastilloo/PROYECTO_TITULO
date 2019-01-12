@@ -33,8 +33,7 @@
                     <p> Genero: {{$Cliente->sexo_cliente}}</p>
                     <p> Alergia: {{$Cliente->alergia_cliente}}</p>
                     <p> Patologia: {{$Cliente->patologia_cliente}}</p>
-                    <p> Patologia: {{$Cliente->patologia_cliente}}</p>
-                    <p> Patologia: {{$Cliente->plan->nombre_plan}}</p>
+                   
 
                    
             

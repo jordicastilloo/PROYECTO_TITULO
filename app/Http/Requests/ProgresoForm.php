@@ -23,6 +23,7 @@ class ProgresoForm extends Request {
 	{
 		return [
 			//
+			'rut_cl' => 'required' 
 		];
 	}
 

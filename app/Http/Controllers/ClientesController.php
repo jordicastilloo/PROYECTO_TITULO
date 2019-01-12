@@ -17,9 +17,13 @@ class ClientesController extends Controller {
 	public function index(Request $request)
 	{
 		//
-		$clientes = Clientes::search($request->name)->orderBy('rut_cl','DESC')->paginate(5);
+		$clientes = Clientes::search($request->name)->orderBy('fecha_evaluacion','DESC')->paginate(5);
 
             return view ('admin.clientes.inicio')->with('clientes',$clientes);
+
+
+ 
+
 
 
 

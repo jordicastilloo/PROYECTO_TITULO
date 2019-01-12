@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProgresoForm;
 use Illuminate\Http\Request;
 use App\Clientes;
+use App\Progreso;
 
 class ProgresoController extends Controller {
 
@@ -13,10 +14,16 @@ class ProgresoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
-		return view("admin.progreso.inicio")->with('progreso', \App\Progreso::paginate(2)->setPath('progreso'));
+
+		$progreso = Progreso::search($request->name)->orderBy('rut_cl','DESC')->paginate(5);
+		
+		//return view("admin.progreso.inicio")->with('progreso', \App\Progreso::paginate(2)->setPath('progreso'));
+
+		 return view ('admin.progreso.inicio')->with('progreso',$progreso);
+
 	}
 
 	/**
@@ -35,7 +42,7 @@ class ProgresoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(ProgresoForm $Request)
 	{
 		//
 		$progreso = new \App\progreso;
@@ -55,6 +62,8 @@ class ProgresoController extends Controller {
 		$progreso->muslo = \Request::input('muslo');
 		$progreso->gemelo = \Request::input('gemelo');
 		$progreso->fecha_evaluacion = date("Y-m-d");
+	   // $progreso->fecha_evaluacion = '2019-04-10';
+
 		//\Request::input('fecha_evaluacion');
 		$progreso->rut_cl = \Request::input('rut_cl');
 		$progreso->save();
@@ -68,7 +77,7 @@ class ProgresoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id_progreso)
 	{
 		//
 	}
@@ -112,7 +121,7 @@ class ProgresoController extends Controller {
 		$progreso->muslo = \Request::input('muslo');
 		$progreso->gemelo = \Request::input('gemelo');
 		$progreso->fecha_evaluacion = \Request::input('fecha_evaluacion');
-		$progreso->clientes_rut_cliente = \Request::input('clientes_rut_cliente');
+		//$progreso->clientes_rut_cliente = \Request::input('clientes_rut_cliente');
  
  		$progreso->save();
  
