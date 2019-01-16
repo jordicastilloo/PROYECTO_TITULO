@@ -18,7 +18,12 @@ class ProgresoController extends Controller {
 	{
 		//
 
-		$progreso = Progreso::search($request->name)->orderBy('fecha_evaluacion','DESC')->paginate(5);
+		//$progreso = Progreso::search($request->name)->orderBy('fecha_evaluacion','DESC')->paginate(5);
+		$progreso = Progreso::search($request->name)
+		->leftjoin('clientes','progresos.rut_cl','=','clientes.rut_cl')
+		->select('progresos.*','clientes.nombre_cliente as clients','clientes.ap_pat_cliente as clients')
+		->paginate(5);
+
 		
 		//return view("admin.progreso.inicio")->with('progreso', \App\Progreso::paginate(2)->setPath('progreso'));
 

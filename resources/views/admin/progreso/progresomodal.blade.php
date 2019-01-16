@@ -47,10 +47,8 @@ document.getElementById('rut_cl').style.display = 'none';
 </div>
 
 
-@if(Buscar == asd){
 	<div id="progreso" style='display:none;'>
-}
-@endif
+
 
 
 

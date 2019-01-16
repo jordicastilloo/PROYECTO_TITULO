@@ -18,15 +18,14 @@ class Progreso extends Model {
 	}
 
 
-
-
+/*
 	public static function comprobar(){   
    if (Progreso::where('rut_cl', '=', Input::get('rut_cl'))->exists()) { 
     // user found 
       echo 'existe usuario';
 
    } 
-   }
+   }*/
 
 
 
