@@ -121,8 +121,10 @@
 <script type="text/javascript">
 function buscar()
 {
+if (document.getElementById('progreso' == )) {
+  document.getElementById('progreso').style.display = 'block';
+}
 //document.getElementById('rut').style.display = 'none';
-document.getElementById('progreso').style.display = 'block';
 }
 </script>
 
@@ -143,7 +145,12 @@ document.getElementById('progreso').style.display = 'block';
  {!! Form::text('rut_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Rut'])
  !!}
+ @if(DB::table('clientes')->where('rut_cl', 'rut_cliente')->exists() == true )
  <input type="button" value="Buscar" onclick="buscar()">
+ @else
+  
+ @endif
+ 
  </div>
 </div>
   <div id="progreso" style='display:none;'>
