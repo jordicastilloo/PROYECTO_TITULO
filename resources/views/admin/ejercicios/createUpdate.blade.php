@@ -34,7 +34,7 @@
 @if(isset($ejercicios))
  {!! Form::model($ejercicios, ['route' => ['ejercicios.update', $ejercicios->id_ejercicio], 'method' => 'patch']) !!}
 @else
- {!! Form::open(['route' => 'ejercicos.store']) !!}
+ {!! Form::open(['route' => 'ejercicios.store']) !!}
 @endif
 
  <div class="panel-body">

@@ -51,12 +51,24 @@ function buscar()
  {!! Form::text('rut_cl', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Rut'])
  !!}
- <input type="button" value="Buscar" onclick="buscar()">
- </div>
+ 
+
+ <input type="button" value="Buscar" onclick="{{$progreso->ValidarRutExistente()}}">
+
+
+
 </div>
 
 
+
+
+
+
+
   <div id="progreso" style='display:none;'>
+
+
+
 
 @if(isset($progreso))
 {!! Form::model($progreso, ['route' => ['progreso.update', $progreso->id_progreso], 'method' => 'patch']) !!}

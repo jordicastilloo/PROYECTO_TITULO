@@ -22,31 +22,36 @@
           <table class="table table-bordered">
               <tr>
                 <th>Nombre</th>
-                <th>Fotografia</th>
-                <th>Video</th>
-                <th>Descripcion</th>
                 <th>Clasificacion</th>
                 <th>Tipo</th>
 
               </tr>
-              @foreach ($ejercicios as $ejercicios)
+              @foreach ($ejercicios as $Ejercicio)
                   <tr>
-                    <td width="500">{{ $ejercicios->nombre }}</td>
-                    <td width="500">{{ $ejercicios->fotografia }}</td>
-                    <td width="500">{{ $ejercicios->video }}</td>
-                    <td width="500">{{ $ejercicios->descripcion }}</td>
-                     <td width="500">{{ $ejercicios->clasificacion }}</td>
-                      <td width="500">{{ $ejercicios->tipo }}</td>
+                    <td width="500">{{ $Ejercicio->nombre }}</td>
+                     <td width="500">{{ $Ejercicio->clasificacion }}</td>
+                      <td width="500">{{ $Ejercicio->tipo }}</td>
                     <td width="60" align="center">
-                      {!! Html::link(route('ejercicios.edit', $ejercicios->id_ejercicio), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
+
+
+                        <td><a href="#" data-target="#modal-{{$Ejercicio->id_ejercicio}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Ver Descripcion</button>
+      </a></td>
+
+
+
+                  <td>
+                      {!! Html::link(route('ejercicios.edit', $Ejercicio->id_ejercicio), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
 
                     <td width="60" align="center">
-                      {!! Form::open(array('route' => array('ejercicios.destroy', $ejercicios->id_ejercicio), 'method' => 'DELETE')) !!}
+                      {!! Form::open(array('route' => array('ejercicios.destroy', $Ejercicio->id_ejercicio), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
                   </tr>
+
+                                      @include('admin.ejercicios.botonmodal')
               @endforeach
           </table>
       @endif

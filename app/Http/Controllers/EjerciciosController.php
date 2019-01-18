@@ -12,7 +12,7 @@ class EjerciciosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
 		//
 		return view("admin.ejercicios.inicio")->with('ejercicios', \App\Ejercicios::paginate(2)->setPath('ejercicios'));
@@ -26,7 +26,7 @@ class EjerciciosController extends Controller {
 	public function create()
 	{
 		//
-		return view("admin.ejercicios.createUpdate");
+		return view('admin.ejercicios.createUpdate');
 	}
 
 	/**
@@ -34,7 +34,7 @@ class EjerciciosController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(EjerciciosForm $request)
 	{
 		//
 		$ejercicios = new \App\ejercicios;
@@ -55,7 +55,7 @@ class EjerciciosController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id_ejercicio)
 	{
 		//
 	}

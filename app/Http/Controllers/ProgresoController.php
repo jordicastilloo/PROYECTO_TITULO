@@ -24,6 +24,7 @@ class ProgresoController extends Controller {
 		->select('progresos.*','clientes.nombre_cliente as clients','clientes.ap_pat_cliente as clients')
 		->paginate(5);
 
+
 		
 		//return view("admin.progreso.inicio")->with('progreso', \App\Progreso::paginate(2)->setPath('progreso'));
 
@@ -148,5 +149,14 @@ class ProgresoController extends Controller {
  
  		return redirect()->route('progreso.index')->with('message', 'Implemento deleted');
 	}
+
+
+	public function ValidarRutExistente() {
+   // if(DB::table('clientes')->where('rut_cl', 'rut_cliente')->exists() == true )
+    
+     echo "alo";
+
+    }
+
 
 }
