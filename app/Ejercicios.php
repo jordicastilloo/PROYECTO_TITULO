@@ -31,4 +31,14 @@ class Ejercicios extends Model {
     }
  }
 
+
+ 		  public function scopeType($query,$clasificacion){
+    	$clasificaciones = config('options3.clasificaciones');
+
+    	if($clasificacion != "" && isset($clasificaciones[$clasificacion])){
+    		$query->where('clasificacion',$clasificacion);
+    	}
+    }
+
+
 }

@@ -3,27 +3,36 @@
 @section('content')
 
 
-{!! Form::open (['route' => 'ejercicios.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+{!!Form::model(Request::all(), ['route' => 'ejercicios.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+
+
   <div class="form-group">
-    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre del Ejercicio'])!!}    
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre Ejercicio'])!!}    
+
+
+    <!--Formulario lista de tipos-->
+   {!!Form::select('clasificacion',config('options3.clasificaciones'),null,['class' => 'form-control'])!!}
   </div>
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
 
 
-<!--
+
+
 <div class="container">
-<div class="row">
- <div class="col-md-3">-->
-
-
-  <div class="container">
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
+ 
 
 
- {!! Html::link(route('ejercicios.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
+
+
+
+ {!! Html::link(route('ejercicios.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!} 
+
+
 </div>
+
 
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
@@ -42,31 +51,36 @@
                       <td width="500">{{ $Ejercicio->tipo }}</td>
                     <td width="60" align="center">
 
-
-                        <td><a href="#" data-target="#modal-{{$Ejercicio->id_ejercicio}}" data-toggle="modal" title="Mostrar">
-        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Ver Descripcion</button>
+                     <td><a href="#" data-target="#modal-{{$Ejercicio->id_ejercicio}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-sm">Ver Descripcion</button>
       </a></td>
-
-
-
-                  <td>
-                      {!! Html::link(route('ejercicios.edit', $Ejercicio->id_ejercicio), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
+ 
+                    <td width="60" align="center">
+                      {!! Html::link(route('ejercicios.edit', $Ejercicio->rut_p), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
-
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('ejercicios.destroy', $Ejercicio->id_ejercicio), 'method' => 'DELETE')) !!}
-                          <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
+                          <button type="submit" class="btn btn-danger btn-md" onclick="return confirm('Esta seguro?')">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
+
+
                   </tr>
 
-                                      @include('admin.ejercicios.botonmodal')
+                                   @include('admin.ejercicios.botonmodal')
+
+
+
               @endforeach
+
           </table>
+    
       @endif
 
-      {!! $ejercicios->render() !!}
+         <!--PARA VER COMPLETA LA LISTA DE ACUERDO AL TIPO-->
+         {!! $ejercicios->appends(Request::only(['name','clasificacion']))->render()!!}
  </div>
  </div>
+</div>
 </div>
 @endsection

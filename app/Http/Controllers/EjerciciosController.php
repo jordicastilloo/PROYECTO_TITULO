@@ -17,8 +17,10 @@ class EjerciciosController extends Controller {
 	{
 		//
 
-		$ejercicios = Ejercicios::search($request->name)->orderBy('nombre','DESC')->paginate(5);
+		//$ejercicios = Ejercicios::search($request->name)->orderBy('nombre','DESC')->paginate(5);
 		//return view("admin.ejercicios.inicio")->with('ejercicios', \App\Ejercicios::paginate(5)->setPath('ejercicios'));
+
+		$ejercicios = Ejercicios::search($request->name)->type($request->get('clasificacion'))->orderBy('id_ejercicio','DESC')->paginate(5);
 
 		return view ('admin.ejercicios.inicio')->with('ejercicios',$ejercicios);
 	}
