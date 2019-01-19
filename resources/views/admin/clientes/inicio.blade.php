@@ -7,9 +7,19 @@
 <div class="row">
  <div class="col-md-3">-->
 
-{!! Form::open (['route' => 'clientes.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+<!--
+{!! Form::open (['route' => 'clientes.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}-->
+
+
+   {!!Form::model(Request::all(), ['route' => 'clientes.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+
+
+
+
   <div class="form-group">
-    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre-Apellido Paterno'])!!}    
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre-Apellido Paterno'])!!} 
+    {!!Form::select('estado',config('options4.estados'),null,['class' => 'form-control'])!!}  
+   
   </div>
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
@@ -111,7 +121,9 @@ function CambiarEstadoAInactivo() {
 
       @endif
 
-        {!! $clientes->render() !!}
+        <!--{!! $clientes->render() !!}-->
+
+        {!! $clientes->appends(Request::only(['name','estado']))->render()!!}
  </div>
  </div>
 </div>

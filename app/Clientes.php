@@ -40,6 +40,16 @@ public function progreso() //id
 	}
 
 
+	public function scopeType($query,$estado){
+    	$estados = config('options4.estados');
+
+    	if($estado != "" && isset($estados[$estado])){
+    		$query->where('estado',$estado);
+    	}
+    }
+
+
+
 
 
 }
