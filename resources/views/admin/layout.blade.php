@@ -412,6 +412,20 @@
             </li>
 
 
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fas fa-walkings"></i>
+                <span> Rutinas</span>
+                <span class="label label-primary pull-right"></span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/rutinas/create"><i class="fas fa-plus-circle"></i> Añadir Rutina</a></li>
+                <li><a href="/rutinas/"><i class="fas fa-bars"></i> Listar Rutina</a></li>
+              </ul>
+            </li>
+
+
 
 
  </li>

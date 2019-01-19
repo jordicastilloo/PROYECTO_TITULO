@@ -2,6 +2,15 @@
  
 @section('content')
 
+
+{!! Form::open (['route' => 'ejercicios.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+  <div class="form-group">
+    {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre del Ejercicio'])!!}    
+  </div>
+  <button type="submit" class="btn btn-default">Buscar</button>
+  {!! Form::close()!!}
+
+
 <!--
 <div class="container">
 <div class="row">
@@ -55,6 +64,8 @@
               @endforeach
           </table>
       @endif
+
+      {!! $ejercicios->render() !!}
  </div>
  </div>
 </div>

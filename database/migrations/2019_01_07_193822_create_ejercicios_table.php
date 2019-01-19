@@ -21,6 +21,8 @@ class CreateEjerciciosTable extends Migration {
 			$table->string('descripcion');
 			$table->string('clasificacion');
 			$table->string('tipo');
+			$table->string('repeticiones');
+			$table->integer('series');
 		});
 	}
 

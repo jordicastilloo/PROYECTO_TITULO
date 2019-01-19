@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EjerciciosForm;
 use Illuminate\Http\Request;
+use App\Ejercicios;
 
 class EjerciciosController extends Controller {
 
@@ -15,7 +16,11 @@ class EjerciciosController extends Controller {
 	public function index(Request $request)
 	{
 		//
-		return view("admin.ejercicios.inicio")->with('ejercicios', \App\Ejercicios::paginate(2)->setPath('ejercicios'));
+
+		$ejercicios = Ejercicios::search($request->name)->orderBy('nombre','DESC')->paginate(5);
+		//return view("admin.ejercicios.inicio")->with('ejercicios', \App\Ejercicios::paginate(5)->setPath('ejercicios'));
+
+		return view ('admin.ejercicios.inicio')->with('ejercicios',$ejercicios);
 	}
 
 	/**
@@ -44,6 +49,8 @@ class EjerciciosController extends Controller {
 		$ejercicios->descripcion= \Request::input('descripcion');
 		$ejercicios->clasificacion= \Request::input('clasificacion');
 		$ejercicios->tipo= \Request::input('tipo');
+		$ejercicios->series= \Request::input('series');
+		$ejercicios->repeticiones= \Request::input('repeticiones');
 		$ejercicios->save();
 
     return redirect('ejercicios/create')->with('message', 'Post saved');
@@ -81,7 +88,7 @@ class EjerciciosController extends Controller {
 	public function update($id_ejercicio, EjerciciosForm $ejerciciosForm)
 	{
 		//
-		$ejercicios = \App\Implementos::find($id_implemento);
+		$ejercicios = \App\Ejercicios::find($id_implemento);
  
  		$ejercicios->nombre = \Request::input('nombre');
  
@@ -94,6 +101,12 @@ class EjerciciosController extends Controller {
  		$ejercicios->clasificacion = \Request::input('clasificacion');
 
  		$ejercicios->tipo = \Request::input('tipo');
+
+ 		$ejercicios->series = \Request::input('series');
+
+
+ 		$ejercicios->repeticiones = \Request::input('repeticiones');
+
  
  		$ejercicios->save();
  

@@ -20,6 +20,8 @@
 
                     <p> <img src="{{ $Ejercicio->fotografia }}" height="300" width="300"></p>
             		<p> Descripcion: {{$Ejercicio->descripcion}}</p>
+                    <p> Numero de Series: {{$Ejercicio->series}}</p>
+                    <p> Intervalo de Repeticiones: {{$Ejercicio->repeticiones}}</p>
                     <p> Video: {{$Ejercicio->video}}</p>
                     
 
