@@ -49,6 +49,7 @@
                     <td width="500">{{ $Ejercicio->nombre }}</td>
                      <td width="500">{{ $Ejercicio->clasificacion }}</td>
                       <td width="500">{{ $Ejercicio->tipo }}</td>
+                      
                     <td width="60" align="center">
 
                      <td><a href="#" data-target="#modal-{{$Ejercicio->id_ejercicio}}" data-toggle="modal" title="Mostrar">

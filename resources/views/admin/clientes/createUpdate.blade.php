@@ -171,47 +171,20 @@ Femenino
 
 
 
-<script type="text/javascript">
-
-function buscar()
-{
-
-//document.getElementById('rut').style.display = 'none';
-           //document.getElementById('alergiaSi').style.display = 'block'; 
-          if(document.getElementById('ConsultaAlergia').value="Si"){
-           document.write("hola");
-          }else{document.write("chao");}
-
-}
-</script>
-
-
-<div class="form-group" id="ConsultaAlergia" onclick="buscar()">
-<label for="Alergia">Seleccione si contiene algún tipo de alergia:</label>
-<br>
-{!! Form::radio('alergia_cliente', 'No', true) !!} 
-No
-
-{!! Form::radio('alergia_cliente', 'Si', true) !!} 
-Si
-
-</div>
 
 
 
-
-<!--
- <div class="form-group" id="alergiaSi" style='display:none;'>
+ <div class="form-group" id="alergia"'>
  {!! Form::text('alergia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Alergia'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Alergia (en caso de contener)'])
  !!}
- </div>-->
+ </div>
 
 
 
  <div class="form-group" id="patologia">
  {!! Form::text('patologia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Patologia'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Patologia (en caso de contener)'])
  !!}
  </div>
 

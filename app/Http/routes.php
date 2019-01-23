@@ -55,6 +55,13 @@ Route::resource('reserva', 'ReservaController');
 Route::resource('cambiarestado', 'ClientesController@editData');
 
 
+Route::get('/read', function(){
+   $clients = DB::select('call viewClients()');
+   dump($clients);
+});
+
+
+
 Route::get('home', function(){
 	return view('home');
 });
