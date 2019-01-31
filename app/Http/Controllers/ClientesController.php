@@ -194,6 +194,10 @@ class ClientesController extends Controller {
      	DB::table('clientes')
         ->where('rut_cl', $rut)
         ->update(['estado' => 0]);
+
+
+        return redirect()->action('ClientesController@index');
+
       }
 
 
@@ -210,6 +214,9 @@ class ClientesController extends Controller {
      	DB::table('clientes')
         ->where('rut_cl', $rut)
         ->update(['estado' => 1]);
+
+        return redirect()->action('HomeController@index');
+
       }
 
 }

@@ -2,6 +2,20 @@
  
 @section('content')
 
+
+<style type="text/css">
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#AEA134; 
+    border:0 none;
+    color:white;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+</style>
+
 <!--
 <div class="container">
 <div class="row">
@@ -31,6 +45,14 @@
 <div class="container">
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
+
+
+  <script type="text/javascript">
+function redireccionar(){
+  window.locationf="admin.clientes.inicio";
+} 
+setTimeout ("redireccionar()", 5000); //tiempo expresado en milisegundos
+</script>
  
 
 
@@ -81,21 +103,6 @@
 
 
 
-
-
-
-<style type="text/css">
-
-input[type=submit] {
-    padding:5px 15px; 
-    background:#FFE933; 
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-}
-</style>
-
                     @if($Cliente->estado == 1) 
                       <td>
                       <form id="form1" name="form1" action="/inicio2" method="post">
@@ -104,6 +111,8 @@ input[type=submit] {
                       <input type="hidden" name="rut_cliente_dejar_activo" id="rut_cliente_dejar_activo" value="<?php echo $Cliente->rut_cl?>">
                    
                       <input type="submit" value="Dejar Inactivo" id="boton"/>
+
+                      
     
                       </form></td>
 
@@ -114,7 +123,7 @@ input[type=submit] {
 
                       <input type="hidden" name="rut_cliente" id="rut_cliente" value="<?php echo $Cliente->rut_cl?>">
                    
-                      <input type="submit" value="Dejar Activo" />
+                      <input type="submit" value="Dejar Activo" onclick="redireccionar()" />
     
                       </form></td>
 

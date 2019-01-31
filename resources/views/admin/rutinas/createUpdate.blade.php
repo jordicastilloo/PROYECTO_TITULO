@@ -66,6 +66,11 @@ document.getElementById('rutina').style.display = 'block';
 
  <div class="panel-body">
  {!! Form::open(['route' => 'rutinas.store']) !!}
+
+
+ <div class="form-group">
+ {!! Form::text('rut_p', null, ['class' => 'form-control','placeholder'=>'Ingrese Rut Personal']) !!}
+ </div>
  
  <div class="form-group">
  {!! Form::text('nombre_rutina', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre de la Rutina']) !!}

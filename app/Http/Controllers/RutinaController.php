@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RutinaForm;
 use Illuminate\Http\Request;
+use DB;
 
 class RutinaController extends Controller {
 
@@ -42,7 +43,7 @@ class RutinaController extends Controller {
 		$rutinas->nombre_rutina = \Request::input('nombre_rutina');
 		$rutinas->desc_rutina= \Request::input('desc_rutina');
 		$rutinas->rut_cl= \Request::input('rut_cl');
-		//$rutinas->tipo= \Request::input('rut_p');
+		$rutinas->rut_p= \Request::input('rut_p');
 		$rutinas->save();
 
     return redirect('rutinas/create')->with('message', 'Post saved');
@@ -107,6 +108,21 @@ class RutinaController extends Controller {
  		$rutinas->delete();
  
  		return redirect()->route('rutinas.index')->with('message', 'Rutina deleted');
+	}
+
+
+
+	public function insertForm(){
+		return view('admin.rutinas.inicio');
+	}
+
+
+	public function insert(Request $request){
+		$idrutina = $request->input('nombre_rutina');
+		DB::table('rutinas')->insert(['nombre_rutina'=>$idrutina]);
+		DB::table('rutinas')->insert(['rut_cl'=>190877345]);
+		DB::table('rutinas')->insert(['rut_p'=>95147121]);
+
 	}
 
 }

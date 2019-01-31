@@ -15,6 +15,11 @@ use App\implementos;
 */
 Route::resource('rutinas','RutinaController');
 
+Route::get('insert','RutinasController@insertForm');
+
+Route::post('inicio','RutinasController@insert');
+
+
 Route::resource('ejercicios','EjerciciosController');
 
 Route::resource('personas', 'PersonasController');
@@ -72,7 +77,6 @@ Route::resource('reserva', 'ReservaController');
 	'password' => 'Auth\PasswordController',
 ]);*/
 
-Route::resource('cambiarestado', 'ClientesController@editData');
 
 
 Route::get('/read', function(){

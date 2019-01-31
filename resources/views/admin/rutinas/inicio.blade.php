@@ -7,6 +7,19 @@
 <div class="row">
  <div class="col-md-3">-->
 
+  <style type="text/css">
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#AEA134; 
+    border:0 none;
+    color:white;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+</style>
+
 
   <div class="container">
  <div class="row">
@@ -43,7 +56,30 @@
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
-                  </tr>
+
+
+
+<!--
+                  <td>
+                      <form id="form2" name="form2" action="/inicio" method="post">
+                        <input type="hidden" name="_token" value = "<?php echo csrf_token(); ?>">
+
+                      <input type="hidden" name="id_rutina" id="id_rutina" value="<?php echo $Rutina->nombre_rutina?>">
+                   
+                      <input type="submit" value="Ingresar Ejercicios" />
+    
+                      </form></td>
+
+                  </tr>-->
+
+
+
+
+
+
+
+                  
+
 
               @endforeach
           </table>
