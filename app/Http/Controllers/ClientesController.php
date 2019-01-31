@@ -215,7 +215,7 @@ class ClientesController extends Controller {
         ->where('rut_cl', $rut)
         ->update(['estado' => 1]);
 
-        return redirect()->action('HomeController@index');
+        return redirect()->action('ClientesController@index');
 
       }
 

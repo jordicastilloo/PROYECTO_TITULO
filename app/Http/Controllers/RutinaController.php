@@ -47,6 +47,10 @@ class RutinaController extends Controller {
 		$rutinas->save();
 
     return redirect('rutinas/create')->with('message', 'Post saved');
+
+
+    //return redirect()->action('EjerciciosController@index');
+
 	}
 
 	/**
@@ -112,17 +116,6 @@ class RutinaController extends Controller {
 
 
 
-	public function insertForm(){
-		return view('admin.rutinas.inicio');
-	}
 
-
-	public function insert(Request $request){
-		$idrutina = $request->input('nombre_rutina');
-		DB::table('rutinas')->insert(['nombre_rutina'=>$idrutina]);
-		DB::table('rutinas')->insert(['rut_cl'=>190877345]);
-		DB::table('rutinas')->insert(['rut_p'=>95147121]);
-
-	}
 
 }

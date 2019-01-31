@@ -55,30 +55,7 @@ input[type=submit] {
                       {!! Form::open(array('route' => array('rutinas.destroy', $Rutina->id_rutina), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
-                    </td>
-
-
-
-<!--
-                  <td>
-                      <form id="form2" name="form2" action="/inicio" method="post">
-                        <input type="hidden" name="_token" value = "<?php echo csrf_token(); ?>">
-
-                      <input type="hidden" name="id_rutina" id="id_rutina" value="<?php echo $Rutina->nombre_rutina?>">
-                   
-                      <input type="submit" value="Ingresar Ejercicios" />
-    
-                      </form></td>
-
-                  </tr>-->
-
-
-
-
-
-
-
-                  
+                    </td>        
 
 
               @endforeach

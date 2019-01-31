@@ -15,11 +15,6 @@ use App\implementos;
 */
 Route::resource('rutinas','RutinaController');
 
-Route::get('insert','RutinasController@insertForm');
-
-Route::post('inicio','RutinasController@insert');
-
-
 Route::resource('ejercicios','EjerciciosController');
 
 Route::resource('personas', 'PersonasController');
