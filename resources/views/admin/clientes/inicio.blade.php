@@ -82,6 +82,20 @@
 
 
 
+
+
+<style type="text/css">
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#FFE933; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+</style>
+
                     @if($Cliente->estado == 1) 
                       <td>
                       <form id="form1" name="form1" action="/inicio2" method="post">
@@ -89,7 +103,7 @@
 
                       <input type="hidden" name="rut_cliente_dejar_activo" id="rut_cliente_dejar_activo" value="<?php echo $Cliente->rut_cl?>">
                    
-                      <input type="submit" value="Dejar Inactivo" />
+                      <input type="submit" value="Dejar Inactivo" id="boton"/>
     
                       </form></td>
 
