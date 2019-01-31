@@ -81,6 +81,44 @@
 
 
 
+
+                    @if($Cliente->estado == 1) 
+                      <td>
+                      <form id="form1" name="form1" action="/inicio2" method="post">
+                        <input type="hidden" name="_token" value = "<?php echo csrf_token(); ?>">
+
+                      <input type="hidden" name="rut_cliente_dejar_activo" id="rut_cliente_dejar_activo" value="<?php echo $Cliente->rut_cl?>">
+                   
+                      <input type="submit" value="Dejar Inactivo" />
+    
+                      </form></td>
+
+                      @elseif($Cliente->estado == 0)
+                        <td>
+                      <form id="form2" name="form2" action="/inicio" method="post">
+                        <input type="hidden" name="_token" value = "<?php echo csrf_token(); ?>">
+
+                      <input type="hidden" name="rut_cliente" id="rut_cliente" value="<?php echo $Cliente->rut_cl?>">
+                   
+                      <input type="submit" value="Dejar Activo" />
+    
+                      </form></td>
+
+
+                      @endif
+
+
+
+
+
+
+                   
+
+                  
+
+
+
+
                   
 
 

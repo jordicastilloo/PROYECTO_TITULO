@@ -2,6 +2,7 @@
 
 use App\implementos;
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -22,7 +23,24 @@ Route::resource('planes', 'PlanesController');
 
 Route::resource('progreso', 'ProgresoController');
 
+
+
+
 Route::resource('clientes', 'ClientesController');
+
+
+//Route::get('Editar','ClientesController@EditarForm');
+Route::post('inicio2','ClientesController@EditaraInactivo');
+
+
+Route::post('inicio','ClientesController@EditaraActivo');
+
+
+
+
+
+
+
 
 Route::resource('implementos', 'ImplementosController');
 
@@ -30,6 +48,8 @@ Route::resource('personas', 'PersonasController');
 
 
 Route::get('/', 'InicioController@index');
+
+
 
 Route::get('login', 'LoginController@index');
 
@@ -59,6 +79,10 @@ Route::get('/read', function(){
    $clients = DB::select('call viewClients()');
    dump($clients);
 });
+
+
+
+
 
 
 

@@ -53,7 +53,7 @@ function buscar()
  !!}
  
 
- <input type="button" value="Buscar" onclick="{{$progreso->ValidarRutExistente()}}">
+ <input type="button" value="Buscar" onclick="buscar()">
 
 
 

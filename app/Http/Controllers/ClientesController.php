@@ -6,6 +6,7 @@ use App\Http\Requests\ClientesForm;
 use Illuminate\Http\Request;
 use App\Clientes;
 use App\Progreso;
+use DB;
 
 class ClientesController extends Controller {
 
@@ -172,5 +173,43 @@ class ClientesController extends Controller {
  		return redirect()->route('clientes.index')->with('message', 'Clientes deleted');
 	}
 
+
+
+	
+     public function EditarForm(){
+     	return view('admin.clientes.inicio');
+     }
+
+
+     public function EditaraInactivo(Request $request){
+     	$rut = $request->input('rut_cliente_dejar_activo');
+     	
+
+
+     	/*
+     	DB::table('clientes')->update(['estado'=>0]);
+     	echo "Estado editado";*/
+
+     	
+     	DB::table('clientes')
+        ->where('rut_cl', $rut)
+        ->update(['estado' => 0]);
+      }
+
+
+      public function EditaraActivo(Request $request){
+     	$rut = $request->input('rut_cliente');
+     	
+
+
+     	/*
+     	DB::table('clientes')->update(['estado'=>0]);
+     	echo "Estado editado";*/
+
+     	
+     	DB::table('clientes')
+        ->where('rut_cl', $rut)
+        ->update(['estado' => 1]);
+      }
 
 }

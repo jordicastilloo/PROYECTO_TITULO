@@ -57,7 +57,7 @@
       </a></td>
  
                     <td width="60" align="center">
-                      {!! Html::link(route('ejercicios.edit', $Ejercicio->rut_p), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
+                      {!! Html::link(route('ejercicios.edit', $Ejercicio->id_ejercicio), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
                     <td width="60" align="center">
                       {!! Form::open(array('route' => array('ejercicios.destroy', $Ejercicio->id_ejercicio), 'method' => 'DELETE')) !!}
