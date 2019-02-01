@@ -5,9 +5,9 @@
 
 <style type="text/css">
 
-input[type=submit] {
+#boton1 {
     padding:5px 15px; 
-    background:#AEA134; 
+    background:#B50E0E; 
     border:0 none;
     color:white;
     cursor:pointer;
@@ -15,6 +15,21 @@ input[type=submit] {
     border-radius: 5px; 
 }
 </style>
+
+<style type="text/css">
+
+#boton2 {
+    padding:5px 15px; 
+    background:#CDCF2A; 
+    border:0 none;
+    color:white;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+</style>
+
+
 
 <!--
 <div class="container">
@@ -110,7 +125,7 @@ setTimeout ("redireccionar()", 5000); //tiempo expresado en milisegundos
 
                       <input type="hidden" name="rut_cliente_dejar_activo" id="rut_cliente_dejar_activo" value="<?php echo $Cliente->rut_cl?>">
                    
-                      <input type="submit" value="Dejar Inactivo" id="boton"/>
+                      <input type="submit" value="Dejar Inactivo" id="boton1"/>
 
                       
     
@@ -123,7 +138,7 @@ setTimeout ("redireccionar()", 5000); //tiempo expresado en milisegundos
 
                       <input type="hidden" name="rut_cliente" id="rut_cliente" value="<?php echo $Cliente->rut_cl?>">
                    
-                      <input type="submit" value="Dejar Activo" onclick="redireccionar()" />
+                      <input type="submit" value="Dejar Activo" id="boton2" />
     
                       </form></td>
 
