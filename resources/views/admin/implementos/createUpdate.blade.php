@@ -14,20 +14,6 @@
  @endif
 
 
-
-<div class="container">
-
-<!--diseño-->
-<div class="col-md-8">
-    <div class="box box-danger">
-            <div class="box-header">
-
-
-                <!--AQUI TERMINA-->
- 
-
-
-
 <!-- BOTON PARA IR A CREAR
 <div class="row">
  <div class="col-md-3">

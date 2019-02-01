@@ -13,4 +13,33 @@ class Contiene extends Model {
 	protected $guarded = ['id_cont'];
 
 
+
+
+	public function rutina() //id
+{
+		return $this->hasOne('App\Rutina','id_rutina','id_rutina');
+	}
+
+
+
+
+   public function getFullNameAttribute()
+	{
+		return $this->nombre_rutina;
+	}
+
+
+
+	public function scopeSearch($query,$name){
+
+        if(trim($name) != "")
+        {
+        return $query->where('nombre_rutina','LIKE',"%$name%");
+         //$query->where(\DB::raw("nombre_rutina',"LIKE","%$name%");
+
+    }
+ }
+
+
+
 }

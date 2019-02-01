@@ -151,12 +151,7 @@ class ProgresoController extends Controller {
 	}
 
 
-	public function ValidarRutExistente() {
-   // if(DB::table('clientes')->where('rut_cl', 'rut_cliente')->exists() == true )
-    
-     echo "alo";
-
-    }
+	
 
 
 }

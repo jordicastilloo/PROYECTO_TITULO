@@ -77,7 +77,7 @@ document.getElementById('rutina').style.display = 'block';
  </div>
  
  <div class="form-group">
- {!! Form::text('desc_rutina', null, ['class' => 'form-control','placeholder'=>'Ingrese Descripcion']) !!}
+ {!! Form::textarea('desc_rutina', null, ['class' => 'form-control','placeholder'=>'Ingrese Descripcion']) !!}
  </div>
   
  <div class="form-group">

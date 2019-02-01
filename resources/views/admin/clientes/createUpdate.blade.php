@@ -15,22 +15,7 @@
 
 
 
-<div class="container">
-
-
-
-
-
-<!--diseño-->
-<div class="col-md-8">
-    <div class="box box-danger">
-            <div class="box-header">
-
-
-            	<!--AQUI TERMINA-->
-
-
-	
+<div class="container">	
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
  <div class="panel panel-default">

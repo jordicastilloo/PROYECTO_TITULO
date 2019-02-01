@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\RutinaForm;
 use Illuminate\Http\Request;
 use DB;
+use App\Rutina;
+use App\Contiene;
 
 class RutinaController extends Controller {
 
