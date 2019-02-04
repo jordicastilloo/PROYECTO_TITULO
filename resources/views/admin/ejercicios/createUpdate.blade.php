@@ -34,7 +34,7 @@
 @if(isset($ejercicios))
  {!! Form::model($ejercicios, ['route' => ['ejercicios.update', $ejercicios->id_ejercicio], 'method' => 'patch']) !!}
 @else
- {!! Form::open(['route' => 'ejercicos.store']) !!}
+ {!! Form::open(['route' => 'ejercicios.store']) !!}
 @endif
 
  <div class="panel-body">
@@ -43,7 +43,35 @@
  <div class="form-group">
  {!! Form::text('nombre', null, ['class' => 'form-control','placeholder'=>'Ingrese Nombre del Ejercicio']) !!}
  </div>
- 
+
+
+ <div class="form-group">
+ {!! Form::text('descripcion', null, ["class" => 'form-control','placeholder'=>'Ingrese descripcion']) !!}
+ </div>
+
+ <div class="form-group">
+ <label for="">Numero de Series</label>
+ <select name="series" id="inputSeries" class="form-control">
+ <option value="">-- Seleccione Numero de Series --</option>
+ <option value ="1">1</option>    
+ <option value ="2">2</option>
+ <option value ="3">3</option>
+ <option value ="4">4</option>
+ <option value ="5">5</option>
+ <option value ="6">6</option>
+ <option value ="7">7</option>
+ <option value ="8">8</option>
+ <option value ="9">9</option>
+ <option value ="10">10</option>
+ </select>
+</div>
+  
+
+  <div class="form-group">
+ {!! Form::text('repeticiones', null, ["class" => 'form-control','placeholder'=>'Ingrese intervalo de Repeticiones']) !!}
+ </div>
+
+
  <div class="form-group">
  {!! Form::text('fotografia', null, ['class' => 'form-control','placeholder'=>'Ingrese foto']) !!}
  </div>
@@ -52,9 +80,6 @@
  {!! Form::text('video', null, ["class" => 'form-control','placeholder'=>'Ingrese video']) !!}
  </div>
 
- <div class="form-group">
- {!! Form::text('descripcion', null, ["class" => 'form-control','placeholder'=>'Ingrese descripcion']) !!}
- </div>
 
  <div class="form-group">
  {!! Form::text('clasificacion', null, ["class" => 'form-control','placeholder'=>'Ingrese clasificacion']) !!}

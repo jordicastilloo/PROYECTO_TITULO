@@ -34,5 +34,22 @@ class Clientes extends Model {
     }
  }
 
+public function progreso() //id
+{
+		return $this->hasOne('App\Progreso','rut_cl','rut_cl');
+	}
+
+
+	public function scopeType($query,$estado){
+    	$estados = config('options4.estados');
+
+    	if($estado != "" && isset($estados[$estado])){
+    		$query->where('estado',$estado);
+    	}
+    }
+
+
+
+
 
 }

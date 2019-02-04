@@ -17,8 +17,6 @@ class CreateRutinasTable extends Migration {
 			$table->increments('id_rutina');
 			$table->string('nombre_rutina');
 			$table->string('desc_rutina');
-			$table->integer('series');
-			$table->integer('repeticiones');
 
 			$table->integer('rut_cl')->unsigned();
 			$table->foreign('rut_cl')->references('rut_cl')->on('clientes');

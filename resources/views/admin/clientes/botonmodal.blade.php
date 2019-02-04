@@ -34,6 +34,8 @@
                     <p> Alergia: {{$Cliente->alergia_cliente}}</p>
                     <p> Patologia: {{$Cliente->patologia_cliente}}</p>
                    
+
+                   
             
 
 

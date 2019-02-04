@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class ProgresoForm extends Request {
+class RutinaForm extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -23,7 +23,6 @@ class ProgresoForm extends Request {
 	{
 		return [
 			//
-			'rut_cl' => 'required' 
 		];
 	}
 

@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ClientesForm;
 use Illuminate\Http\Request;
 use App\Clientes;
+use App\Progreso;
+use DB;
 
 class ClientesController extends Controller {
 
@@ -16,9 +18,15 @@ class ClientesController extends Controller {
 	public function index(Request $request)
 	{
 		//
-		$clientes = Clientes::search($request->name)->orderBy('rut_cl','DESC')->paginate(5);
+		//$clientes = Clientes::search($request->name)->orderBy('rut_cl','DESC')->paginate(5);
+
+		$clientes = Clientes::search($request->name)->type($request->get('estado'))->orderBy('rut_cl','DESC')->paginate(5);
 
             return view ('admin.clientes.inicio')->with('clientes',$clientes);
+
+
+ 
+
 
 
 
@@ -47,7 +55,7 @@ class ClientesController extends Controller {
 
 		//
 		$clientes = new \App\clientes;
-		$clientes->rut_cliente = \Request::input('rut_cl');
+		$clientes->rut_cl = \Request::input('rut_cl');
 		$clientes->nombre_cliente = \Request::input('nombre_cliente');
 		$clientes->ap_pat_cliente = \Request::input('ap_pat_cliente');
 		$clientes->ap_mat_cliente = \Request::input('ap_mat_cliente');
@@ -63,7 +71,7 @@ class ClientesController extends Controller {
 		$clientes->patologia_cliente = \Request::input('patologia_cliente');
 		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
 		$clientes->id_emp = 1;
-		$clientes->contrata_id_insc = \Request::input('contrata_id_insc');
+		$clientes->id_insc = \Request::input('id_insc');
 		$clientes->save();
 
 		//obtenemos el campo file definido en el formulario
@@ -123,15 +131,15 @@ class ClientesController extends Controller {
 
  		$clientes->email_cliente = \Request::input('email_cliente');
 
- 		$clientes->huella_cliente = \Request::input('huella_cliente');
+ 		//$clientes->huella_cliente = \Request::input('huella_cliente');
 
- 		$clientes->contrasena_cliente = \Request::input('contrasena_cliente');
+ 		//$clientes->contrasena_cliente = \Request::input('contrasena_cliente');
 
  		$clientes->nacionalidad_cliente = \Request::input('nacionalidad_cliente');
 
  		$clientes->fecha_nac_cliente = \Request::input('fecha_nac_cliente');
 
- 		$clientes->sexo_cliente = \Request::input('sexo_cliente');
+ 		//$clientes->sexo_cliente = \Request::input('sexo_cliente');
 
 
  		$clientes->alergia_cliente = \Request::input('alergia_cliente');
@@ -141,12 +149,12 @@ class ClientesController extends Controller {
  		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
 
 
- 		$clientes->contrata_id_insc = \Request::input('contrata_id_insc');
+ 		$clientes->id_insc = \Request::input('contrata_id_insc');
 
  
  		$clientes->save();
  
- 		return redirect()->route('clientes.edit', ['post' => $rut_cliente])->with('message', 'Personal updated');
+ 		return redirect()->route('clientes.edit', ['post' => $rut_cl])->with('message', 'Personal updated');
 	}
 
 	/**
@@ -164,5 +172,51 @@ class ClientesController extends Controller {
  
  		return redirect()->route('clientes.index')->with('message', 'Clientes deleted');
 	}
+
+
+
+	
+     public function EditarForm(){
+     	return view('admin.clientes.inicio');
+     }
+
+
+     public function EditaraInactivo(Request $request){
+     	$rut = $request->input('rut_cliente_dejar_activo');
+     	
+
+
+     	/*
+     	DB::table('clientes')->update(['estado'=>0]);
+     	echo "Estado editado";*/
+
+     	
+     	DB::table('clientes')
+        ->where('rut_cl', $rut)
+        ->update(['estado' => 0]);
+
+
+        return redirect()->action('ClientesController@index');
+
+      }
+
+
+      public function EditaraActivo(Request $request){
+     	$rut = $request->input('rut_cliente');
+     	
+
+
+     	/*
+     	DB::table('clientes')->update(['estado'=>0]);
+     	echo "Estado editado";*/
+
+     	
+     	DB::table('clientes')
+        ->where('rut_cl', $rut)
+        ->update(['estado' => 1]);
+
+        return redirect()->action('ClientesController@index');
+
+      }
 
 }

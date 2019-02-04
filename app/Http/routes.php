@@ -2,6 +2,7 @@
 
 use App\implementos;
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,10 +13,9 @@ use App\implementos;
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::resource('rutinas','RutinaController');
 
-Route::get('/downloadPDF/{rut_p}','PersonalController@downloadPDF');
-
-
+Route::resource('ejercicios','EjerciciosController');
 
 Route::resource('personas', 'PersonasController');
 
@@ -23,7 +23,26 @@ Route::resource('planes', 'PlanesController');
 
 Route::resource('progreso', 'ProgresoController');
 
+Route::resource('contiene', 'ContieneController');
+
+
+
+
 Route::resource('clientes', 'ClientesController');
+
+
+//Route::get('Editar','ClientesController@EditarForm');
+Route::post('inicio2','ClientesController@EditaraInactivo');
+
+
+Route::post('inicio','ClientesController@EditaraActivo');
+
+
+
+
+
+
+
 
 Route::resource('implementos', 'ImplementosController');
 
@@ -31,6 +50,8 @@ Route::resource('personas', 'PersonasController');
 
 
 Route::get('/', 'InicioController@index');
+
+
 
 Route::get('login', 'LoginController@index');
 
@@ -52,6 +73,18 @@ Route::resource('reserva', 'ReservaController');
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);*/
+
+
+
+Route::get('/read', function(){
+   $clients = DB::select('call viewClients()');
+   dump($clients);
+});
+
+
+
+
+
 
 
 Route::get('home', function(){

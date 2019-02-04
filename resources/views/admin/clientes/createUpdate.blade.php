@@ -1,4 +1,4 @@
-@extends('admin.layout')
+    @extends('admin.layout')
  
 @section('content')
 
@@ -15,22 +15,7 @@
 
 
 
-<div class="container">
-
-
-
-
-
-<!--diseño-->
-<div class="col-md-8">
-    <div class="box box-danger">
-            <div class="box-header">
-
-
-            	<!--AQUI TERMINA-->
-
-
-	
+<div class="container">	
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
  <div class="panel panel-default">
@@ -51,7 +36,7 @@
  
  
 @if(isset($clientes))
- {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cliente], 'method' => 'patch']) !!}
+ {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cl], 'method' => 'patch']) !!}
 @else
  {!! Form::open(['route' => 'clientes.store']) !!}
 @endif
@@ -117,17 +102,17 @@
  </div>
 
 
+<script type="text/javascript" src="/dist/jquery-ui/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="/dist/jquery-ui/jquery-ui.min.js"></script> 
+
+
+
+
 <div class="form-group">
  {!! Form::text('fecha_nac_cliente', null,
  ['class'=>'form-control datepicker' , 'id'=>'fechanacimiento']),old('fecha_nac_cliente')!!}
  </div>
 
-
-
-
- 
-<script type="text/javascript" src="/dist/jquery-ui/external/jquery/jquery.js"></script>
-<script type="text/javascript" src="/dist/jquery-ui/jquery-ui.min.js"></script> 
 
 
  
@@ -169,17 +154,22 @@ Masculino
 Femenino 
 </div>
 
- <div class="form-group">
+
+
+
+
+
+ <div class="form-group" id="alergia"'>
  {!! Form::text('alergia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Alergia (En caso de contener)'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Alergia (en caso de contener)'])
  !!}
  </div>
 
 
 
- <div class="form-group">
+ <div class="form-group" id="patologia">
  {!! Form::text('patologia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Patologia (En caso de contener)'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Tipo de Patologia (en caso de contener)'])
  !!}
  </div>
 
@@ -194,18 +184,18 @@ Femenino
 
 <div class="form-group">
  {!! Form::text('fotografia_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Fotografia'])
  !!}
  </div>
 
  <div class="form-group">
  {!! Form::text('empresa_id_emp', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
+ ['class'=>'form-control', 'placeholder'=>'Ingrese id Empresa'])
  !!}
  </div>
 
 <div class="form-group">
- {!! Form::text('contrata_id_insc', null,
+ {!! Form::text('id_insc', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
  !!}
  </div>

@@ -1,8 +1,8 @@
 <script type="text/javascript">
 function buscar()
 {
-//document.getElementById('rut').style.display = 'none';
-document.getElementById('progreso').style.display = 'block';
+document.getElementById('rut_cl').style.display = 'none';
+//document.getElementById('progreso').style.display = 'block';
 }
 </script>
 
@@ -19,6 +19,9 @@ document.getElementById('progreso').style.display = 'block';
           <h4 class="modal-title">Ingrese RUT</h4>
         </div>
         <div class="modal-body">
+
+
+
 
      <div id="panel2" class="panel panel-primary">
   <div class="panel-heading">rut</div>
@@ -42,7 +45,14 @@ document.getElementById('progreso').style.display = 'block';
  <input type="button" value="Buscar" onclick="buscar()">
  </div>
 </div>
+
+
 	<div id="progreso" style='display:none;'>
+
+
+
+
+
 @if(isset($progreso))
 {!! Form::model($progreso, ['route' => ['progreso.update', $progreso->id_progreso], 'method' => 'patch']) !!}
 @else

@@ -52,13 +52,6 @@ document.getElementById('plan_nutricional').style.display = 'block';
 @endif
 
 
-
-
-
-
-
-
-
  <div class="panel-body">
  {!! Form::open(['route' => 'plan_nutricional.store']) !!}
 
