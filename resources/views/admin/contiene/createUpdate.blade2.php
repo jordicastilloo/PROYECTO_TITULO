@@ -53,24 +53,21 @@
  {!! Form::open(['route' => 'contiene.store']) !!}
 
 
- <div class="form-group">
-{!!Form::label('Genero','Rutina:')!!}
-{!!Form::select('id_rutina',$rutinas,null, ['class' => 'form-control'])!!}
-</div>
+{{!!form::select('id_rutina',$rutina)!!}}
 
-<div class="form-group">
- {!! Form::text('id_ejercicio', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese ID ejercicio'])
- !!}
+
+
+
+ <div class="form-group">
+ {!! Form::text('id_ejercicio', null, ['class' => 'form-control','placeholder'=>'Ingrese id ejercicio']) !!}
  </div>
+ 
 
 
  
  <div class="form-group" onclick="return confirm('Esta seguro?')">
  {!! Form::submit('Agregar', ["class" => "btn btn-success btn-block"]) !!}
  </div>
-
-
  
  {!! Form::close() !!}
  </div>
