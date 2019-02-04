@@ -6,7 +6,7 @@ use App\Http\Requests\ContieneForm;
 use Illuminate\Http\Request;
 use App\Rutina;
 use App\Contiene;
-
+use App\Ejercicios;
 
 
 
@@ -44,11 +44,19 @@ class ContieneController extends Controller {
 	 */
 	public function create()
 	{
-		//
-		//return view('admin.contiene.createUpdate');
+		
+		
+
 		$rutinas = Rutina::lists('nombre_rutina','id_rutina');
 
-		return view('admin.contiene.createUpdate',compact('rutinas'));
+
+
+		$ejercicios = Ejercicios::lists('nombre','id_ejercicio');
+
+
+		return view('admin.contiene.createUpdate',compact('rutinas','ejercicios'));
+
+
 		
 
 	    //return view('admin.contiene.createUpdate');
@@ -70,7 +78,7 @@ class ContieneController extends Controller {
 		$contiene->save();*/
 
 		Contiene::create($request->all());
-		
+
 
     return redirect('contiene/create')->with('message', 'Post saved');
 	}

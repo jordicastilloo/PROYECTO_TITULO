@@ -53,16 +53,22 @@
  {!! Form::open(['route' => 'contiene.store']) !!}
 
 
+
  <div class="form-group">
-{!!Form::label('Genero','Rutina:')!!}
+{!!Form::label('Rutina','Rutina:')!!}
 {!!Form::select('id_rutina',$rutinas,null, ['class' => 'form-control'])!!}
 </div>
 
+
+
 <div class="form-group">
- {!! Form::text('id_ejercicio', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese ID ejercicio'])
- !!}
- </div>
+{!!Form::label('Ejercicio','Ejercicio:')!!}
+{!!Form::select('id_ejercicio',$ejercicios,null, ['class' => 'form-control'])!!}
+</div>
+
+ 
+
+
 
 
  
