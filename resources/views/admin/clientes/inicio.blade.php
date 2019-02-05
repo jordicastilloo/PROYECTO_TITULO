@@ -62,16 +62,6 @@
  <div class="col-md-10 col-md-offset-1">
 
 
-  <script type="text/javascript">
-function redireccionar(){
-  window.locationf="admin.clientes.inicio";
-} 
-setTimeout ("redireccionar()", 5000); //tiempo expresado en milisegundos
-</script>
- 
-
-
-
 
  {!! Html::link(route('clientes.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!} 
 

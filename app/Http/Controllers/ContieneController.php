@@ -31,6 +31,9 @@ class ContieneController extends Controller {
 
 		return view ('admin.contiene.inicio')->with('contiene',$contiene);
 
+   		$ejercicios = Ejercicios::all();
+
+   		return view('select', ['ejercicios'=> $ejercicios]);
 
 		
 		
@@ -52,6 +55,8 @@ class ContieneController extends Controller {
 
 
 		$ejercicios = Ejercicios::lists('nombre','id_ejercicio');
+
+		$ejercicios = Ejercicios::all();
 
 
 		return view('admin.contiene.createUpdate',compact('rutinas','ejercicios'));
@@ -133,5 +138,8 @@ class ContieneController extends Controller {
  
  		return redirect()->route('contiene.index')->with('message', 'Implemento deleted');
 	}
+
+
+	
 
 }
