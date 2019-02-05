@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Rutina;
 use App\Contiene;
 use App\Ejercicios;
+use Illuminate\Support\Facades\Input;
+
 
 
 
@@ -75,17 +77,26 @@ class ContieneController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-		//
-		/*
+
+		//Contiene::create($request->all());
+
+
+
+		$id_ejercicio = Input::get('id_ejercicio');
+
+foreach ($id_ejercicio as $key => $value)
+{
+
 		$contiene = new \App\contiene;
 		$contiene->id_rutina = \Request::input('id_rutina');
-		$contiene->id_ejercicio = \Request::input('id_ejercicio');
-		$contiene->save();*/
+		$contiene->id_ejercicio = $value;
+		$contiene->save();
 
-		Contiene::create($request->all());
 
+}
 
     return redirect('contiene/create')->with('message', 'Post saved');
+
 	}
 
 	/**

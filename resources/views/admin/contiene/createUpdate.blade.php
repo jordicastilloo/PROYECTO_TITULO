@@ -62,7 +62,7 @@
 
 <h4>Elija los ejercicios:<br></h4>
   @foreach($ejercicios as $ejercicio)
-  <input type="checkbox" class="form" name="id_ejercicio" value="{{ $ejercicio->id_ejercicio }}">{{ $ejercicio->nombre }}<br>
+  <input type="checkbox" class="form" name="id_ejercicio[]" id="id_ejercicio[]" value="{{ $ejercicio->id_ejercicio }}">{{ $ejercicio->nombre }}<br>
 
   @endforeach
   <br>
