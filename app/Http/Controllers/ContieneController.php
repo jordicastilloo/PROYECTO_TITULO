@@ -47,7 +47,7 @@ class ContieneController extends Controller {
         ->join('contienes', 'rutinas.id_rutina', '=', 'contienes.id_rutina')
         //->join('departments', 'users.dpt_id', '=', 'departments.id')
         ->distinct()
-        ->select('rutinas.nombre_rutina','rutinas.id_rutina')
+        ->select('rutinas.nombre_rutina','rutinas.id_rutina','rutinas.desc_rutina')
         ->paginate(5,['nombre_rutina']);
         //return $contiene;
 
