@@ -8,6 +8,7 @@ use App\Rutina;
 use App\Contiene;
 use App\Ejercicios;
 use Illuminate\Support\Facades\Input;
+use DB;
 
 
 
@@ -23,16 +24,42 @@ class ContieneController extends Controller {
 	public function index(Request $request)
 	{
 		
-		$contiene = Contiene::search($request->id_cont)->orderBy('id_cont','DESC')->paginate(5);
+		
 
 		
-		$contiene = Contiene::search($request->name)
-		->leftjoin('rutinas','contienes.id_rutina','=','rutinas.id_rutina')
-		->select('contienes.*','rutinas.nombre_rutina as rutins')
-		->paginate(5);
+		//FUNCIONA
+		/*
+	 	$contiene = DB::table('contienes')
+	 	->select('id_rutina')
+	    ->distinct()
+	    //->where('rutinas.id_rutina','=','contienes.id_rutina')
+	 	//->get(['contienes.id_rutina'])
+	 	//->get(['contienes.id_rutina'])
+	 	->paginate(5,['id_rutina']);*/	
 
-		return view ('admin.contiene.inicio')->with('contiene',$contiene);
+	 	//return $contiene;
 
+	 	$contiene = Contiene::search($request->name);
+
+
+
+        $contiene = DB::table('rutinas')
+        ->join('contienes', 'rutinas.id_rutina', '=', 'contienes.id_rutina')
+        //->join('departments', 'users.dpt_id', '=', 'departments.id')
+        ->distinct()
+        ->select('rutinas.nombre_rutina','rutinas.id_rutina')
+        ->paginate(5,['nombre_rutina']);
+        //return $contiene;
+
+
+
+	    return view ('admin.contiene.inicio')->with('contiene',$contiene);
+
+
+		//return view('admin.contiene.inicio',compact('contiene'));
+
+
+	    
    		$ejercicios = Ejercicios::all();
 
    		return view('select', ['ejercicios'=> $ejercicios]);
@@ -108,6 +135,7 @@ foreach ($id_ejercicio as $key => $value)
 	public function show($id_cont)
 	{
 		//
+
 	}
 
 	/**
@@ -116,10 +144,10 @@ foreach ($id_ejercicio as $key => $value)
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id_cont)
+	public function edit($id_rutina)
 	{
 		//
-	    return view('admin.contiene.createUpdate')->with('contiene', \App\Contiene::find($id_cont));
+	    return view('admin.contiene.createUpdate')->with('contiene', \App\Contiene::find($id_rutina));
 
 	}
 
@@ -140,10 +168,10 @@ foreach ($id_ejercicio as $key => $value)
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id_cont)
+	public function destroy($id_rutina)
 	{
 		//
-		$contiene = \App\Contiene::find($id_cont);
+		$contiene = \App\Contiene::find($id_rutina);
  
  		$contiene->delete();
  

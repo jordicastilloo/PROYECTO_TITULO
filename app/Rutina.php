@@ -14,7 +14,7 @@ class Rutina extends Model {
 
 	public function contiene() //id
 {
-		return $this->hasOne('App\Contiene','id_rutina','id_rutina');
+		return $this->hasMany('App\Contiene','id_rutina','id_rutina');
 	}
 
 

@@ -7,7 +7,14 @@
 <div class="row">
  <div class="col-md-3">-->
 
-{!! Form::open (['route' => 'contiene.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+
+{!!Form::model(Request::all(), ['route' => 'contiene.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
+
+
+
+
+<!--
+{!! Form::open (['route' => 'contiene.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}-->
   <div class="form-group">
     {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingrese Nombre Rutina'])!!}    
   </div>
@@ -37,22 +44,22 @@
       @if(!$contiene->isEmpty())
           <table class="table table-bordered">
               <tr>
-                <th>Nombre Rutina</th>
+                <th>ID Rutina</th>
              
 
               </tr>
               @foreach ($contiene as $Contiene)
                   <tr>
-                    <td width="500">{{ $Contiene->rutina->nombre_rutina}}</td>
+                    <td width="500">{{ $Contiene->nombre_rutina}}</td>
                    
                   
                 
                     <td width="60" align="center">
-                      {!! Html::link(route('contiene.edit', $Contiene->id_cont), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
+                      {!! Html::link(route('contiene.edit', $Contiene->id_rutina), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>
 
                     <td width="60" align="center">
-                      {!! Form::open(array('route' => array('contiene.destroy', $Contiene->id_cont), 'method' => 'DELETE')) !!}
+                      {!! Form::open(array('route' => array('contiene.destroy', $Contiene->id_rutina), 'method' => 'DELETE')) !!}
                           <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
                       {!! Form::close() !!}
                     </td>
@@ -71,6 +78,9 @@
       @endif
 
         {!! $contiene->render() !!}
+
+            <!--    {!! $contiene->appends(Request::only(['name']))->render()!!}-->
+
  </div>
  </div>
 </div>

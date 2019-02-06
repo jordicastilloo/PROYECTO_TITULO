@@ -32,13 +32,14 @@ class Contiene extends Model {
 
 	public function scopeSearch($query,$name){
 
-        if(trim($name) != "")
+		if(trim($name) != "")
         {
-        return $query->where('nombre_rutina','LIKE',"%$name%");
-         //$query->where(\DB::raw("nombre_rutina',"LIKE","%$name%");
+        //return $query->where('nombre_p','LIKE',"%$name%");
+         $query->where(\DB::raw("nombre_rutina"),"LIKE","%$name%");
 
     }
- }
+
+	 }
 
 
 
