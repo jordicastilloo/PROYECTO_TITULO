@@ -44,36 +44,28 @@
       @if(!$contiene->isEmpty())
           <table class="table table-bordered">
               <tr>
-                <th>Nombre Cliente</th>
+                <th>Rut Cliente</th>
+                <th>Ejercicios</th>
                 <th>Nombre Rutina</th>
                 <th>Descripcion Rutina</th>
+
+
               </tr>
               @foreach ($contiene as $Contiene)
                   <tr>
+                    <td width="500">{{ $Contiene->rut_cl}}</td>
+                    
+                    <td width="500">{{ $Contiene->nombre}}</td>
+
                     <td width="500">{{ $Contiene->nombre_rutina}}</td>
-                    <td width="500">{{ $Contiene->nombre_rutina}}</td>
+
+
                     <td width="500">{{ $Contiene->desc_rutina}}</td>
 
-                    <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->id_rutina}}" data-toggle="modal" title="Mostrar">
-        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Ver Ejercicios</button>
+
+                    <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->id_cont}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Rutina de Ejercicios</button>
       </a></td>
-
-                                       
-                  
-                
-                    <td width="60" align="center">
-                      {!! Html::link(route('contiene.edit', $Contiene->id_rutina), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
-                    </td>
-
-
-
-
-                    <td width="60" align="center">
-                      {!! Form::open(array('route' => array('contiene.destroy', $Contiene->id_rutina), 'method' => 'DELETE')) !!}
-                          <button type="submit" class="btn btn-danger btn-md">Eliminar</button>
-                      {!! Form::close() !!}
-                    </td>
-
 
 
 
@@ -82,6 +74,7 @@
 
 
 
+                 @include('admin.contiene.botonmodal')
 
               @endforeach
           </table>

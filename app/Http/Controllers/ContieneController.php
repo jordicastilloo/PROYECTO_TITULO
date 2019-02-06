@@ -39,18 +39,26 @@ class ContieneController extends Controller {
 
 	 	//return $contiene;
 
-	 	$contiene = Contiene::search($request->name);
+	 	//$contiene = Contiene::search($request->name);
 
 
-
-        $contiene = DB::table('rutinas')
+        $contiene2 = DB::table('rutinas')
         ->join('contienes', 'rutinas.id_rutina', '=', 'contienes.id_rutina')
-        //->join('departments', 'users.dpt_id', '=', 'departments.id')
         ->distinct()
-        ->select('rutinas.nombre_rutina','rutinas.id_rutina','rutinas.desc_rutina')
+        ->select('rutinas.nombre_rutina','rutinas.id_rutina','rutinas.desc_rutina','rutinas.rut_cl')
         ->paginate(5,['nombre_rutina']);
         //return $contiene;
 
+
+        $contiene = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        //->where('rutinas.rut_cl',)
+        //->distinct()
+        ->select('rutinas.nombre_rutina','ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->paginate(5,['nombre_rutina']);
+       //return $contiene;
 
 
 	    return view ('admin.contiene.inicio')->with('contiene',$contiene);
