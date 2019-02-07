@@ -25,7 +25,7 @@ class Contiene extends Model {
 
    public function getFullNameAttribute()
 	{
-		return $this->nombre_rutina;
+		return $this->id_rutina;
 	}
 
 
@@ -35,7 +35,7 @@ class Contiene extends Model {
 		if(trim($name) != "")
         {
         //return $query->where('nombre_p','LIKE',"%$name%");
-         $query->where(\DB::raw("nombre_rutina"),"LIKE","%$name%");
+         $query->where(\DB::raw("id_rutina"),"LIKE","%$name%");
 
     }
 
