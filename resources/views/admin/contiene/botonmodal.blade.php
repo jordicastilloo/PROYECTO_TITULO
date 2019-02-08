@@ -16,14 +16,10 @@
  <div class="modal-body" style="max-height: calc(100vh - 210px);overflow-y: auto"; align="center">
 
 
-        <?php
-            
-         print_r($consultamodal);
-          
-            ?>
-                          
 
-                   
+<?php
+//print( "<pre>".print_r( $consultamodal, true)."</pre>");
+?>
             
 
 

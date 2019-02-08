@@ -65,7 +65,8 @@ class ContieneController extends Controller {
 
        //return $contiene;
 
-        $consultamodal = DB::select('select ejercicios.nombre from ejercicios');
+       $consultamodal = DB::select('select nombre from ejercicios where id_ejercicio= 1');
+
 
 
 	    //return view ('admin.contiene.inicio2')->with('contiene',$contiene);
@@ -98,12 +99,30 @@ class ContieneController extends Controller {
 
 
 
-		$ejercicios = Ejercicios::lists('nombre','id_ejercicio');
+		//$ejercicios = Ejercicios::lists('nombre','id_ejercicio');
 
-		$ejercicios = Ejercicios::all();
+		//$ejercicios = Ejercicios::all();
+
+		$ejercicios = DB::table('ejercicios')
+		->where('clasificacion','hombro')
+		->get();
+
+		$ejercicios2 = DB::table('ejercicios')
+		->where('clasificacion','pecho')
+		->get();
+
+		$ejercicios3 = DB::table('ejercicios')
+		->where('clasificacion','espalda')
+		->get();
+
+		$ejercicios4 = DB::table('ejercicios')
+		->where('clasificacion','piernas')
+		->get();
 
 
-		return view('admin.contiene.createUpdate',compact('rutinas','ejercicios'));
+
+
+		return view('admin.contiene.createUpdate',compact('rutinas','ejercicios','ejercicios2','ejercicios3','ejercicios4'));
 
 
 		
@@ -192,6 +211,8 @@ foreach ($id_ejercicio as $key => $value)
  
  		return redirect()->route('contiene.index')->with('message', 'Implemento deleted');
 	}
+
+	
 
 
 	

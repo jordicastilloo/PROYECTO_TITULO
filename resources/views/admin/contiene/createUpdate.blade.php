@@ -60,12 +60,17 @@
 </div>
 
 
-<h4>Elija los ejercicios:<br></h4>
+<h4><b>Seleccione ejercicios</b><br><br></h4>
+
+
+
+<h5><b>Ejercicios Hombro:</b><br></h5>
   @foreach($ejercicios as $ejercicio)
 
 
 
   <input type="checkbox" class="form" name="id_ejercicio[]" id="id_ejercicio[]" value="{{ $ejercicio->id_ejercicio }}"> {{   $ejercicio->nombre}}<br>
+
 
   
 
@@ -74,6 +79,50 @@
 
 
   <br>
+
+
+
+  <h5><b>Ejercicios Pecho:</b><br></h5>
+  @foreach($ejercicios2 as $ejercicio2)
+
+
+
+  <input type="checkbox" class="form" name="id_ejercicio[]" id="id_ejercicio[]" value="{{ $ejercicio2->id_ejercicio }}"> {{   $ejercicio2->nombre}}<br>
+
+
+  
+
+
+  @endforeach
+
+
+  <br>
+
+
+  <h5><b>Ejercicios Espalda:</b><br></h5>
+  @foreach($ejercicios3 as $ejercicio3)
+
+
+
+  <input type="checkbox" class="form" name="id_ejercicio[]" id="id_ejercicio[]" value="{{ $ejercicio3->id_ejercicio }}"> {{   $ejercicio3->nombre}}<br>
+
+  @endforeach
+
+
+  <br>
+
+
+  <h5><b>Ejercicios Pierna:</b><br></h5>
+  @foreach($ejercicios4 as $ejercicio4)
+
+
+
+  <input type="checkbox" class="form" name="id_ejercicio[]" id="id_ejercicio[]" value="{{ $ejercicio4->id_ejercicio }}"> {{   $ejercicio4->nombre}}<br>
+
+  @endforeach
+
+
+
 
 
 
