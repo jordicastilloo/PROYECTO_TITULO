@@ -9,7 +9,7 @@ class Contiene extends Model {
     protected $table = 'contienes';
 	protected $primaryKey = 'id_cont';
 	//protected $
-	protected $fillable = ['id_cont','id_rutina', 'id_ejercicio'];
+	protected $fillable = ['id_cont','id_rutina', 'id_ejercicio','dia'];
 	protected $guarded = ['id_cont'];
 
 

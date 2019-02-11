@@ -19,6 +19,7 @@ class CreateContienesTable extends Migration {
 			$table->foreign('id_rutina')->references('id_rutina')->on('rutinas');
 			$table->integer('id_ejercicio')->unsigned();
 			$table->foreign('id_ejercicio')->references('id_ejercicio')->on('ejercicios');
+			$table->string('dia');
 		});
 	}
 

@@ -58,13 +58,12 @@ class ContieneController extends Controller {
         ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
         ->distinct()
-        ->where('rutinas.rut_cl','=',$rut_cl)
+        ->where('rutinas.rut_cl','=','190877345')
         ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
         ->groupby('ejercicios.nombre')
         ->paginate(5,['nombre']);
 
        
-
 
 
 
@@ -155,6 +154,7 @@ foreach ($id_ejercicio as $key => $value)
 		$contiene = new \App\contiene;
 		$contiene->id_rutina = \Request::input('id_rutina');
 		$contiene->id_ejercicio = $value;
+		$contiene->dia = \Request::input('dia');
 		$contiene->save();
 
 

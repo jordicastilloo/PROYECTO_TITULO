@@ -59,6 +59,21 @@
 {!!Form::select('id_rutina',$rutinas,null, ['class' => 'form-control'])!!}
 </div>
 
+<div class="form-group">
+ <label for="">Seleccione Día</label>
+ <select name="dia" id="inputDia" class="form-control">
+ <option value="">-- Seleccione Día --</option>
+ <option value ="Lunes">Lunes</option>    
+ <option value ="Martes">Martes</option>
+ <option value ="Miercoles">Miercoles</option>
+ <option value ="Jueves">Jueves</option>
+ <option value ="Viernes">Viernes</option>
+ <option value ="Sabado">Sabado</option>
+ <option value ="Domingo">Domingo</option>
+ </select>
+ </div>
+
+
 
 <h4><b>Seleccione ejercicios</b><br><br></h4>
 
