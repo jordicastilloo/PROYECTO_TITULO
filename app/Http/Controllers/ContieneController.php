@@ -58,7 +58,74 @@ class ContieneController extends Controller {
         ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
         ->distinct()
-        ->where('rutinas.rut_cl','=','190877345')
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Lunes')
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
+        ->paginate(5,['nombre']);
+
+        $consultaejerciciosdiaMartes = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->distinct()
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Martes')
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
+        ->paginate(5,['nombre']);
+
+        $consultaejerciciosdiaMiercoles = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->distinct()
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Martes')
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
+        ->paginate(5,['nombre']);
+
+        $consultaejerciciosdiaJueves = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->distinct()
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Miercoles')
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
+        ->paginate(5,['nombre']);
+
+        $consultaejerciciosdiaViernes = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->distinct()
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Jueves')
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
+        ->paginate(5,['nombre']);
+
+        $consultaejerciciosdiaSabado = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->distinct()
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Sabado')
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
+        ->paginate(5,['nombre']);
+
+        $consultaejerciciosdiaDomingo = DB::table('ejercicios')
+
+        ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
+        ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->distinct()
+        ->where('rutinas.rut_cl','=','999')
+        ->where('contienes.dia','=','Domingo')
         ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
         ->groupby('ejercicios.nombre')
         ->paginate(5,['nombre']);
@@ -75,7 +142,7 @@ class ContieneController extends Controller {
 	    //return view ('admin.contiene.inicio2')->with('contiene',$contiene);
 
 
-		return view('admin.contiene.inicio2',compact('contiene','consultamodal','consultaejercicios'));
+		return view('admin.contiene.inicio2',compact('contiene','consultamodal','consultaejercicios','consultaejerciciosdiaMartes','consultaejerciciosdiaMiercoles','consultaejerciciosdiaJueves','consultaejerciciosdiaViernes','consultaejerciciosdiaSabado','consultaejerciciosdiaDomingo'));
 
 
 	    
@@ -107,7 +174,7 @@ class ContieneController extends Controller {
 		//$ejercicios = Ejercicios::all();
 
 		$ejercicios = DB::table('ejercicios')
-		->where('clasificacion','hombro')
+		->where('clasificacion','hombros')
 		->get();
 
 		$ejercicios2 = DB::table('ejercicios')
