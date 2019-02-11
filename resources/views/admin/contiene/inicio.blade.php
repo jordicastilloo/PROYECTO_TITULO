@@ -63,9 +63,9 @@
                     <td width="500">{{ $Contiene->desc_rutina}}</td>
 
 
-                    <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->id_cont}}" data-toggle="modal" title="Mostrar">
+                   <!-- <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->id_cont}}" data-toggle="modal" title="Mostrar">
         <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Rutina de Ejercicios</button>
-      </a></td>
+      </a></td>-->
 
 
 
@@ -74,10 +74,28 @@
 
 
 
-                 @include('admin.contiene.botonmodal')
+                 
 
               @endforeach
           </table>
+
+
+
+
+          @foreach ($consultaejercicios as $consultaejer)
+
+
+                    <td width="60" align="center"><a href="#" data-target="#modal-{{$consultaejer->id_cont}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Rutina de Ejercicios</button>
+      </a></td>
+
+          @include('admin.contiene.botonmodal')
+
+          @endforeach
+
+
+
+
           
              
     

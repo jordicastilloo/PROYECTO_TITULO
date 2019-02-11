@@ -53,26 +53,30 @@ class ContieneController extends Controller {
 
 
         
-        $consulta = DB::table('ejercicios')
+        $consultaejercicios = DB::table('ejercicios')
 
         ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
-        //->where('rutinas.rut_cl',)
-        //->distinct()
-        ->select('rutinas.nombre_rutina','ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->distinct()
+        ->where('rutinas.rut_cl','=',$rut_cl)
+        ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
+        ->groupby('ejercicios.nombre')
         ->paginate(5,['nombre']);
+
+       
+
+
 
 
        //return $contiene;
 
-       $consultamodal = DB::select('select nombre from ejercicios where id_ejercicio= 1');
 
 
 
 	    //return view ('admin.contiene.inicio2')->with('contiene',$contiene);
 
 
-		return view('admin.contiene.inicio2',compact('contiene','consultamodal'));
+		return view('admin.contiene.inicio2',compact('contiene','consultamodal','consultaejercicios'));
 
 
 	    

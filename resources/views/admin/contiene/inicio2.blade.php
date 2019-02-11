@@ -2,19 +2,11 @@
  
 @section('content')
 
-<!--
-<div class="container">
-<div class="row">
- <div class="col-md-3">-->
 
 
 {!!Form::model(Request::all(), ['route' => 'contiene.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}
 
 
-
-
-<!--
-{!! Form::open (['route' => 'contiene.index', 'method' => 'GET', 'class' => 'navbar-form navbar-left' , 'role' => 'search'])!!}-->
   <div class="form-group">
     {!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingrese Nombre Rutina'])!!}    
   </div>
@@ -35,7 +27,8 @@
 
  {!! Html::link(route('contiene.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!} 
 
-
+</div>
+</div>
 </div>
 
 
@@ -72,11 +65,24 @@
                     <td width="500">{{ $Contiene->desc_rutina}}</td>
 
 
-
-
-                    <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->rut_cl}}" data-toggle="modal" title="Mostrar">
+                     <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->rut_cl}}" data-toggle="modal" title="Mostrar">
         <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Rutina de Ejercicios</button>
       </a></td>
+
+
+
+
+<!--
+                    @foreach($consultaejercicios as $Contiene2)
+
+
+
+                    
+                    
+                    <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene2->rut_cl}}" data-toggle="modal" title="Mostrar">
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Rutina de Ejercicios</button>
+      </a></td>
+                  @endforeach-->
 
 
 
@@ -85,20 +91,23 @@
 
 
 
-                 @include('admin.contiene.botonmodal')
+                @include('admin.contiene.botonmodal')
 
               @endforeach
           </table>
-          
              
-    
       @endif
+
 
         {!! $contiene->render() !!}
 
             <!--    {!! $contiene->appends(Request::only(['name']))->render()!!}-->
 
- </div>
- </div>
-</div>
+
+
+    </div>
+  </div>
+
+                
+
 @endsection
