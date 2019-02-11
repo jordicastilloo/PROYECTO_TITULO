@@ -82,11 +82,24 @@
 
 
  <div class="form-group">
- {!! Form::text('clasificacion', null, ["class" => 'form-control','placeholder'=>'Ingrese clasificacion']) !!}
+ <label for="">Seleccione Tipo</label>
+ <select name="tipo" id="inputDia" class="form-control">
+ <option value="">-- Seleccione Tipo de Ejercicio --</option>
+ <option value ="Musculacion">Musculacion</option>    
+ <option value ="Cardiovascular">Cardiovascular</option> 
+ </select>
  </div>
 
  <div class="form-group">
- {!! Form::text('tipo', null, ["class" => 'form-control','placeholder'=>'Ingrese tipo']) !!}
+ <label for="">Seleccione Día</label>
+ <select name="clasificacion" id="inputDia" class="form-control">
+ <option value="">-- Seleccione Clasificacion del Ejercicio --</option>
+ <option value ="Pecho">Pecho</option>    
+ <option value ="Piernas">Piernas</option>
+ <option value ="Espalda">Espalda</option>
+ <option value ="Hombros">Hombros</option>
+ 
+ </select>
  </div>
  
  <div class="form-group">
