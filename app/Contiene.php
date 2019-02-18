@@ -28,7 +28,7 @@ class Contiene extends Model {
 		return $this->id_rutina;
 	}
 
-
+	
 
 	public function scopeSearch($query,$name){
 

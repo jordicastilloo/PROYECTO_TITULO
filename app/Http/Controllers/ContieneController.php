@@ -9,6 +9,9 @@ use App\Contiene;
 use App\Ejercicios;
 use Illuminate\Support\Facades\Input;
 use DB;
+//use Request;
+
+
 
 
 
@@ -23,45 +26,32 @@ class ContieneController extends Controller {
 	 */
 	public function index(Request $request)
 	{
-		
-		
 
-		
-		//FUNCIONA
-		/*
-	 	$contiene = DB::table('contienes')
-	 	->select('id_rutina')
-	    ->distinct()
-	    //->where('rutinas.id_rutina','=','contienes.id_rutina')
-	 	//->get(['contienes.id_rutina'])
-	 	//->get(['contienes.id_rutina'])
-	 	->paginate(5,['id_rutina']);*/	
+				
 
-	 	//return $contiene;
 
-	 	//$contiene = Contiene::search($request->name);
 
 
         $contiene = DB::table('rutinas')
         ->join('contienes', 'rutinas.id_rutina', '=', 'contienes.id_rutina')
         ->join('clientes','rutinas.rut_cl','=','clientes.rut_cl')
         ->distinct()
-        ->select('rutinas.nombre_rutina','rutinas.id_rutina','rutinas.desc_rutina','rutinas.rut_cl','clientes.nombre_cliente','clientes.ap_pat_cliente','clientes.ap_mat_cliente')
+        ->select('rutinas.nombre_rutina','rutinas.id_rutina','rutinas.desc_rutina','rutinas.rut_cl','clientes.nombre_cliente','clientes.ap_pat_cliente','clientes.ap_mat_cliente','clientes.rut_cl')
         ->paginate(5,['nombre_rutina']);
         //return $contiene2;
-
-
 
         
         $consultaejercicios = DB::table('ejercicios')
 
         ->join('contienes', 'ejercicios.id_ejercicio', '=', 'contienes.id_ejercicio')
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
+        ->join('clientes','rutinas.rut_cl','=','clientes.rut_cl')
         ->distinct()
-        ->where('rutinas.rut_cl','=','999')
-        ->where('contienes.dia','=','Lunes')
+        ->where('rutinas.rut_cl','=',999)
+        //->where('contienes.dia','=','Lunes')
         ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
         ->groupby('ejercicios.nombre')
+        //->get();
         ->paginate(5,['nombre']);
 
         $consultaejerciciosdiaMartes = DB::table('ejercicios')
@@ -81,7 +71,7 @@ class ContieneController extends Controller {
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
         ->distinct()
         ->where('rutinas.rut_cl','=','999')
-        ->where('contienes.dia','=','Martes')
+        ->where('contienes.dia','=','Miercoles')
         ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
         ->groupby('ejercicios.nombre')
         ->paginate(5,['nombre']);
@@ -92,7 +82,7 @@ class ContieneController extends Controller {
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
         ->distinct()
         ->where('rutinas.rut_cl','=','999')
-        ->where('contienes.dia','=','Miercoles')
+        ->where('contienes.dia','=','Jueves')
         ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
         ->groupby('ejercicios.nombre')
         ->paginate(5,['nombre']);
@@ -103,7 +93,7 @@ class ContieneController extends Controller {
         ->join('rutinas','rutinas.id_rutina','=','contienes.id_rutina')
         ->distinct()
         ->where('rutinas.rut_cl','=','999')
-        ->where('contienes.dia','=','Jueves')
+        ->where('contienes.dia','=','Viernes')
         ->select('ejercicios.nombre','rutinas.rut_cl','rutinas.desc_rutina','contienes.id_cont','ejercicios.fotografia','ejercicios.video','ejercicios.descripcion','ejercicios.clasificacion','ejercicios.tipo','ejercicios.repeticiones','ejercicios.series')
         ->groupby('ejercicios.nombre')
         ->paginate(5,['nombre']);
@@ -213,8 +203,13 @@ class ContieneController extends Controller {
 
 
 
+		$rut = $request->get('rut_cl');
+
+
 		$id_ejercicio = Input::get('id_ejercicio');
 
+
+		
 foreach ($id_ejercicio as $key => $value)
 {
 
@@ -283,6 +278,12 @@ foreach ($id_ejercicio as $key => $value)
  		return redirect()->route('contiene.index')->with('message', 'Implemento deleted');
 	}
 
+
+
+		public function recibiendorut($rut_cl)
+{
+    return "Esto muestra un producto. Recibiendo $rut_cl";
+}
 	
 
 
