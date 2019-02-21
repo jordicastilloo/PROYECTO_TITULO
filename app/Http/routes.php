@@ -86,10 +86,10 @@ Route::resource('plan_nutricional', 'Plan_nutricionalController');
 
 Route::resource('reserva', 'ReservaController');
 
-/*Route::controllers([
+Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-]);*/
+]);
 
 
 
@@ -108,11 +108,11 @@ Route::get('home', function(){
 	return view('home');
 });
 
-
+/*
 Route::get('inscripcion', function(){
 	return view('admin.inscripcion.inicio');
 });
-
+*/
 Route::get('entrenador', function(){
 	return view('sitioweb.entrenador');
 });

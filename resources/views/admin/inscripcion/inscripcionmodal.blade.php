@@ -21,9 +21,12 @@
           <div id="panel1" class="panel panel-primary">
           <div class="panel-heading">Planes</div>
             <div class="panel-body">
+
+
+
+
               <button type="button" class="btn btn-default" id="agregar">Plan 1</button>
               <button type="button" class="btn btn-default" id="rut">Plan 2</button>
-              <button type="button" class="btn btn-default">Plan 3</button>
             </div>
           </div>
         </div>

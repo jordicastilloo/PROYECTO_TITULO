@@ -19,6 +19,8 @@ class CreateContratasTable extends Migration {
 			$table->integer('pago_insc');
 			$table->datetime('fin_insc');
 			
+			$table->integer('rut_cl')->unsigned();
+			$table->foreign('rut_cl')->references('rut_cl')->on('clientes');
 			$table->integer('id_plan')->unsigned();
 			$table->foreign('id_plan')->references('id_plan')->on('planes');
 		});

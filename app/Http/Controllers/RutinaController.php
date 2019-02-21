@@ -9,7 +9,10 @@ use App\Rutina;
 use App\Contiene;
 
 class RutinaController extends Controller {
-
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
