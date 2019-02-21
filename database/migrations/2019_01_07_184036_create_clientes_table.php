@@ -33,8 +33,6 @@ class CreateClientesTable extends Migration {
 
 			$table->integer('id_emp')->unsigned();
 			$table->foreign('id_emp')->references('id_emp')->on('empresas');
-			$table->integer('id_insc')->unsigned();
-			$table->foreign('id_insc')->references('id_insc')->on('contratas');
 		});
 	}
 

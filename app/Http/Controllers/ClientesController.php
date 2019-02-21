@@ -9,7 +9,10 @@ use App\Progreso;
 use DB;
 
 class ClientesController extends Controller {
-
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -71,7 +74,6 @@ class ClientesController extends Controller {
 		$clientes->patologia_cliente = \Request::input('patologia_cliente');
 		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
 		$clientes->id_emp = 1;
-		$clientes->id_insc = \Request::input('id_insc');
 		$clientes->save();
 
 		//obtenemos el campo file definido en el formulario
@@ -148,8 +150,6 @@ class ClientesController extends Controller {
 
  		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
 
-
- 		$clientes->id_insc = \Request::input('contrata_id_insc');
 
  
  		$clientes->save();
