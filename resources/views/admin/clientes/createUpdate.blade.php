@@ -1,4 +1,4 @@
-    @extends('admin.layout')
+@extends('admin.layout')
  
 @section('content')
 
@@ -20,20 +20,6 @@
  <div class="col-md-10 col-md-offset-1">
  <div class="panel panel-default">
  <div class="panel-heading">Home</div>
- 
- <!--
-                @if($errors->has())
-                    <div class='alert alert-danger'>
-                        @foreach ($errors->all('<p>:message</p>') as $message)
-                            {!! $message !!}
-                        @endforeach
-                    </div>
-                @endif
- 
- @if (Session::has('message'))
-     <div class="alert alert-success">{{ Session::get('message') }}</div>
- @endif   -->
- 
  
 @if(isset($clientes))
  {!! Form::model($clientes, ['route' => ['clientes.update', $clientes->rut_cl], 'method' => 'patch']) !!}
@@ -185,18 +171,6 @@ Femenino
 <div class="form-group">
  {!! Form::text('fotografia_cliente', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Fotografia'])
- !!}
- </div>
-
- <div class="form-group">
- {!! Form::text('empresa_id_emp', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese id Empresa'])
- !!}
- </div>
-
-<div class="form-group">
- {!! Form::text('id_insc', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese id contrata'])
  !!}
  </div>
 

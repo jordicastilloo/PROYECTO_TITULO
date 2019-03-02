@@ -55,7 +55,8 @@ Route::get('/', 'InicioController@index');
 
 
 
-Route::get('login', 'LoginController@index');
+//Route::get('login', 'LoginController@index');
+Route::resource('login', 'LogController');
 
 Route::get('admin', 'HomeController@index');
 
@@ -93,11 +94,11 @@ Route::get('home', function(){
 	return view('home');
 });
 
-/*
+
 Route::get('inscripcion', function(){
 	return view('admin.inscripcion.inicio');
 });
-*/
+
 Route::get('entrenador', function(){
 	return view('sitioweb.entrenador');
 });

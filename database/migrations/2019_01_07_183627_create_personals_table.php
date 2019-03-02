@@ -28,8 +28,8 @@ class CreatePersonalsTable extends Migration {
 			$table->string('sexo_p');
 			$table->string('profesion_p');
 			$table->string('fotografia_p');
-			$table->integer('id_emp')->unsigned();
-			$table->foreign('id_emp')->references('id_emp')->on('empresas');
+			//$table->integer('id_emp')->unsigned();
+			//$table->foreign('id_emp')->references('id_emp')->on('empresas');
 		});
 	}
 

@@ -30,9 +30,10 @@ class CreateClientesTable extends Migration {
 			$table->string('patologia_cliente');
 			$table->string('fotografia_cliente');
 			$table->integer('estado');
-
+			/*
 			$table->integer('id_emp')->unsigned();
 			$table->foreign('id_emp')->references('id_emp')->on('empresas');
+			*/
 		});
 	}
 
