@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder {
 		\DB::table('planes')->insert(array (
 			'nombre_plan'	=>	'Plan Mensual',
 			'precio_plan'	=>	'15990',
-			'duracion_plan'	=>	'30'
+			'duracion_plan'	=>	'1'
 		));
 
 		Model::unguard();

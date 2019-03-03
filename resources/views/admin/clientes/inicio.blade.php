@@ -54,7 +54,7 @@
   {!! Form::close()!!}
 
 
-
+ <button id="btnPrint" class="btn btn-warning btn-md">Exportar <i class="fas fa-print"></i></button>
 
 
 <div class="container">
@@ -68,7 +68,34 @@
 
 </div>
 
+<div id="dvCont" style="display:none;">
+  
+      @if(!$clientes->isEmpty())
+          <table class="table table-bordered">
+              <tr>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Estado</th>
+              </tr>
+              @foreach ($clientes as $Cliente)
+                  <tr>
+                    <td width="500">{{ $Cliente->rut_cl}}</td>
+                    <td width="500">{{ $Cliente->nombre_cliente}}</td>
+                    <td width="500">{{ $Cliente->ap_pat_cliente}}</td>
+                    <td width="500">{{ $Cliente->ap_mat_cliente}}</td>
 
+                     @if($Cliente->estado == 1) <td width="500">{{ "Activo" }}</td>
+                     @elseif($Cliente->estado == 0) <td width="500">{{ "Inactivo" }}</td>
+                     @endif
+              @endforeach
+                   </tr>
+                 </table>
+            @endif
+
+</div>
+ 
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
       @if(!$clientes->isEmpty())
@@ -137,12 +164,6 @@
 
 
 
-
-
-
-                   
-
-                  
 
 
 
