@@ -15,15 +15,41 @@
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
 
+ <input type="button" value="Exportar" id="btnPrint" />
 
 
 
-  <div class="container">
+<div class="container">
  <div class="row">
  <div class="col-md-10 col-md-offset-1">
 
 
  {!! Html::link(route('planes.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
+</div>
+
+<div id="dvCont" style="display:none;">
+   @if(!$planes->isEmpty())
+          <table class="table table-bordered">
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Duracion Plan</th>
+
+              </tr>
+              @foreach ($planes as $plan)
+                  <tr>
+                    <td width="500">{{ $plan->nombre_plan }}</td>
+                    <td width="500">{{ $plan->precio_plan }}</td>
+
+                   
+                    @if($plan->duracion_plan == 0) <td width="500">{{ "Dia" }}</td>
+                    @elseif($plan->duracion_plan == 1) <td width="500">{{ $plan->duracion_plan }} Mes</td>
+                    @elseif ($plan->duracion_plan != 0)<td width="500">{{ $plan->duracion_plan }} Meses</td>
+                    @endif
+                  </tr>
+                @endforeach
+                </table>
+              @endif
 </div>
 
  <div class="row">

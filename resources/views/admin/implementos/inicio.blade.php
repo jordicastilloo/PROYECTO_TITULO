@@ -13,7 +13,7 @@
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
 
-
+ <input type="button" value="Exportar" id="btnPrint" />
 
 
 <!-----     -->
@@ -26,6 +26,40 @@
 
  {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
 </div>
+
+
+<div id="dvCont" style="display:none;">
+  
+@if(!$implementos->isEmpty())
+          <table class="table table-bordered">
+              <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Fecha de Ingreso</th>
+                <th>Subcategoria</th>
+                <th>Stock</th>
+                <th>Estado del Implemento</th>
+                <th></th>
+                <th></th>
+              </tr>
+
+              @foreach ($implementos as $implemento)
+                  <tr>
+                    <td width="500">{{ $implemento->nombre }}</td>
+                    <td width="500">{{ $implemento->tipo}}</td>
+                    <td width="500">{{ $implemento->fecha_ingreso  }}</td>
+                    <td width="500">{{ $implemento->subcategoria  }}</td>
+                    <td width="500">{{ $implemento->stock  }}</td>
+                    <td width="500">{{ $implemento->estado  }}</td>
+                  </tr>
+              @endforeach
+
+          </table>
+
+      @endif
+
+</div>
+
 
 
 

@@ -15,6 +15,8 @@
   {!! Form::close()!!}
 
 
+ <button id="btnPrint" class="btn btn-warning btn-md">Exportar <i class="fas fa-print"></i></button>
+
 
  <div class="container">
  <div class="row">
@@ -22,6 +24,28 @@
 
 
  {!! Html::link(route('clases.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
+</div>
+
+<div id="dvCont" style="display:none;">
+      @if(!$clases->isEmpty())
+          <table class="table table-bordered">
+              <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Hora de Inicio</th>
+                <th>Hora Finalizacion</th>
+
+              </tr>
+              @foreach ($clases as $clase)
+                  <tr>
+                    <td width="500">{{ $clase->nombre_clase }}</td>
+                    <td width="500">{{ $clase->descripcion_clase }}</td>
+                    <td width="500">{{ $clase->hora_inicio }}</td>
+                    <td width="500">{{ $clase->hora_fin }}</td>
+                  </tr>
+              @endforeach
+          </table>
+        @endif
 </div>
 
  <div class="row">

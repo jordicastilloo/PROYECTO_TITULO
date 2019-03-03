@@ -295,6 +295,8 @@
       </footer>
 
     </div><!-- ./wrapper -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/js/imprimir.js"></script>
 
     <!-- jQuery 2.1.4 -->
     <script src="/plugins/jQuery/jQuery-2.1.4.min.js"></script>
