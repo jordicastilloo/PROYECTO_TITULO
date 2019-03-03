@@ -31,25 +31,25 @@
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Ingrese al sistema</p>
-        <form action="admin" method="post">
-          <div class="form-group has-feedback">
-            <input type="number" class="form-control" placeholder="RUT sin puntos ni guión">
+        {!!Form::open(['route'=>'login.store', 'method'=>'POST', 'class'=>'form-horizontal'])!!}
+        
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <div class="form-group">
+            {!!Form::label('rut', 'RUT:')!!}
+            {!!Form::text('rut',null,['class'=>'form-control', 'placeholder'=>'RUT sin puntos ni guión'])!!}
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
-          <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Contraseña">
+          <div class="form-group">
+            {!!Form::label('contraseña', 'Contraseña:')!!}
+            {!!Form::password('contraseña',null,['class'=>'form-control', 'placeholder'=>'Contraseña'])!!}
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
-         
           <div class="row">
-            
-
-            
             <div class="col-xs-4"><center>
-              <button type="submit" class="btn btn-primary btn-block tn-flat">Ingresar</button>
+            {!!Form::submit('Ingresar', ['class'=>'btn btn-primary btn-block tn-flat'])!!}
             </div><!-- /.col -->
           </div>
-        </form>
+         {!!Form::close()!!}
 
      
        

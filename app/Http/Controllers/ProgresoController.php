@@ -8,10 +8,10 @@ use App\Clientes;
 use App\Progreso;
 
 class ProgresoController extends Controller {
-	public function __construct()
+	/*public function __construct()
 	{
 		$this->middleware('auth');
-	}
+	}*/
 	/**
 	 * Display a listing of the resource.
 	 *

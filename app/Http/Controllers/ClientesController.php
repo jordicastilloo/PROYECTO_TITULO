@@ -9,10 +9,10 @@ use App\Progreso;
 use DB;
 
 class ClientesController extends Controller {
-	public function __construct()
+	/*public function __construct()
 	{
 		$this->middleware('auth');
-	}
+	}*/
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -44,7 +44,7 @@ class ClientesController extends Controller {
 	public function create()
 	{
 		//
-		return view('admin.clientes.createUpdate');
+		return view('admin.clientes.crear');
 	}
 
 	/**
@@ -54,39 +54,25 @@ class ClientesController extends Controller {
 	 */
 	public function store(ClientesForm $request)
 	{
-		
-
-		//
 		$clientes = new \App\clientes;
-		$clientes->rut_cl = \Request::input('rut_cl');
-		$clientes->nombre_cliente = \Request::input('nombre_cliente');
-		$clientes->ap_pat_cliente = \Request::input('ap_pat_cliente');
-		$clientes->ap_mat_cliente = \Request::input('ap_mat_cliente');
+		$clientes->rut_cl = \Request::input('rut');
+		$clientes->nombre_cliente = \Request::input('nombre');
+		$clientes->ap_pat_cliente = \Request::input('ap_pat');
+		$clientes->ap_mat_cliente = \Request::input('ap_mat');
+		$clientes->telefono_cliente = \Request::input('telefono');
+		$clientes->email_cliente = \Request::input('email');
+		$clientes->huella_cliente = 0;
+		$clientes->contrasena_cliente = \Hash::make(\Request::input('contraseña'));
+		$clientes->nacionalidad_cliente = \Request::input('nacionalidad');
+		$clientes->fecha_nac_cliente = \Request::input('fecha');
+		$clientes->sexo_cliente = \Request::input('sexo');
+		$clientes->alergia_cliente = \Request::input('alergia');
+		$clientes->patologia_cliente = \Request::input('patologia');
+		$clientes->fotografia_cliente = 0;
 		$clientes->estado = 1;
-	    $clientes->telefono_cliente = \Request::input('telefono_cliente');
-		$clientes->email_cliente = \Request::input('email_cliente');
-		$clientes->huella_cliente = \Request::input('huella_cliente');
-		$clientes->contrasena_cliente = \Request::input('contrasena_cliente');
-		$clientes->nacionalidad_cliente = \Request::input('nacionalidad_cliente');
-		$clientes->fecha_nac_cliente = \Request::input('fecha_nac_cliente');
-		$clientes->sexo_cliente = \Request::input('sexo_cliente');
-		$clientes->alergia_cliente = \Request::input('alergia_cliente');
-		$clientes->patologia_cliente = \Request::input('patologia_cliente');
-		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
-		$clientes->id_emp = 1;
 		$clientes->save();
 
-		//obtenemos el campo file definido en el formulario
-       $file = $request->file('file');
- 
-       //obtenemos el nombre del archivo
-       $nombre = $file->getClientOriginalName();
- 
-       //indicamos que queremos guardar un nuevo archivo en el disco local
-       \Storage::disk('local')->put($nombre,  \File::get($file));
- 
-
-    return redirect('clientes/create')->with('message', 'Post saved');
+    return redirect('clientes')->with('message', 'Cliente saved');
 	}
 
 	/**
@@ -123,38 +109,22 @@ class ClientesController extends Controller {
 		//
 		$clientes = \App\Clientes::find($rut_cl);
  
- 		$clientes->nombre_cliente = \Request::input('nombre_cliente');
- 
-  		$clientes->ap_pat_cliente = \Request::input('ap_pat_cliente');
-
- 		$clientes->ap_mat_cliente = \Request::input('ap_mat_cliente');
-
- 		$clientes->telefono_cliente = \Request::input('telefono_cliente');
-
- 		$clientes->email_cliente = \Request::input('email_cliente');
-
- 		//$clientes->huella_cliente = \Request::input('huella_cliente');
-
- 		//$clientes->contrasena_cliente = \Request::input('contrasena_cliente');
-
- 		$clientes->nacionalidad_cliente = \Request::input('nacionalidad_cliente');
-
- 		$clientes->fecha_nac_cliente = \Request::input('fecha_nac_cliente');
-
- 		//$clientes->sexo_cliente = \Request::input('sexo_cliente');
-
-
- 		$clientes->alergia_cliente = \Request::input('alergia_cliente');
-
- 		$clientes->patologia_cliente = \Request::input('patologia_cliente');
-
- 		$clientes->fotografia_cliente = \Request::input('fotografia_cliente');
-
+		$clientes->nombre_cliente = \Request::input('nombre');
+		$clientes->ap_pat_cliente = \Request::input('ap_pat');
+		$clientes->ap_mat_cliente = \Request::input('ap_mat');
+		$clientes->telefono_cliente = \Request::input('telefono');
+		$clientes->email_cliente = \Request::input('email');
+		$clientes->contrasena_cliente = \Hash::make(\Request::input('contraseña'));
+		$clientes->nacionalidad_cliente = \Request::input('nacionalidad');
+		$clientes->fecha_nac_cliente = \Request::input('fecha');
+		$clientes->sexo_cliente = \Request::input('sexo');
+		$clientes->alergia_cliente = \Request::input('alergia');
+		$clientes->patologia_cliente = \Request::input('patologia');
 
  
  		$clientes->save();
  
- 		return redirect()->route('clientes.edit', ['post' => $rut_cl])->with('message', 'Personal updated');
+ 		return redirect()->route('clientes.edit', ['post' => $rut_cl])->with('message', 'Cliente updated');
 	}
 
 	/**

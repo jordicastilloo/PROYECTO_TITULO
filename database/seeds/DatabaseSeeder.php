@@ -44,7 +44,6 @@ class DatabaseSeeder extends Seeder {
 			'patologia_cliente'		=>	'N',
 			'fotografia_cliente'	=> 'fotito',
 			'estado'				=> '1', //0=inactivo 1=activo
-			'id_emp'				=> '1',
 		));
 
 
@@ -56,7 +55,9 @@ class DatabaseSeeder extends Seeder {
 			'rut_cl'		=> 	'19380335',
 			'id_plan'		=>	'1'
 		));
-		// $this->call('UserTableSeeder');
+
+
+
 	}
 
 }

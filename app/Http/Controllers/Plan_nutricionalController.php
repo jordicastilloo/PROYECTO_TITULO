@@ -6,10 +6,10 @@ use App\Http\Requests\Plan_nutricionalForm;
 use Illuminate\Http\Request;
 
 class Plan_nutricionalController extends Controller {
-public function __construct()
+/*public function __construct()
 	{
 		$this->middleware('auth');
-	}
+	}*/
 	/**
 	 * Display a listing of the resource.
 	 *
