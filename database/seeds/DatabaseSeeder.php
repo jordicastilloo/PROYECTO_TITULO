@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder {
 			'alergia_cliente'		=>	'N',
 			'patologia_cliente'		=>	'N',
 			'fotografia_cliente'	=> 'fotito',
-			'estado'				=> '1', //0=inactivo 1=activo
+			'estado'				=> '1' //0=inactivo 1=activo
 		));
 
 
@@ -54,6 +54,30 @@ class DatabaseSeeder extends Seeder {
 			'fin_insc'		=>	'2018/02/01',
 			'rut_cl'		=> 	'19380335',
 			'id_plan'		=>	'1'
+		));
+
+		Model::unguard();
+		\DB::table('ejercicios')->insert(array (
+			'nombre'		=> '',
+			'fotografia'	=> '',
+			'video'			=> '',
+			'descripcion'	=> '',
+			'clasificacion'	=> '',
+			'tipo'			=> '',
+			'repeticiones'	=> '',
+			'series'		=> ''
+		));
+		
+		Model::unguard();
+		\DB::table('ejercicios')->insert(array (
+			'nombre'		=> '',
+			'fotografia'	=> '',
+			'video'			=> '',
+			'descripcion'	=> '',
+			'clasificacion'	=> '',
+			'tipo'			=> '',
+			'repeticiones'	=> '',
+			'series'		=> ''
 		));
 
 
