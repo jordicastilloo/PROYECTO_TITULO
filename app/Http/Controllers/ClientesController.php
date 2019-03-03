@@ -59,6 +59,7 @@ class ClientesController extends Controller {
 		$clientes->nombre_cliente = \Request::input('nombre');
 		$clientes->ap_pat_cliente = \Request::input('ap_pat');
 		$clientes->ap_mat_cliente = \Request::input('ap_mat');
+		$clientes->direccion_cliente = \Request::input('direccion');
 		$clientes->telefono_cliente = \Request::input('telefono');
 		$clientes->email_cliente = \Request::input('email');
 		$clientes->huella_cliente = 0;
@@ -112,6 +113,7 @@ class ClientesController extends Controller {
 		$clientes->nombre_cliente = \Request::input('nombre');
 		$clientes->ap_pat_cliente = \Request::input('ap_pat');
 		$clientes->ap_mat_cliente = \Request::input('ap_mat');
+		$clientes->direccion_cliente = \Request::input('direccion');
 		$clientes->telefono_cliente = \Request::input('telefono');
 		$clientes->email_cliente = \Request::input('email');
 		$clientes->contrasena_cliente = \Hash::make(\Request::input('contraseña'));

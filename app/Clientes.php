@@ -9,7 +9,7 @@ class Clientes extends Model {
     protected $table = 'clientes';
 	protected $primaryKey = 'rut_cl';
 	//protected $
-	protected $fillable = ['rut_cl','nombre_cliente', 'ap_pat_cliente', 'ap_mat_cliente','telefono_cliente','email_cliente','huella_cliente','contrasena_cliente','nacionalidad_cliente','fecha_nac_cliente','sexo_cliente','alergia_cliente','patologia_cliente','fotografia_cliente','estado'];
+	protected $fillable = ['rut_cl','nombre_cliente', 'ap_pat_cliente', 'ap_mat_cliente','direccion_cliente','telefono_cliente','email_cliente','huella_cliente','contrasena_cliente','nacionalidad_cliente','fecha_nac_cliente','sexo_cliente','alergia_cliente','patologia_cliente','fotografia_cliente','estado'];
 	protected $guarded = ['rut_cl'];
 
 /*

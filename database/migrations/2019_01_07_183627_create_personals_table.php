@@ -20,6 +20,7 @@ class CreatePersonalsTable extends Migration {
 			$table->string('nombre_p');
 			$table->string('ap_pat_p');
 			$table->string('ap_mat_p');
+			$table->string('direccion_p');
 			$table->integer('telefono_p');
 			$table->string('email_p');
 			$table->string('contrasena_p');
@@ -28,6 +29,7 @@ class CreatePersonalsTable extends Migration {
 			$table->string('sexo_p');
 			$table->string('profesion_p');
 			$table->string('fotografia_p');
+			$table->integer('estado');
 			//$table->integer('id_emp')->unsigned();
 			//$table->foreign('id_emp')->references('id_emp')->on('empresas');
 		});

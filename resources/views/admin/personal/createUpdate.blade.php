@@ -59,6 +59,12 @@
  </div>
 
  <div class="form-group">
+ {!! Form::text('direccion_p', null,
+ ['class'=>'form-control', 'placeholder'=>'Ingrese Direccion'])
+ !!}
+ </div>
+
+ <div class="form-group">
  {!! Form::text('telefono_p', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Telefono de Contacto'])
  !!}

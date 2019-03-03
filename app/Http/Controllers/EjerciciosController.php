@@ -53,7 +53,6 @@ class EjerciciosController extends Controller {
 		$ejercicios->video = \Request::input('video');
 		$ejercicios->descripcion= \Request::input('descripcion');
 		$ejercicios->clasificacion= \Request::input('clasificacion');
-		$ejercicios->tipo= \Request::input('tipo');
 		$ejercicios->series= \Request::input('series');
 		$ejercicios->repeticiones= \Request::input('repeticiones');
 		$ejercicios->save();
@@ -105,7 +104,6 @@ class EjerciciosController extends Controller {
 
  		$ejercicios->clasificacion = \Request::input('clasificacion');
 
- 		$ejercicios->tipo = \Request::input('tipo');
 
  		$ejercicios->series = \Request::input('series');
 

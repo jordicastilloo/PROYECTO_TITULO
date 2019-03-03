@@ -62,6 +62,7 @@ public function __construct()
 		$personal->nombre_p = \Request::input('nombre_p');
 		$personal->ap_pat_p = \Request::input('ap_pat_p');
 		$personal->ap_mat_p = \Request::input('ap_mat_p');
+		$personal->direccion_p = \Request::input('direccion_p');
 	    $personal->telefono_p = \Request::input('telefono_p');
 		$personal->email_p = \Request::input('email_p');
 		$personal->tipo_p = \Request::input('tipo_p');
@@ -71,6 +72,7 @@ public function __construct()
 		$personal->sexo_p = \Request::input('sexo_p');
 		$personal->profesion_p = \Request::input('profesion_p');
 		$personal->fotografia_p = \Request::input('fotografia_p');
+		$personal->estado = 1;
 		$personal->id_emp = 1;
 		$personal->save();
 
@@ -126,6 +128,8 @@ public function __construct()
   		$personal->ap_pat_p = \Request::input('ap_pat_p');
 
  		$personal->ap_mat_p = \Request::input('ap_mat_p');
+
+ 		$personal->direccion_p = \Request::input('direccion_p');
 
  		$personal->telefono_p = \Request::input('telefono_p');
 

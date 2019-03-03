@@ -19,6 +19,7 @@ class CreateClientesTable extends Migration {
 			$table->string('nombre_cliente');
 			$table->string('ap_pat_cliente');
 			$table->string('ap_mat_cliente');
+			$table->string('direccion_cliente');
 			$table->integer('telefono_cliente');
 			$table->string('email_cliente');
 			$table->string('huella_cliente');

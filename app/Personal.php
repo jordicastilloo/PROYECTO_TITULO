@@ -8,7 +8,7 @@ class Personal extends Model {
     protected $table = 'personals';
 	protected $primaryKey = 'rut_p';
 	//protected $
-	protected $fillable = ['rut_p','tipo_p', 'nombre_p', 'ap_pat_p','ap_mat_p','telefono_p','email_p','contrasena_p','nacionalidad_p','fecha_nac','sexo_p','profesion_p','fotografia_p','id_emp'];
+	protected $fillable = ['rut_p','tipo_p', 'nombre_p', 'ap_pat_p','ap_mat_p','direccion_p','telefono_p','email_p','contrasena_p','nacionalidad_p','fecha_nac','sexo_p','profesion_p','fotografia_p','estado','id_emp'];
 	protected $guarded = ['rut_p'];
 
 
