@@ -15,12 +15,6 @@
 
 
 
-<div class="container">
-
-<!--diseño-->
-<div class="col-md-8">
-    <div class="box box-danger">
-            <div class="box-header">
 
 
                 <!--AQUI TERMINA-->
@@ -65,7 +59,7 @@
  <option value="">-- Seleccione Estado del Implemento --</option>
  <option value ="Deterioro">Deterioro</option>    
  <option value ="Disponible">Disponible</option>
- <option value ="Ver que mas">Ver que mas</option>
+ <option value ="Ver que mas">En Mantención</option>
  
  </select>
  </div>

@@ -54,16 +54,19 @@ class ClientesController extends Controller {
 	 */
 	public function store(ClientesForm $request)
 	{
+		$contra = \Request::input('rut');
+		$nombresito = \Request::input('nombre');
 		$clientes = new \App\clientes;
 		$clientes->rut_cl = \Request::input('rut');
 		$clientes->nombre_cliente = \Request::input('nombre');
 		$clientes->ap_pat_cliente = \Request::input('ap_pat');
 		$clientes->ap_mat_cliente = \Request::input('ap_mat');
-		$clientes->direccion_cliente = \Request::input('direccion');
+		$clientes->direccion_cliente = 0;
 		$clientes->telefono_cliente = \Request::input('telefono');
 		$clientes->email_cliente = \Request::input('email');
 		$clientes->huella_cliente = 0;
-		$clientes->contrasena_cliente = \Hash::make(\Request::input('contraseña'));
+		//$clientes->contrasena_cliente = \Hash::make(\Request::input('contraseña'));
+		$clientes->contrasena_cliente = \Hash::make($nombresito.substr($contra, -4));
 		$clientes->nacionalidad_cliente = \Request::input('nacionalidad');
 		$clientes->fecha_nac_cliente = \Request::input('fecha');
 		$clientes->sexo_cliente = \Request::input('sexo');

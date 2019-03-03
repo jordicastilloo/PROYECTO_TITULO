@@ -88,14 +88,6 @@ Profesor
 Nutricionista
 </div>
 
-
-
- <div class="form-group">
- {!! Form::text('contrasena_p', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Contraseña'])
- !!}
- </div>
-
  <div class="form-group">
  {!! Form::text('nacionalidad_p', null,
  ['class'=>'form-control', 'placeholder'=>'Ingrese Nacionalidad'])

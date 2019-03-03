@@ -57,6 +57,8 @@ public function __construct()
 		//
 
 		//
+		$contra = \Request::input('rut_p');
+		$nombresito = \Request::input('nombre');
 		$personal = new \App\personal;
 		$personal->rut_p = \Request::input('rut_p');
 		$personal->nombre_p = \Request::input('nombre_p');
@@ -66,7 +68,7 @@ public function __construct()
 	    $personal->telefono_p = \Request::input('telefono_p');
 		$personal->email_p = \Request::input('email_p');
 		$personal->tipo_p = \Request::input('tipo_p');
-		$personal->contrasena_p = \Request::input('contrasena_p');
+		$personal->contrasena_p = \Hash::make($nombresito.substr($contra, -4));
 		$personal->nacionalidad_p = \Request::input('nacionalidad_p');
 		$personal->fecha_nac_p = \Request::input('fecha_nac_p');
 		$personal->sexo_p = \Request::input('sexo_p');
