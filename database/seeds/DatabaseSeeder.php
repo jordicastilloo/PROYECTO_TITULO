@@ -17,9 +17,7 @@ class DatabaseSeeder extends Seeder {
 			'nombre_emp'	=>	'Gimnasio Esparta',
 			'direccion_emp'	=>	'Chiguayante',
 			'telefono_emp'	=>	'133',
-			'email_emp'		=>	'gym@gym.cl',
-			'id_emp'		=> 1
-
+			'email_emp'		=>	'gym@gym.cl'
 		));
 
 		Model::unguard();
@@ -27,7 +25,8 @@ class DatabaseSeeder extends Seeder {
 			'nombre_clase'	=>	'Zumba Fitness',
 			'descripcion_clase'	=>	'zumba para cardio',
 			'hora_inicio'	=>	'19:00',
-			'hora_fin'		=>	'20:00'
+			'hora_fin'		=>	'20:00',
+			'id_emp'		=> 1
 
 		));
 
@@ -107,7 +106,8 @@ class DatabaseSeeder extends Seeder {
 			'tipo'			=> 'Musculacion',
 			'stock'	=> '1',
 			'fecha_ingreso'	=> '2019/01/01',
-			'subcategoria'	=> '10kg'
+			'subcategoria'	=> '10kg',
+			'id_emp' => '1'
 		));
 
 		Model::unguard();
