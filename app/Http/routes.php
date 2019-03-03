@@ -32,7 +32,7 @@ Route::get('parametro/{id}','ContieneController@index');
 
 Route::resource('rutinas','RutinaController');
 
-//Route::resource('ejercicios','EjerciciosController');
+Route::resource('ejercicios','EjerciciosController');
 
 Route::resource('personas', 'PersonasController');
 
