@@ -34,12 +34,15 @@
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Duracion Plan</th>
+                <th>Días Gratis</th>
 
               </tr>
               @foreach ($planes as $plan)
                   <tr>
                     <td width="500">{{ $plan->nombre_plan }}</td>
                     <td width="500">{{ $plan->precio_plan }}</td>
+                    <td width="500">{{ $plan->duracion_plan }}</td>
+                    <td width="500">{{ $plan->dias_gratis }}</td>
 
                    
                     @if($plan->duracion_plan == 0) <td width="500">{{ "Dia" }}</td>
@@ -60,12 +63,14 @@
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Duracion Plan</th>
+                <th>Días Gratis</th>
 
               </tr>
               @foreach ($planes as $plan)
                   <tr>
                     <td width="500">{{ $plan->nombre_plan }}</td>
                     <td width="500">{{ $plan->precio_plan }}</td>
+                    
 
 
                     
@@ -75,7 +80,7 @@
                     @elseif ($plan->duracion_plan != 0)<td width="500">{{ $plan->duracion_plan }} Meses</td>
                     @endif
                     
-
+                      <td width="500">{{ $plan->dias_gratis }}</td>
                     <td>
                       {!! Html::link(route('planes.edit', $plan->id_plan), 'Editar', array('class' => 'btn btn-success btn-md')) !!}
                     </td>

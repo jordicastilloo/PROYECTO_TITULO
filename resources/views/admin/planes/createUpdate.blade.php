@@ -86,7 +86,29 @@
  <option value ="10">10 meses</option>
  <option value ="11">11 meses</option>
  <option value ="12">12 meses</option>
- 
+  
+ </select>
+ </div>
+
+
+
+
+ <div class="form-group">
+ <label for="">Dias Gratis</label>
+ <select name="duracion_plan" id="inputDuracionPlan" class="form-control">
+ <option value="">-- Seleccione Días Gratis --</option>
+
+ <option value ="0">0 Días</option>    
+ <option value ="1">1 Día</option>    
+ <option value ="2">2 Días</option>
+ <option value ="3">3 Días</option>
+ <option value ="4">4 Días</option>
+ <option value ="5">5 Días</option>
+ <option value ="6">6 Días</option>
+ <option value ="7">7 Días</option>
+ <option value ="8">8 Días</option>
+ <option value ="9">9 Días</option>
+ <option value ="10">10 Días</option>
 
   
  </select>
