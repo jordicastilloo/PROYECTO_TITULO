@@ -13,7 +13,6 @@
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
 
- <input type="button" value="Exportar" id="btnPrint" />
 
 
 <!-----     -->
@@ -21,10 +20,12 @@
 
  <div class="container">
  <div class="row">
- <div class="col-md-10 col-md-offset-1">
+ <div class="col-md-10 col-md-offset-1" align="right">
 
 
- {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md pull-right')) !!}
+ {!! Html::link(route('implementos.create'), 'Crear', array('class' => 'btn btn-info btn-md')) !!}
+  <button id="btnPrint" class="btn btn-warning btn-md">Exportar <i class="fas fa-print"></i></button>
+
 </div>
 
 
