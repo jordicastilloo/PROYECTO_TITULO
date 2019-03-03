@@ -48,9 +48,9 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="/" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <span class="logo-mini"><b>GYM</b></span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>GYM</b>ESPARTA</span>
         </a>
@@ -58,7 +58,8 @@
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Toggle navigation</span><i class="fas fa-angle-left">
+            </i>
           </a>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
@@ -97,16 +98,6 @@
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Buscar...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header"> Menu Principal</li>
@@ -212,23 +203,11 @@
 
 
              </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fas fa-walkings"></i>
-                <span> Ingresar Ejercicios</span>
-                <span class="label label-primary pull-right"></span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/ejercicios/create"><i class="fas fa-plus-circle"></i> Añadir Ejercicios</a></li>
-                <li><a href="/ejercicios/"><i class="fas fa-bars"></i> Listar Ejercicios</a></li>
-              </ul>
-            </li>
-
 
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-walkings"></i>
+                <i class="far fa-edit"></i>
                 <span> Crear Rutina</span>
                 <span class="label label-primary pull-right"></span>
               </a>
@@ -243,7 +222,7 @@
              </li>
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-walkings"></i>
+                <i class="far fa-calendar-check"></i>
                 <span> Rutina de Ejercicios</span>
                 <span class="label label-primary pull-right"></span>
               </a>
@@ -289,9 +268,9 @@
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> NUMERO
+          <b>Version</b> 1.1
         </div>
-        <strong>Copyright &copy; 2018-2019 <a href="http://#">Gimnasio Esparta</a>.</strong> Chiguayante.
+        <strong>Copyright &copy; 2019 <a href="http://#">Gimnasio Esparta</a>.</strong> Chiguayante.
       </footer>
 
     </div><!-- ./wrapper -->

@@ -15,7 +15,7 @@
   <button type="submit" class="btn btn-default">Buscar</button>
   {!! Form::close()!!}
 
- <input type="button" value="Exportar" id="btnPrint" />
+ <button id="btnPrint" class="btn btn-warning btn-md">Exportar <i class="fas fa-print"></i></button>
 
 
 

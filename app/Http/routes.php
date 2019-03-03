@@ -17,7 +17,7 @@ use App\implementos;
 
 Route::resource('rutinas','RutinaController');
 
-Route::resource('ejercicios','EjerciciosController');
+//Route::resource('ejercicios','EjerciciosController');
 
 Route::resource('personas', 'PersonasController');
 
