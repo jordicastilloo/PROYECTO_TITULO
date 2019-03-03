@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder {
 			'nombre_emp'	=>	'Gimnasio Esparta',
 			'direccion_emp'	=>	'Chiguayante',
 			'telefono_emp'	=>	'133',
-			'email_emp'		=>	'gym@gym.cl'
+			'email_emp'		=>	'gym@gym.cl',
+			'id_emp'		=> 1
 
 		));
 
