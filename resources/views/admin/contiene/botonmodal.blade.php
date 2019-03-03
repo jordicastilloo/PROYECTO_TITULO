@@ -1,6 +1,8 @@
 
 
-<div class="modal fade" tabindex="-1" id="modal-{{$Contiene2->rut_cl}}" role="dialog" >
+<div class="modal fade" tabindex="-1" id="{{$Contiene->rut_cl}}" role="dialog" value="{{$Contiene->rut_cl}}">
+            
+
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,6 +14,9 @@
 
             </div>
  <div class="modal-body" style="max-height: calc(100vh - 210px);overflow-y: auto"; align="center">
+
+
+
 
 
                 <h4><b>Ejercicios Día Lunes</b></h4>
@@ -29,6 +34,14 @@
 
 
 
+
+
+
+
+
+
+
+<!--
                   <h4><b>Ejercicios Día Martes</b></h4>
 
 
@@ -46,7 +59,7 @@
                   <h4><b>Ejercicios Día Miercoles</b></h4>
 
 
-@foreach ($consultaejerciciosdiaMartes as $Contiene5)
+@foreach ($consultaejerciciosdiaMiercoles as $Contiene5)
 
 
                 <li>{{ $Contiene5->nombre}} </li>
@@ -114,7 +127,7 @@
 
                    
                   @endforeach
-
+-->
 
 
 

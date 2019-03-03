@@ -1,5 +1,9 @@
  <?php
 
+
+use Illuminate\Support\Facades\Route;
+
+
 use App\implementos;
 
 
@@ -13,6 +17,17 @@ use App\implementos;
 | and give it the controller to call when that URI is requested.
 |
 */
+
+
+Route::post('admin.contiene.inicio2/modal-{{$Contiene->rut_cl}}','ContieneController@index');
+
+
+Route::get('parametro/{id}','ContieneController@index');
+
+
+
+
+
 
 
 Route::resource('rutinas','RutinaController');

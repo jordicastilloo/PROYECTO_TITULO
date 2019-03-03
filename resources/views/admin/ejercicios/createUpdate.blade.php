@@ -46,13 +46,13 @@
 
 
  <div class="form-group">
- {!! Form::text('descripcion', null, ["class" => 'form-control','placeholder'=>'Ingrese descripcion']) !!}
+ {!! Form::textarea('descripcion', null, ["class" => 'form-control','placeholder'=>'Ingrese descripcion']) !!}
  </div>
 
  <div class="form-group">
  <label for="">Numero de Series</label>
  <select name="series" id="inputSeries" class="form-control">
- <option value="">-- Seleccione Numero de Series --</option>
+ <option value="">-- Seleccione Numero de Series si es necesario--</option>
  <option value ="1">1</option>    
  <option value ="2">2</option>
  <option value ="3">3</option>
@@ -73,11 +73,11 @@
 
 
  <div class="form-group">
- {!! Form::text('fotografia', null, ['class' => 'form-control','placeholder'=>'Ingrese foto']) !!}
+ {!! Form::text('fotografia', null, ['class' => 'form-control','placeholder'=>'Ingrese URL fotografía']) !!}
  </div>
  
   <div class="form-group">
- {!! Form::text('video', null, ["class" => 'form-control','placeholder'=>'Ingrese video']) !!}
+ {!! Form::text('video', null, ["class" => 'form-control','placeholder'=>'Ingrese URL video']) !!}
  </div>
 
 
@@ -91,13 +91,22 @@
  </div>
 
  <div class="form-group">
- <label for="">Seleccione Día</label>
+ <label for="">Seleccione Clasificacion</label>
  <select name="clasificacion" id="inputDia" class="form-control">
  <option value="">-- Seleccione Clasificacion del Ejercicio --</option>
  <option value ="Pecho">Pecho</option>    
- <option value ="Piernas">Piernas</option>
+ <option value ="Piernas">Gluteos</option>
  <option value ="Espalda">Espalda</option>
  <option value ="Hombros">Hombros</option>
+ <option value ="Triceps">Triceps</option>
+ <option value ="Biceps">Biceps</option>
+ <option value ="ABS">ABS</option>
+ <option value ="Cardio">Cardio</option>
+ <option value ="Muslos">Muslos</option>
+ <option value ="Pantorrilla">Pantorrilla</option>
+
+
+
  
  </select>
  </div>

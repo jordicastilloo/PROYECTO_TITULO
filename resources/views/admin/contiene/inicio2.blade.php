@@ -65,9 +65,14 @@
                     <td width="500">{{ $Contiene->desc_rutina}}</td>
 
 
-                     <td width="60" align="center"><a href="#" data-target="#modal-{{$Contiene->rut_cl}}" data-toggle="modal" title="Mostrar">
+                     <td width="60" align="center"><a href="#" data-target="#{{$Contiene->rut_cl}}" data-toggle="modal" title="Mostrar">
         <button type="button" class="btn btn-primary btn-md" data-toggle="modal">Rutina de Ejercicios</button>
-      </a></td>
+      </a></td>            <input type="hidden" name="field_name" value="#modal-{{$Contiene->rut_cl}}" id="hola">
+
+
+
+
+
 
 
 
@@ -94,6 +99,8 @@
                 @include('admin.contiene.botonmodal')
 
               @endforeach
+
+
           </table>
              
       @endif
