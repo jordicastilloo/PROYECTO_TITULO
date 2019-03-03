@@ -219,7 +219,7 @@
 
             <li class="treeview">
               <a href="#">
-                <i class="fas fa-walkings"></i>
+                <i class="fas fa-child"></i>
                 <span> Ejercicios</span>
                 <span class="label label-primary pull-right"></span>
               </a>

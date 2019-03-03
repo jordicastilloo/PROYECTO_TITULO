@@ -2,7 +2,7 @@
  
 @section('content')
 
-
+<span id="titulo"> HOLA </span>
 <style type="text/css">
 
 #boton1 {
