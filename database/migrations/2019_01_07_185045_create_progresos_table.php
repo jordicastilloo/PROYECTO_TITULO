@@ -14,13 +14,13 @@ class CreateProgresosTable extends Migration {
 	{
 		Schema::create('progresos', function(Blueprint $table)
 		{
-			$table->increments('id_progreso');
+			$table->increments('id_progreso',10);
 			$table->double('peso_corporal');
-			$table->integer('estatura');
-			$table->string('subescapular');
-			$table->string('tricipital');
-			$table->string('bicipital');
-			$table->string('supra_iliaco');
+			$table->integer('estatura',11);
+			$table->string('subescapular',20);
+			$table->string('tricipital',20);
+			$table->string('bicipital',20);
+			$table->string('supra_iliaco',20);
 			$table->double('hombros');
 			$table->double('pecho');
 			$table->double('biceps_relajado');

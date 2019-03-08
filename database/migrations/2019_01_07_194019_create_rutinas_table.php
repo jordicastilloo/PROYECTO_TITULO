@@ -14,9 +14,9 @@ class CreateRutinasTable extends Migration {
 	{
 		Schema::create('rutinas', function(Blueprint $table)
 		{
-			$table->increments('id_rutina');
-			$table->string('nombre_rutina');
-			$table->string('desc_rutina');
+			$table->increments('id_rutina',10);
+			$table->string('nombre_rutina',200);
+			$table->string('desc_rutina',200);
 
 			$table->integer('rut_cl')->unsigned();
 			$table->foreign('rut_cl')->references('rut_cl')->on('clientes');

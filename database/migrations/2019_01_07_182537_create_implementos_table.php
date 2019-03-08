@@ -14,13 +14,13 @@ class CreateImplementosTable extends Migration {
 	{
 		Schema::create('implementos', function(Blueprint $table)
 		{
-			$table->increments('id_implemento');
-			$table->string('nombre');
-			$table->string('estado');
-			$table->string('tipo');
-			$table->integer('stock');
+			$table->increments('id_implemento',10);
+			$table->string('nombre',100);
+			$table->string('estado',50);
+			$table->string('tipo',50);
+			$table->integer('stock',20);
 			$table->date('fecha_ingreso');
-			$table->string('subcategoria');
+			$table->string('subcategoria',50);
 
 			$table->integer('id_emp')->unsigned();
 			$table->foreign('id_emp')->references('id_emp')->on('empresas');

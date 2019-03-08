@@ -25,7 +25,7 @@ class ClientesController extends Controller {
 
 		$clientes = Clientes::search($request->name)->type($request->get('estado'))->orderBy('rut_cl','DESC')->paginate(5);
 
-            return view ('admin.clientes.inicio')->with('clientes',$clientes);
+        return view ('admin.clientes.inicio')->with('clientes',$clientes);
 
 
  

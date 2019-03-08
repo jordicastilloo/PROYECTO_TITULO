@@ -26,6 +26,7 @@
             		<p> Nombre: {{$Cliente->nombre_cliente}}</p>
                     <p> Apellido Paterno: {{$Cliente->ap_pat_cliente}}</p>
                     <p> Apellido Materno: {{$Cliente->ap_mat_cliente}}</p>
+                    <p> Direccion: {{$Cliente->direccion_cliente}}</p>
                     <p> Telefono: {{$Cliente->telefono_cliente}}</p>
                     <p> Email: {{$Cliente->email_cliente}}</p>
                     <p> Nacionalidad: {{$Cliente->nacionalidad_cliente}}</p>

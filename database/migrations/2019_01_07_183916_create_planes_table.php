@@ -14,11 +14,11 @@ class CreatePlanesTable extends Migration {
 	{
 		Schema::create('planes', function(Blueprint $table)
 		{
-			$table->increments('id_plan');
-			$table->string('nombre_plan');
-			$table->string('precio_plan');
-			$table->integer('duracion_plan');
-			$table->integer('dias_gratis');
+			$table->increments('id_plan',10);
+			$table->string('nombre_plan',200);
+			$table->int('precio_plan',15);
+			$table->integer('duracion_plan',11);
+			$table->integer('dias_gratis',11);
 		});
 	}
 

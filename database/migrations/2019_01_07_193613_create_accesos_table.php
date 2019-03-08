@@ -14,7 +14,7 @@ class CreateAccesosTable extends Migration {
 	{
 		Schema::create('accesos', function(Blueprint $table)
 		{
-			$table->increments('id_acceso');
+			$table->increments('id_acceso',10);
 			$table->datetime('fecha');
 			
 			$table->integer('rut_cl')->unsigned();

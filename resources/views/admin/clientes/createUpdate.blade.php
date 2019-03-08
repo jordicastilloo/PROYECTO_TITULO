@@ -81,11 +81,7 @@
  !!}
  </div>
 
- <div class="form-group">
- {!! Form::text('contrasena_cliente', null,
- ['class'=>'form-control', 'placeholder'=>'Ingrese Contraseña'])
- !!}
- </div>
+ 
 
  <div class="form-group">
  {!! Form::text('nacionalidad_cliente', null,

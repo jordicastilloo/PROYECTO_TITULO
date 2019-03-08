@@ -14,11 +14,11 @@ class CreateEmpresasTable extends Migration {
 	{
 		Schema::create('empresas', function(Blueprint $table)
 		{
-			$table->increments('id_emp');
-			$table->string('nombre_emp');
-			$table->string('direccion_emp');
-			$table->integer('telefono_emp');
-			$table->string('email_emp');
+			$table->increments('id_emp',10);
+			$table->string('nombre_emp',100);
+			$table->string('direccion_emp',200);
+			$table->integer('telefono_emp',11);
+			$table->string('email_emp',100);
 		});
 	}
 

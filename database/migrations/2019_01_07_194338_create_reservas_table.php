@@ -14,7 +14,7 @@ class CreateReservasTable extends Migration {
 	{
 		Schema::create('reservas', function(Blueprint $table)
 		{
-			$table->increments('id_reserva');
+			$table->increments('id_reserva',10);
 			$table->datetime('hora_inicio');
 			$table->datetime('hora_fin');
 			$table->datetime('fecha');

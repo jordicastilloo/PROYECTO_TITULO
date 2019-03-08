@@ -57,11 +57,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-right">
-						<p class="num">Teléfono: +56 9 12345678</p>
+						<p class="num">Teléfono: +569 82407367</p>
 						<ul class="fh5co-social">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-							<li><a href="#"><i class="icon-github"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+							<!--<li><a href="#"><i class="icon-github"></i></a></li>-->
 						</ul>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 
 						<img src="sitioweb/images/logoesparta.jpg" width="50" height="50">
 
-						<div id="fh5co-logo"><a href="index.html">ESPARTA GYM Chiguayante<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html">SPARTA GYM Chiguayante<span>.</span></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
@@ -85,7 +85,7 @@
 							<li><a href="entrenador">Entrenadores</a></li>
 							<li><a href="sitioweb/pricing.html">Planes</a></li>
 							<li class="has-dropdown">
-								<a href="blog.html">Blog</a>
+								<!--<a href="blog.html">Blog</a>-->
 								<ul class="dropdown">
 									<li><a href="#">Web Design</a></li>
 									<li><a href="#">eCommerce</a></li>
@@ -111,8 +111,8 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Hazlo un estilo de vida, No un Deber!</h1>
-							<h2>Subtitulo</a></h2>
-							<p><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn btn-primary popup-vimeo">Watch Our Video</a></p>
+							<!--<h2>Subtitulo</a></h2>-->
+							<!--<p><a href="https://vimeo.com/channels/staffpicks/93951774" class="btn btn-primary popup-vimeo">Watch Our Video</a></p>-->
 						</div>
 					</div>
 				</div>
@@ -127,16 +127,20 @@
 					<div class="services">
 						<span><img class="img-responsive" src="sitioweb/images/zumba.png" alt=""></span>
 						<h3>ZUMBA</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
-						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+						<p>Zumba es una disciplina fitness creada a mediados de los años 1990 por el colombiano Alberto "Beto" Pérez,1​ enfocada por una parte a mantener un cuerpo saludable y por otra a desarrollar, fortalecer y dar flexibilidad al cuerpo mediante movimientos de baile combinados con una serie de rutinas aeróbicas.
+
+Zumba utiliza dentro de sus rutinas los principales ritmos latinoamericanos, como lo son la salsa, el merengue,la cumbia, reggaetón y el samba. En cada sesión de Zumba, se pueden llegar a quemar de 50 a 300 calorías.</p>
+						<!--<p><a href="#" class="btn btn-primary btn-outline btn-sm"> <i class="icon-arrow-right"></i></a></p>-->
 					</div>
 				</div>
 				<div class="col-md-4 text-center animate-box">
 					<div class="services">
 						<span><img class="img-responsive" src="sitioweb/images/pilates.png" alt=""></span>
 						<h3>PILATES</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
-						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+						<p>El método Pilates, o simplemente Pilates, es un sistema de entrenamiento físico y mental.
+
+ El método se centra en el desarrollo de los músculos internos para mantener el equilibrio corporal y dar estabilidad y firmeza a la columna vertebral, por lo que es muy usado como terapia en rehabilitación1​ y para, por ejemplo, prevenir y curar el dolor de espalda. Se practica en todo el mundo y su popularidad es cada vez mayor debido a que es practicado por personajes famosos del mundo de la música, el cine, la danza y/o el deporte.</p>
+						<!--<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>-->
 					</div>
 				</div>
 			
@@ -146,8 +150,10 @@
 					<div class="services">
 						<span><img class="img-responsive" src="sitioweb/images/cardiobox.png" alt=""></span>
 						<h3>CARDIO BOX</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
-						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+						<p>El 'aerobox es una actividad energética que permite endurecer los músculos, evitar enfermedades cardiovasculares y modelar el cuerpo mediante la realización de ejercicios relacionados con el kickboxing (puños y patadas) acompañados también con música. Este deporte sirve para ganar coordinación corporal y es un bálsamo para eliminar las tensiones de la vida diaria.
+
+En el aerobox el adversario es imaginario, no se busca el desarrollo de las capacidades luchadoras, sino que utiliza movimientos de deportes de lucha para reinterpretarlos en una serie de movimientos cercanos a una danza peculiarmente violenta. La práctica de este deporte durante una hora asegura quemar entre 700 a 1.000 calorías</p>
+						<!--<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>-->
 					</div>
 				</div>
 				
@@ -156,8 +162,8 @@
 					<div class="services">
 						<span><img class="img-responsive" src="sitioweb/images/abdominal.png" alt=""></span>
 						<h3>REDUCTIVO ABDOMINAL</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
-						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+						<p></p>
+						<!--<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>-->
 					</div>
 				</div>
 				
@@ -167,8 +173,10 @@
 					<div class="services">
 						<span><img class="img-responsive" src="sitioweb/images/circuit.png" alt=""></span>
 						<h3>CIRCUIT TRAINING</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius</p>
-						<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>
+						<p>El circuito de entrenamiento es un tipo de entrenamiento que consiste en un grupo de actividades que aluden a un porcentaje de estaciones seleccionadas y posicionadas alrededor de una instalación (normalmente canchas deportivas) que son visitadas en rápida secuencia. Cada una de las estaciones suelen estar compuestas por unos grupos de personas. La gama de ejercicios en las estaciones incluyen equipo de resistencia (como pesas), al igual que espacios asignados para hacer ejercicios como flexiones, sentadillas, abdominales, etc.
+
+Cada persona debe completar la actividad en esa estación antes de proceder a la próxima, en un lapso de 20 a 30 segundos. Entonces, ellos continúan hasta que hayan pasado a lo largo de las estaciones una o dos veces, según sea requerido en el cuerpo o hasta que se haya completado en un determinado tiempo.</p>
+						<!--<p><a href="#" class="btn btn-primary btn-outline btn-sm">More <i class="icon-arrow-right"></i></a></p>-->
 					</div>
 				</div>
 				 
@@ -184,24 +192,24 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Fitness Expert</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>Profesores Fitness</h2>
+					<p>Profesores encargados de realizar las clases en Gimnasio Esparta Chiguayante</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-sm-4 animate-box">
 					<div class="trainer">
-						<a href="#"><img class="img-responsive" src="sitioweb/images/trainer-1.jpg" alt="trainer"></a>
+						<a href="#"><img class="img-responsive" src="sitioweb/images/MIGUEL.jpg" alt="trainer"></a>
 						<div class="title">
-							<h3><a href="#">Angel Adams</a></h3>
-							<span>Dance Expert</span>
+							<h3><a href="#">Miguel Zuñiga</a></h3>
+							<span>Profesor de Zumba Fitness</span>
 						</div>
 						<div class="desc text-center">
 							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-instagram"></i></a></li>
 								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								<!--<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
 							</ul>
 						</div>
 					</div>
@@ -215,10 +223,10 @@
 						</div>
 						<div class="desc text-center">
 							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-instagram"></i></a></li>
 								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								<!--<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
 							</ul>
 						</div>
 					</div>
@@ -232,10 +240,10 @@
 						</div>
 						<div class="desc text-center">
 							<ul class="fh5co-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-instagram"></i></a></li>
 								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								<!--<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>-->
 							</ul>
 						</div>
 					</div>
@@ -248,7 +256,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Class Schedule</h2>
+					<h2>Clases Impartidas</h2>
 				</div>
 			</div>
 
@@ -256,14 +264,14 @@
 				
 				<div class="fh5co-tabs">
 					<ul class="fh5co-tab-nav">
-						<li class="active"><a href="#" data-tab="1"><span class="visible-xs">S</span><span class="hidden-xs">Sunday</span></a></li>
-						<li><a href="#" data-tab="2"><span class="visible-xs">M</span><span class="hidden-xs">Monday</span></a></li>
-						<li><a href="#" data-tab="3"><span class="visible-xs">T</span><span class="hidden-xs">Tuesday</span></a></li>
-						<li><a href="#" data-tab="4"><span class="visible-xs">W</span><span class="hidden-xs">Wednesday</span></a></li>
+						<li class="active"><a href="#" data-tab="1"><span class="visible-xs">S</span><span class="hidden-xs">Lunes</span></a></li>
+						<li><a href="#" data-tab="2"><span class="visible-xs">M</span><span class="hidden-xs">Martes</span></a></li>
+						<li><a href="#" data-tab="3"><span class="visible-xs">T</span><span class="hidden-xs">Miercoles</span></a></li>
+						<li><a href="#" data-tab="4"><span class="visible-xs">W</span><span class="hidden-xs">Jueves</span></a></li>
 
-						<li><a href="#" data-tab="5"><span class="visible-xs">Th</span><span class="hidden-xs">Thursday</span></a></li>
-						<li><a href="#" data-tab="6"><span class="visible-xs">F</span><span class="hidden-xs">Friday</span></a></li>
-						<li><a href="#" data-tab="7"><span class="visible-xs">S</span><span class="hidden-xs">Saturday</span></a></li>
+						<li><a href="#" data-tab="5"><span class="visible-xs">Th</span><span class="hidden-xs">Viernes</span></a></li>
+						<li><a href="#" data-tab="6"><span class="visible-xs">F</span><span class="hidden-xs">Sabado</span></a></li>
+						<li><a href="#" data-tab="7"><span class="visible-xs">S</span><span class="hidden-xs">Domingo</span></a></li>
 					</ul>
 
 					<!-- Tabs -->
@@ -279,7 +287,7 @@
 								<li class="text-center">
 									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
-									<h4>Body Building</h4>
+									<h4>Zumba Fitness</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
@@ -291,31 +299,31 @@
 								<li class="text-center">
 									<span><img src="sitioweb/images/two-boxing-gloves.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
-									<h4>Boxing</h4>
+									<h4>Cardio Box</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
 									<span><img src="sitioweb/images/ballet.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
-									<h4>Ballet Dance</h4>
+									<h4>Pilates</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
 									<span><img src="sitioweb/images/dumbbell.svg" class="img-responsive" alt=""></span>
 									<span class="time">9:00 AM - 11AM</span>
-									<h4>Body Building</h4>
+									<h4>Circuit Training</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
 									<span><img src="sitioweb/images/yoga-carpet.svg" class="img-responsive" alt=""></span>
 									<span class="time">6:00 AM - 7AM</span>
-									<h4>Yoga</h4>
+									<h4>Zumba Fitness</h4>
 									<small>Angel Adams</small>
 								</li>
 								<li class="text-center">
 									<span><img src="sitioweb/images/exercise.svg" class="img-responsive" alt=""></span>
 									<span class="time">7:00 AM - 8AM</span>
-									<h4>Cardio</h4>
+									<h4>Pilates</h4>
 									<small>Angel Adams</small>
 								</li>
 							</ul>
@@ -649,16 +657,16 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Pricing Plan</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>Precios Planes</h2>
+					<p>Listado de Planes </p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="pricing">
 					<div class="col-md-3 animate-box">
 						<div class="price-box">
-							<h2 class="pricing-plan">Starter</h2>
-							<div class="price"><sup class="currency">$</sup>9<small>/month</small></div>
+							<h2 class="pricing-plan">Zumba Fitness</h2>
+							<div class="price"><sup class="currency">$1500</sup><small>/month</small></div>
 							<ul class="classes">
 								<li>15 Cardio Classes</li>
 								<li class="color">10 Swimming Lesson</li>
@@ -668,14 +676,14 @@
 								<li class="color">5 Massage</li>
 								<li>10 Body Building</li>
 							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<!--<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>-->
 						</div>
 					</div>
 
 					<div class="col-md-3 animate-box">
 						<div class="price-box">
-							<h2 class="pricing-plan">Basic</h2>
-							<div class="price"><sup class="currency">$</sup>27<small>/month</small></div>
+							<h2 class="pricing-plan">Gimnasio + Cardio Box</h2>
+							<div class="price"><sup class="currency">$25000</sup><small>/month</small></div>
 							<ul class="classes">
 								<li>15 Cardio Classes</li>
 								<li class="color">10 Swimming Lesson</li>
@@ -685,14 +693,14 @@
 								<li class="color">5 Massage</li>
 								<li>10 Body Building</li>
 							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<!--<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>-->
 						</div>
 					</div>
 
 					<div class="col-md-3 animate-box">
 						<div class="price-box popular">
-							<h2 class="pricing-plan pricing-plan-offer">Pro <span>Best Offer</span></h2>
-							<div class="price"><sup class="currency">$</sup>74<small>/month</small></div>
+							<h2 class="pricing-plan pricing-plan-offer">Gimnasio + Pilates <span>Best Offer</span></h2>
+							<div class="price"><sup class="currency">$20000</sup><small>/month</small></div>
 							<ul class="classes">
 								<li>15 Cardio Classes</li>
 								<li class="color">10 Swimming Lesson</li>
@@ -702,14 +710,14 @@
 								<li class="color">5 Massage</li>
 								<li>10 Body Building</li>
 							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<!--<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>-->
 						</div>
 					</div>
 
 					<div class="col-md-3 animate-box">
 						<div class="price-box">
-							<h2 class="pricing-plan">Unlimited</h2>
-							<div class="price"><sup class="currency">$</sup>140<small>/month</small></div>
+							<h2 class="pricing-plan">Gimnasio + Circuit Training</h2>
+							<div class="price"><sup class="currency">$18000</sup><small>/month</small></div>
 							<ul class="classes">
 								<li>15 Cardio Classes</li>
 								<li class="color">10 Swimming Lesson</li>
@@ -719,7 +727,7 @@
 								<li class="color">5 Massage</li>
 								<li>10 Body Building</li>
 							</ul>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<!--<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>-->
 						</div>
 					</div>
 				</div>
@@ -805,6 +813,8 @@
 		</div>
 	</div>
 	
+
+	<!--
 	<div id="fh5co-testimonial" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row animate-box">
@@ -985,6 +995,7 @@
 		</div>
 	</footer>
 	</div>
+-->
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

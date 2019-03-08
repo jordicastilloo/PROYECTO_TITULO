@@ -14,22 +14,22 @@ class CreatePersonalsTable extends Migration {
 	{
 		Schema::create('personals', function(Blueprint $table)
 		{
-			$table->integer('rut_p')->unsigned();
-			$table->primary('rut_p');
-			$table->string('tipo_p');
-			$table->string('nombre_p');
-			$table->string('ap_pat_p');
-			$table->string('ap_mat_p');
-			$table->string('direccion_p');
-			$table->integer('telefono_p');
-			$table->string('email_p');
-			$table->string('contrasena_p');
-			$table->string('nacionalidad_p');
+			$table->integer('rut_p',10)->unsigned();
+			$table->primary('rut_p',10);
+			$table->string('tipo_p',50);
+			$table->string('nombre_p',100);
+			$table->string('ap_pat_p',100);
+			$table->string('ap_mat_p',100);
+			$table->string('direccion_p',200);
+			$table->integer('telefono_p',11);
+			$table->string('email_p',100);
+			$table->string('contrasena_p',100);
+			$table->string('nacionalidad_p',50);
 			$table->date('fecha_nac_p');
-			$table->string('sexo_p');
-			$table->string('profesion_p');
-			$table->string('fotografia_p');
-			$table->integer('estado');
+			$table->string('sexo_p',50);
+			$table->string('profesion_p',100);
+			$table->string('fotografia_p',100);
+			$table->integer('estado',1);
 			//$table->integer('id_emp')->unsigned();
 			//$table->foreign('id_emp')->references('id_emp')->on('empresas');
 		});
