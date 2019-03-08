@@ -15,9 +15,7 @@ class CreateAccesosTable extends Migration {
 		Schema::create('accesos', function(Blueprint $table)
 		{
 			$table->increments('id_acceso');
-			$table->datetime('hora');
-			$table->string('mes');
-			$table->integer('ano');
+			$table->datetime('fecha');
 			
 			$table->integer('rut_cl')->unsigned();
 			$table->foreign('rut_cl')->references('rut_cl')->on('clientes');
